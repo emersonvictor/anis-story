@@ -14,8 +14,6 @@
 		2CACA9DB2146E60C0007B737 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CACA9D92146E60C0007B737 /* Main.storyboard */; };
 		2CACA9DD2146E60E0007B737 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CACA9DC2146E60E0007B737 /* Assets.xcassets */; };
 		2CACA9E02146E60E0007B737 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CACA9DF2146E60E0007B737 /* main.m */; };
-		2CACA9EA2146E60E0007B737 /* mc3Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CACA9E92146E60E0007B737 /* mc3Tests.m */; };
-		2CACA9F52146E60E0007B737 /* mc3UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CACA9F42146E60E0007B737 /* mc3UITests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,11 +47,7 @@
 		2CACA9DE2146E60E0007B737 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2CACA9DF2146E60E0007B737 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2CACA9E52146E60E0007B737 /* mc3Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mc3Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2CACA9E92146E60E0007B737 /* mc3Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = mc3Tests.m; sourceTree = "<group>"; };
-		2CACA9EB2146E60E0007B737 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2CACA9F02146E60E0007B737 /* mc3UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mc3UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2CACA9F42146E60E0007B737 /* mc3UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = mc3UITests.m; sourceTree = "<group>"; };
-		2CACA9F62146E60E0007B737 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,8 +79,6 @@
 			isa = PBXGroup;
 			children = (
 				2CACA9CB2146E60C0007B737 /* mc3 */,
-				2CACA9E82146E60E0007B737 /* mc3Tests */,
-				2CACA9F32146E60E0007B737 /* mc3UITests */,
 				2CACA9CA2146E60C0007B737 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -104,37 +96,51 @@
 		2CACA9CB2146E60C0007B737 /* mc3 */ = {
 			isa = PBXGroup;
 			children = (
-				2CACA9CC2146E60C0007B737 /* AppDelegate.h */,
-				2CACA9CD2146E60C0007B737 /* AppDelegate.m */,
-				2CACA9CF2146E60C0007B737 /* GameScene.sks */,
-				2CACA9D32146E60C0007B737 /* GameScene.h */,
-				2CACA9D42146E60C0007B737 /* GameScene.m */,
 				2CACA9D62146E60C0007B737 /* GameViewController.h */,
 				2CACA9D72146E60C0007B737 /* GameViewController.m */,
+				2CACA9DF2146E60E0007B737 /* main.m */,
+				2CACA9CF2146E60C0007B737 /* GameScene.sks */,
 				2CACA9D92146E60C0007B737 /* Main.storyboard */,
 				2CACA9DC2146E60E0007B737 /* Assets.xcassets */,
-				2CACA9DE2146E60E0007B737 /* Info.plist */,
-				2CACA9DF2146E60E0007B737 /* main.m */,
+				D96F0A5021494E9F007524E1 /* Auxiliary */,
+				D96F0A4D21494E3B007524E1 /* Character */,
+				D96F0A4C21494E26007524E1 /* Objects */,
+				D96F0A4F21494E81007524E1 /* Scenery */,
 			);
 			path = mc3;
 			sourceTree = "<group>";
 		};
-		2CACA9E82146E60E0007B737 /* mc3Tests */ = {
+		D96F0A4C21494E26007524E1 /* Objects */ = {
 			isa = PBXGroup;
 			children = (
-				2CACA9E92146E60E0007B737 /* mc3Tests.m */,
-				2CACA9EB2146E60E0007B737 /* Info.plist */,
 			);
-			path = mc3Tests;
+			path = Objects;
 			sourceTree = "<group>";
 		};
-		2CACA9F32146E60E0007B737 /* mc3UITests */ = {
+		D96F0A4D21494E3B007524E1 /* Character */ = {
 			isa = PBXGroup;
 			children = (
-				2CACA9F42146E60E0007B737 /* mc3UITests.m */,
-				2CACA9F62146E60E0007B737 /* Info.plist */,
 			);
-			path = mc3UITests;
+			path = Character;
+			sourceTree = "<group>";
+		};
+		D96F0A4F21494E81007524E1 /* Scenery */ = {
+			isa = PBXGroup;
+			children = (
+				2CACA9D32146E60C0007B737 /* GameScene.h */,
+				2CACA9D42146E60C0007B737 /* GameScene.m */,
+			);
+			path = Scenery;
+			sourceTree = "<group>";
+		};
+		D96F0A5021494E9F007524E1 /* Auxiliary */ = {
+			isa = PBXGroup;
+			children = (
+				2CACA9DE2146E60E0007B737 /* Info.plist */,
+				2CACA9CC2146E60C0007B737 /* AppDelegate.h */,
+				2CACA9CD2146E60C0007B737 /* AppDelegate.m */,
+			);
+			path = Auxiliary;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,7 +284,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2CACA9EA2146E60E0007B737 /* mc3Tests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,7 +291,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2CACA9F52146E60E0007B737 /* mc3UITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
