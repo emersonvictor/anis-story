@@ -2,6 +2,9 @@
   "images" : [
     {
       "idiom" : "tv"
+    },
+    {
+      "idiom" : "mac"
     }
   ],
   "info" : {

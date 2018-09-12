@@ -39,5 +39,10 @@
     
     _lastUpdateTime = currentTime;
 }
+- (void)keyDown:(NSEvent *)event {
+    NSLog(@"OPA");
+}
+
+
 
 @end

@@ -14,6 +14,17 @@
 		2CACA9DB2146E60C0007B737 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CACA9D92146E60C0007B737 /* Main.storyboard */; };
 		2CACA9DD2146E60E0007B737 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CACA9DC2146E60E0007B737 /* Assets.xcassets */; };
 		2CACA9E02146E60E0007B737 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CACA9DF2146E60E0007B737 /* main.m */; };
+		2CACAA04214958200007B737 /* GameController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CACAA03214958200007B737 /* GameController.m */; };
+		2CACAA0721495BD40007B737 /* InputHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CACAA0621495BD40007B737 /* InputHandler.m */; };
+		2CACAA5021497F4B0007B737 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CACAA4F21497F4B0007B737 /* AppDelegate.m */; };
+		2CACAA5A21497F4B0007B737 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CACAA5921497F4B0007B737 /* ViewController.m */; };
+		2CACAA5F21497F4B0007B737 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CACAA5D21497F4B0007B737 /* Main.storyboard */; };
+		2CACAA6221497F4C0007B737 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CACAA6121497F4C0007B737 /* main.m */; };
+		2CACAA69214984CB0007B737 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CACA9D42146E60C0007B737 /* GameScene.m */; };
+		2CACAA6A214984CE0007B737 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 2CACA9CF2146E60C0007B737 /* GameScene.sks */; };
+		2CACAA6B214984D40007B737 /* GameController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CACAA03214958200007B737 /* GameController.m */; };
+		2CACAA6C214984D80007B737 /* InputHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CACAA0621495BD40007B737 /* InputHandler.m */; };
+		2CACAA6E214986E30007B737 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CACA9DC2146E60E0007B737 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +59,19 @@
 		2CACA9DF2146E60E0007B737 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2CACA9E52146E60E0007B737 /* mc3Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mc3Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CACA9F02146E60E0007B737 /* mc3UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mc3UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CACAA022149562A0007B737 /* GameController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameController.h; sourceTree = "<group>"; };
+		2CACAA03214958200007B737 /* GameController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameController.m; sourceTree = "<group>"; };
+		2CACAA0521495A670007B737 /* InputHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InputHandler.h; sourceTree = "<group>"; };
+		2CACAA0621495BD40007B737 /* InputHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InputHandler.m; sourceTree = "<group>"; };
+		2CACAA4C21497F4B0007B737 /* mc3-macos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mc3-macos.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CACAA4E21497F4B0007B737 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2CACAA4F21497F4B0007B737 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2CACAA5821497F4B0007B737 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		2CACAA5921497F4B0007B737 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		2CACAA5E21497F4B0007B737 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2CACAA6021497F4B0007B737 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CACAA6121497F4C0007B737 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2CACAA6321497F4C0007B737 /* mc3_macos.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = mc3_macos.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,13 +96,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2CACAA4921497F4B0007B737 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		2CACA9C02146E60B0007B737 = {
 			isa = PBXGroup;
 			children = (
-				2CACA9CB2146E60C0007B737 /* mc3 */,
+				2CACAA6721497F7C0007B737 /* mc3-shared */,
+				2CACA9CB2146E60C0007B737 /* mc3-tvOS */,
+				2CACAA4D21497F4B0007B737 /* mc3-macos */,
 				2CACA9CA2146E60C0007B737 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -89,58 +122,69 @@
 				2CACA9C92146E60C0007B737 /* mc3.app */,
 				2CACA9E52146E60E0007B737 /* mc3Tests.xctest */,
 				2CACA9F02146E60E0007B737 /* mc3UITests.xctest */,
+				2CACAA4C21497F4B0007B737 /* mc3-macos.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2CACA9CB2146E60C0007B737 /* mc3 */ = {
+		2CACA9CB2146E60C0007B737 /* mc3-tvOS */ = {
 			isa = PBXGroup;
 			children = (
+				2CACA9CC2146E60C0007B737 /* AppDelegate.h */,
+				2CACA9CD2146E60C0007B737 /* AppDelegate.m */,
 				2CACA9D62146E60C0007B737 /* GameViewController.h */,
 				2CACA9D72146E60C0007B737 /* GameViewController.m */,
 				2CACA9DF2146E60E0007B737 /* main.m */,
-				2CACA9CF2146E60C0007B737 /* GameScene.sks */,
 				2CACA9D92146E60C0007B737 /* Main.storyboard */,
+				2CACA9DE2146E60E0007B737 /* Info.plist */,
+			);
+			path = "mc3-tvOS";
+			sourceTree = "<group>";
+		};
+		2CACAA4D21497F4B0007B737 /* mc3-macos */ = {
+			isa = PBXGroup;
+			children = (
+				2CACAA4E21497F4B0007B737 /* AppDelegate.h */,
+				2CACAA4F21497F4B0007B737 /* AppDelegate.m */,
+				2CACAA5821497F4B0007B737 /* ViewController.h */,
+				2CACAA5921497F4B0007B737 /* ViewController.m */,
+				2CACAA5D21497F4B0007B737 /* Main.storyboard */,
+				2CACAA6021497F4B0007B737 /* Info.plist */,
+				2CACAA6121497F4C0007B737 /* main.m */,
+				2CACAA6321497F4C0007B737 /* mc3_macos.entitlements */,
+			);
+			path = "mc3-macos";
+			sourceTree = "<group>";
+		};
+		2CACAA6721497F7C0007B737 /* mc3-shared */ = {
+			isa = PBXGroup;
+			children = (
+				2CACAA022149562A0007B737 /* GameController.h */,
+				2CACAA03214958200007B737 /* GameController.m */,
+				2CACAA6D214986800007B737 /* Settings */,
+				D96F0A4F21494E81007524E1 /* Levels */,
 				2CACA9DC2146E60E0007B737 /* Assets.xcassets */,
-				D96F0A5021494E9F007524E1 /* Auxiliary */,
-				D96F0A4D21494E3B007524E1 /* Character */,
-				D96F0A4C21494E26007524E1 /* Objects */,
-				D96F0A4F21494E81007524E1 /* Scenery */,
 			);
-			path = mc3;
+			path = "mc3-shared";
 			sourceTree = "<group>";
 		};
-		D96F0A4C21494E26007524E1 /* Objects */ = {
+		2CACAA6D214986800007B737 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				2CACAA0521495A670007B737 /* InputHandler.h */,
+				2CACAA0621495BD40007B737 /* InputHandler.m */,
 			);
-			path = Objects;
+			path = Settings;
 			sourceTree = "<group>";
 		};
-		D96F0A4D21494E3B007524E1 /* Character */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Character;
-			sourceTree = "<group>";
-		};
-		D96F0A4F21494E81007524E1 /* Scenery */ = {
+		D96F0A4F21494E81007524E1 /* Levels */ = {
 			isa = PBXGroup;
 			children = (
 				2CACA9D32146E60C0007B737 /* GameScene.h */,
 				2CACA9D42146E60C0007B737 /* GameScene.m */,
+				2CACA9CF2146E60C0007B737 /* GameScene.sks */,
 			);
-			path = Scenery;
-			sourceTree = "<group>";
-		};
-		D96F0A5021494E9F007524E1 /* Auxiliary */ = {
-			isa = PBXGroup;
-			children = (
-				2CACA9DE2146E60E0007B737 /* Info.plist */,
-				2CACA9CC2146E60C0007B737 /* AppDelegate.h */,
-				2CACA9CD2146E60C0007B737 /* AppDelegate.m */,
-			);
-			path = Auxiliary;
+			path = Levels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,6 +243,23 @@
 			productReference = 2CACA9F02146E60E0007B737 /* mc3UITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		2CACAA4B21497F4B0007B737 /* mc3-macos */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2CACAA6421497F4C0007B737 /* Build configuration list for PBXNativeTarget "mc3-macos" */;
+			buildPhases = (
+				2CACAA4821497F4B0007B737 /* Sources */,
+				2CACAA4921497F4B0007B737 /* Frameworks */,
+				2CACAA4A21497F4B0007B737 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "mc3-macos";
+			productName = "mc3-macos";
+			productReference = 2CACAA4C21497F4B0007B737 /* mc3-macos.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -219,6 +280,9 @@
 						CreatedOnToolsVersion = 9.4.1;
 						TestTargetID = 2CACA9C82146E60C0007B737;
 					};
+					2CACAA4B21497F4B0007B737 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
 				};
 			};
 			buildConfigurationList = 2CACA9C42146E60B0007B737 /* Build configuration list for PBXProject "mc3" */;
@@ -237,6 +301,7 @@
 				2CACA9C82146E60C0007B737 /* mc3 */,
 				2CACA9E42146E60E0007B737 /* mc3Tests */,
 				2CACA9EF2146E60E0007B737 /* mc3UITests */,
+				2CACAA4B21497F4B0007B737 /* mc3-macos */,
 			);
 		};
 /* End PBXProject section */
@@ -266,6 +331,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2CACAA4A21497F4B0007B737 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CACAA6A214984CE0007B737 /* GameScene.sks in Resources */,
+				2CACAA6E214986E30007B737 /* Assets.xcassets in Resources */,
+				2CACAA5F21497F4B0007B737 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -274,8 +349,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CACA9D52146E60C0007B737 /* GameScene.m in Sources */,
+				2CACAA0721495BD40007B737 /* InputHandler.m in Sources */,
 				2CACA9D82146E60C0007B737 /* GameViewController.m in Sources */,
 				2CACA9E02146E60E0007B737 /* main.m in Sources */,
+				2CACAA04214958200007B737 /* GameController.m in Sources */,
 				2CACA9CE2146E60C0007B737 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,6 +368,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CACAA4821497F4B0007B737 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CACAA5A21497F4B0007B737 /* ViewController.m in Sources */,
+				2CACAA6C214984D80007B737 /* InputHandler.m in Sources */,
+				2CACAA6221497F4C0007B737 /* main.m in Sources */,
+				2CACAA69214984CB0007B737 /* GameScene.m in Sources */,
+				2CACAA6B214984D40007B737 /* GameController.m in Sources */,
+				2CACAA5021497F4B0007B737 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,6 +404,14 @@
 			isa = PBXVariantGroup;
 			children = (
 				2CACA9DA2146E60C0007B737 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2CACAA5D21497F4B0007B737 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2CACAA5E21497F4B0007B737 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -436,7 +534,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UDB57TC6RA;
-				INFOPLIST_FILE = mc3/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/mc3-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -454,7 +552,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UDB57TC6RA;
-				INFOPLIST_FILE = mc3/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/mc3-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -539,6 +637,48 @@
 			};
 			name = Release;
 		};
+		2CACAA6521497F4C0007B737 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "mc3-macos/mc3_macos.entitlements";
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = UDB57TC6RA;
+				INFOPLIST_FILE = "mc3-macos/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.academy.cin.ufpe.jacn.mc3-macos";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		2CACAA6621497F4C0007B737 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "mc3-macos/mc3_macos.entitlements";
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = UDB57TC6RA;
+				INFOPLIST_FILE = "mc3-macos/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.academy.cin.ufpe.jacn.mc3-macos";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -574,6 +714,15 @@
 			buildConfigurations = (
 				2CACAA002146E60E0007B737 /* Debug */,
 				2CACAA012146E60E0007B737 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2CACAA6421497F4C0007B737 /* Build configuration list for PBXNativeTarget "mc3-macos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CACAA6521497F4C0007B737 /* Debug */,
+				2CACAA6621497F4C0007B737 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
