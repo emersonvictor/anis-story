@@ -11,6 +11,19 @@
 @implementation GameController
 
 -(void) tick {
-    
 }
+
+- (void)handleKeyDown:(NSEvent *)event {
+    NSLog(@"APERTOU");
+}
+
+- (void)handleKeyUp:(NSEvent *)event {
+    NSLog(@"Soltou");
+}
+
+//- (void)update:(NSTimeInterval)currentTime forScene:(SKScene *)scene {
+//    NSLog(@"LA FOI UM FRAME");
+//}
 @end
+
+

@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "GameScene.h"
+#import "GameLevel.h"
 
 @implementation ViewController
 
@@ -16,11 +16,13 @@
 
     // Load 'GameScene.sks' as a GKScene. This provides gameplay related content
     // including entities and graphs.
-    GKScene *scene = [GKScene sceneWithFileNamed:@"GameScene"];
+    GKScene *scene = [GKScene sceneWithFileNamed:@"GameLevel"];
+    _ctrl = [GameController new];
     
     // Get the SKScene from the loaded GKScene
-    GameScene *sceneNode = (GameScene *)scene.rootNode;
+    GameLevel *sceneNode = (GameLevel *)scene.rootNode;
     
+    sceneNode.delegate = _ctrl;
     // Copy gameplay related content over to the scene
     sceneNode.entities = [scene.entities mutableCopy];
     sceneNode.graphs = [scene.graphs mutableCopy];

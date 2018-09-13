@@ -8,7 +8,9 @@
 
 #import <GameplayKit/GameplayKit.h>
 #import <SpriteKit/SpriteKit.h>
+#import "LevelDelegate.h"
+#import "InputHandler.h"
 
-@interface GameController: NSObject
+@interface GameController: NSObject <LevelDelegate>
 
 @end

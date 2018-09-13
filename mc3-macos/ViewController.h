@@ -9,10 +9,12 @@
 #import <Cocoa/Cocoa.h>
 #import <SpriteKit/SpriteKit.h>
 #import <GameplayKit/GameplayKit.h>
+#import "GameController.h"
 
 @interface ViewController : NSViewController
 
 @property (assign) IBOutlet SKView *skView;
+@property (nonatomic) GameController *ctrl;
 
 @end
 

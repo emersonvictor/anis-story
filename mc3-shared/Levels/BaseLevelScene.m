@@ -1,16 +1,19 @@
 //
-//  GameScene.m
+//  BaseLevelScene.m
 //  mc3
 //
-//  Created by André Carneiro on 10/09/18.
+//  Created by André Carneiro on 12/09/18.
 //  Copyright © 2018 André Carneiro. All rights reserved.
 //
 
-#import "GameScene.h"
+#import <Foundation/Foundation.h>
+#import "BaseLevelScene.h"
 
-@implementation GameScene {
+@implementation BaseLevelScene {
     NSTimeInterval _lastUpdateTime;
 }
+
+@dynamic delegate;
 
 - (void)sceneDidLoad {
     // Setup your scene here
@@ -39,8 +42,13 @@
     
     _lastUpdateTime = currentTime;
 }
+
 - (void)keyDown:(NSEvent *)event {
-    NSLog(@"OPA");
+    [self.delegate handleKeyDown:event];
+}
+
+- (void)keyUp:(NSEvent *)event {
+    [self.delegate handleKeyUp:event];
 }
 
 

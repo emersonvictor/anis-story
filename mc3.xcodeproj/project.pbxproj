@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C63C0BC2149BD7E006A96EC /* BaseLevelScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C63C0BB2149BD7E006A96EC /* BaseLevelScene.m */; };
+		2C63C0BD2149BD7E006A96EC /* BaseLevelScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C63C0BB2149BD7E006A96EC /* BaseLevelScene.m */; };
 		2CACA9CE2146E60C0007B737 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CACA9CD2146E60C0007B737 /* AppDelegate.m */; };
-		2CACA9D02146E60C0007B737 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 2CACA9CF2146E60C0007B737 /* GameScene.sks */; };
-		2CACA9D52146E60C0007B737 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CACA9D42146E60C0007B737 /* GameScene.m */; };
+		2CACA9D02146E60C0007B737 /* GameLevel.sks in Resources */ = {isa = PBXBuildFile; fileRef = 2CACA9CF2146E60C0007B737 /* GameLevel.sks */; };
+		2CACA9D52146E60C0007B737 /* GameLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CACA9D42146E60C0007B737 /* GameLevel.m */; };
 		2CACA9D82146E60C0007B737 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CACA9D72146E60C0007B737 /* GameViewController.m */; };
 		2CACA9DB2146E60C0007B737 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CACA9D92146E60C0007B737 /* Main.storyboard */; };
 		2CACA9DD2146E60E0007B737 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CACA9DC2146E60E0007B737 /* Assets.xcassets */; };
@@ -20,8 +22,8 @@
 		2CACAA5A21497F4B0007B737 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CACAA5921497F4B0007B737 /* ViewController.m */; };
 		2CACAA5F21497F4B0007B737 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CACAA5D21497F4B0007B737 /* Main.storyboard */; };
 		2CACAA6221497F4C0007B737 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CACAA6121497F4C0007B737 /* main.m */; };
-		2CACAA69214984CB0007B737 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CACA9D42146E60C0007B737 /* GameScene.m */; };
-		2CACAA6A214984CE0007B737 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 2CACA9CF2146E60C0007B737 /* GameScene.sks */; };
+		2CACAA69214984CB0007B737 /* GameLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CACA9D42146E60C0007B737 /* GameLevel.m */; };
+		2CACAA6A214984CE0007B737 /* GameLevel.sks in Resources */ = {isa = PBXBuildFile; fileRef = 2CACA9CF2146E60C0007B737 /* GameLevel.sks */; };
 		2CACAA6B214984D40007B737 /* GameController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CACAA03214958200007B737 /* GameController.m */; };
 		2CACAA6C214984D80007B737 /* InputHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CACAA0621495BD40007B737 /* InputHandler.m */; };
 		2CACAA6E214986E30007B737 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CACA9DC2146E60E0007B737 /* Assets.xcassets */; };
@@ -45,12 +47,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2C63C0B82149A04F006A96EC /* BaseLevelScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseLevelScene.h; sourceTree = "<group>"; };
+		2C63C0BA2149A244006A96EC /* LevelDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LevelDelegate.h; sourceTree = "<group>"; };
+		2C63C0BB2149BD7E006A96EC /* BaseLevelScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseLevelScene.m; sourceTree = "<group>"; };
 		2CACA9C92146E60C0007B737 /* mc3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mc3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CACA9CC2146E60C0007B737 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2CACA9CD2146E60C0007B737 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		2CACA9CF2146E60C0007B737 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
-		2CACA9D32146E60C0007B737 /* GameScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
-		2CACA9D42146E60C0007B737 /* GameScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
+		2CACA9CF2146E60C0007B737 /* GameLevel.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameLevel.sks; sourceTree = "<group>"; };
+		2CACA9D32146E60C0007B737 /* GameLevel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameLevel.h; sourceTree = "<group>"; };
+		2CACA9D42146E60C0007B737 /* GameLevel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameLevel.m; sourceTree = "<group>"; };
 		2CACA9D62146E60C0007B737 /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
 		2CACA9D72146E60C0007B737 /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
 		2CACA9DA2146E60C0007B737 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -106,6 +111,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C63C0B92149A1DA006A96EC /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				2C63C0BA2149A244006A96EC /* LevelDelegate.h */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		2CACA9C02146E60B0007B737 = {
 			isa = PBXGroup;
 			children = (
@@ -161,6 +174,7 @@
 			children = (
 				2CACAA022149562A0007B737 /* GameController.h */,
 				2CACAA03214958200007B737 /* GameController.m */,
+				2C63C0B92149A1DA006A96EC /* Protocols */,
 				2CACAA6D214986800007B737 /* Settings */,
 				D96F0A4F21494E81007524E1 /* Levels */,
 				2CACA9DC2146E60E0007B737 /* Assets.xcassets */,
@@ -180,9 +194,11 @@
 		D96F0A4F21494E81007524E1 /* Levels */ = {
 			isa = PBXGroup;
 			children = (
-				2CACA9D32146E60C0007B737 /* GameScene.h */,
-				2CACA9D42146E60C0007B737 /* GameScene.m */,
-				2CACA9CF2146E60C0007B737 /* GameScene.sks */,
+				2CACA9D32146E60C0007B737 /* GameLevel.h */,
+				2CACA9D42146E60C0007B737 /* GameLevel.m */,
+				2CACA9CF2146E60C0007B737 /* GameLevel.sks */,
+				2C63C0B82149A04F006A96EC /* BaseLevelScene.h */,
+				2C63C0BB2149BD7E006A96EC /* BaseLevelScene.m */,
 			);
 			path = Levels;
 			sourceTree = "<group>";
@@ -312,7 +328,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CACA9DB2146E60C0007B737 /* Main.storyboard in Resources */,
-				2CACA9D02146E60C0007B737 /* GameScene.sks in Resources */,
+				2CACA9D02146E60C0007B737 /* GameLevel.sks in Resources */,
 				2CACA9DD2146E60E0007B737 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -335,7 +351,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2CACAA6A214984CE0007B737 /* GameScene.sks in Resources */,
+				2CACAA6A214984CE0007B737 /* GameLevel.sks in Resources */,
 				2CACAA6E214986E30007B737 /* Assets.xcassets in Resources */,
 				2CACAA5F21497F4B0007B737 /* Main.storyboard in Resources */,
 			);
@@ -348,10 +364,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2CACA9D52146E60C0007B737 /* GameScene.m in Sources */,
+				2CACA9D52146E60C0007B737 /* GameLevel.m in Sources */,
 				2CACAA0721495BD40007B737 /* InputHandler.m in Sources */,
 				2CACA9D82146E60C0007B737 /* GameViewController.m in Sources */,
 				2CACA9E02146E60E0007B737 /* main.m in Sources */,
+				2C63C0BC2149BD7E006A96EC /* BaseLevelScene.m in Sources */,
 				2CACAA04214958200007B737 /* GameController.m in Sources */,
 				2CACA9CE2146E60C0007B737 /* AppDelegate.m in Sources */,
 			);
@@ -378,7 +395,8 @@
 				2CACAA5A21497F4B0007B737 /* ViewController.m in Sources */,
 				2CACAA6C214984D80007B737 /* InputHandler.m in Sources */,
 				2CACAA6221497F4C0007B737 /* main.m in Sources */,
-				2CACAA69214984CB0007B737 /* GameScene.m in Sources */,
+				2CACAA69214984CB0007B737 /* GameLevel.m in Sources */,
+				2C63C0BD2149BD7E006A96EC /* BaseLevelScene.m in Sources */,
 				2CACAA6B214984D40007B737 /* GameController.m in Sources */,
 				2CACAA5021497F4B0007B737 /* AppDelegate.m in Sources */,
 			);
