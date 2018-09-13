@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "BaseLevelScene.h"
+#import <TargetConditionals.h>
 
 @implementation BaseLevelScene {
     NSTimeInterval _lastUpdateTime;
@@ -43,6 +44,7 @@
     _lastUpdateTime = currentTime;
 }
 
+#if TARGET_OS_OSX
 - (void)keyDown:(NSEvent *)event {
     [self.delegate handleKeyDown:event];
 }
@@ -51,6 +53,7 @@
     [self.delegate handleKeyUp:event];
 }
 
+#endif
 
 
 @end

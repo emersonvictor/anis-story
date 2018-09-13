@@ -11,7 +11,10 @@
 
 @protocol LevelDelegate <SKSceneDelegate>
 
+#if TARGET_OS_OSX
 //Keyboard methods
 -(void) handleKeyUp:(NSEvent *) event;
 -(void) handleKeyDown:(NSEvent *) event;
+#endif
+
 @end

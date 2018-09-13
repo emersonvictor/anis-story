@@ -50,6 +50,7 @@
 		2C63C0B82149A04F006A96EC /* BaseLevelScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseLevelScene.h; sourceTree = "<group>"; };
 		2C63C0BA2149A244006A96EC /* LevelDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LevelDelegate.h; sourceTree = "<group>"; };
 		2C63C0BB2149BD7E006A96EC /* BaseLevelScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseLevelScene.m; sourceTree = "<group>"; };
+		2C63C0BF214AC559006A96EC /* InputScheme.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InputScheme.h; sourceTree = "<group>"; };
 		2CACA9C92146E60C0007B737 /* mc3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mc3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CACA9CC2146E60C0007B737 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2CACA9CD2146E60C0007B737 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -119,6 +120,16 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		2C63C0BE214AC52C006A96EC /* Input */ = {
+			isa = PBXGroup;
+			children = (
+				2C63C0BF214AC559006A96EC /* InputScheme.h */,
+				2CACAA0521495A670007B737 /* InputHandler.h */,
+				2CACAA0621495BD40007B737 /* InputHandler.m */,
+			);
+			path = Input;
+			sourceTree = "<group>";
+		};
 		2CACA9C02146E60B0007B737 = {
 			isa = PBXGroup;
 			children = (
@@ -174,6 +185,7 @@
 			children = (
 				2CACAA022149562A0007B737 /* GameController.h */,
 				2CACAA03214958200007B737 /* GameController.m */,
+				2C63C0BE214AC52C006A96EC /* Input */,
 				2C63C0B92149A1DA006A96EC /* Protocols */,
 				2CACAA6D214986800007B737 /* Settings */,
 				D96F0A4F21494E81007524E1 /* Levels */,
@@ -185,8 +197,6 @@
 		2CACAA6D214986800007B737 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				2CACAA0521495A670007B737 /* InputHandler.h */,
-				2CACAA0621495BD40007B737 /* InputHandler.m */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -298,6 +308,11 @@
 					};
 					2CACAA4B21497F4B0007B737 = {
 						CreatedOnToolsVersion = 9.4.1;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -659,7 +674,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "mc3-macos/mc3_macos.entitlements";
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -680,7 +694,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "mc3-macos/mc3_macos.entitlements";
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;

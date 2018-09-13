@@ -12,5 +12,5 @@
 #import "InputHandler.h"
 
 @interface GameController: NSObject <LevelDelegate>
-
+//+(instancetype) initWith:ControllerScheme
 @end

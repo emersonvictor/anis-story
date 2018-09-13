@@ -10,16 +10,15 @@
 
 @implementation GameController
 
--(void) tick {
-}
-
+#if TARGET_OS_OSX
 - (void)handleKeyDown:(NSEvent *)event {
-    NSLog(@"APERTOU");
+    NSLog(@"%u", event.keyCode);
 }
 
 - (void)handleKeyUp:(NSEvent *)event {
     NSLog(@"Soltou");
 }
+#endif
 
 //- (void)update:(NSTimeInterval)currentTime forScene:(SKScene *)scene {
 //    NSLog(@"LA FOI UM FRAME");
