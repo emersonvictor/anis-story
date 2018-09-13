@@ -13,36 +13,12 @@
     NSTimeInterval _lastUpdateTime;
 }
 
-
 - (void)sceneDidLoad {
-    // Setup your scene here
-    
-    // Initialize update time
-    _lastUpdateTime = 0;
+    [super sceneDidLoad];
 }
 
-
-
--(void)update:(CFTimeInterval)currentTime {
-    // Called before each frame is rendered
+- (void)update:(CFTimeInterval)currentTime {
     
-    // Initialize _lastUpdateTime if it has not already been
-    if (_lastUpdateTime == 0) {
-        _lastUpdateTime = currentTime;
-    }
-    
-    // Calculate time since last update
-    CGFloat dt = currentTime - _lastUpdateTime;
-    
-    // Update entities
-    for (GKEntity *entity in self.entities) {
-        [entity updateWithDeltaTime:dt];
-    }
-    
-    _lastUpdateTime = currentTime;
 }
-
-
-
 
 @end
