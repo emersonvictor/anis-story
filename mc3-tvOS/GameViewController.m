@@ -39,7 +39,6 @@
     
     skView.showsFPS = YES;
     skView.showsNodeCount = YES;
-    skView.showsPhysics = TRUE;
 }
 
 - (void)didReceiveMemoryWarning {
