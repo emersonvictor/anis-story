@@ -14,7 +14,6 @@
 		2CACA9D52146E60C0007B737 /* GameLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CACA9D42146E60C0007B737 /* GameLevel.m */; };
 		2CACA9D82146E60C0007B737 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CACA9D72146E60C0007B737 /* GameViewController.m */; };
 		2CACA9DB2146E60C0007B737 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CACA9D92146E60C0007B737 /* Main.storyboard */; };
-		2CACA9DD2146E60E0007B737 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CACA9DC2146E60E0007B737 /* Assets.xcassets */; };
 		2CACA9E02146E60E0007B737 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CACA9DF2146E60E0007B737 /* main.m */; };
 		2CACAA04214958200007B737 /* GameController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CACAA03214958200007B737 /* GameController.m */; };
 		2CACAA0721495BD40007B737 /* InputHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CACAA0621495BD40007B737 /* InputHandler.m */; };
@@ -26,25 +25,9 @@
 		2CACAA6A214984CE0007B737 /* GameLevel.sks in Resources */ = {isa = PBXBuildFile; fileRef = 2CACA9CF2146E60C0007B737 /* GameLevel.sks */; };
 		2CACAA6B214984D40007B737 /* GameController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CACAA03214958200007B737 /* GameController.m */; };
 		2CACAA6C214984D80007B737 /* InputHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CACAA0621495BD40007B737 /* InputHandler.m */; };
-		2CACAA6E214986E30007B737 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CACA9DC2146E60E0007B737 /* Assets.xcassets */; };
+		D96661E6214AEFCE00784631 /* PlatformNode.m in Sources */ = {isa = PBXBuildFile; fileRef = D96661E5214AEFCE00784631 /* PlatformNode.m */; };
+		D96661E7214AEFCE00784631 /* PlatformNode.m in Sources */ = {isa = PBXBuildFile; fileRef = D96661E5214AEFCE00784631 /* PlatformNode.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		2CACA9E62146E60E0007B737 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2CACA9C12146E60B0007B737 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2CACA9C82146E60C0007B737;
-			remoteInfo = mc3;
-		};
-		2CACA9F12146E60E0007B737 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2CACA9C12146E60B0007B737 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2CACA9C82146E60C0007B737;
-			remoteInfo = mc3;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		2C63C0B82149A04F006A96EC /* BaseLevelScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseLevelScene.h; sourceTree = "<group>"; };
@@ -60,11 +43,8 @@
 		2CACA9D62146E60C0007B737 /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
 		2CACA9D72146E60C0007B737 /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
 		2CACA9DA2146E60C0007B737 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		2CACA9DC2146E60E0007B737 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2CACA9DE2146E60E0007B737 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2CACA9DF2146E60E0007B737 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		2CACA9E52146E60E0007B737 /* mc3Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mc3Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2CACA9F02146E60E0007B737 /* mc3UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mc3UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CACAA022149562A0007B737 /* GameController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameController.h; sourceTree = "<group>"; };
 		2CACAA03214958200007B737 /* GameController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameController.m; sourceTree = "<group>"; };
 		2CACAA0521495A670007B737 /* InputHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InputHandler.h; sourceTree = "<group>"; };
@@ -78,24 +58,12 @@
 		2CACAA6021497F4B0007B737 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2CACAA6121497F4C0007B737 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2CACAA6321497F4C0007B737 /* mc3_macos.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = mc3_macos.entitlements; sourceTree = "<group>"; };
+		D96661E4214AEFCE00784631 /* PlatformNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlatformNode.h; sourceTree = "<group>"; };
+		D96661E5214AEFCE00784631 /* PlatformNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlatformNode.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		2CACA9C62146E60C0007B737 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2CACA9E22146E60E0007B737 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2CACA9ED2146E60E0007B737 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -144,8 +112,6 @@
 			isa = PBXGroup;
 			children = (
 				2CACA9C92146E60C0007B737 /* mc3.app */,
-				2CACA9E52146E60E0007B737 /* mc3Tests.xctest */,
-				2CACA9F02146E60E0007B737 /* mc3UITests.xctest */,
 				2CACAA4C21497F4B0007B737 /* mc3-macos.app */,
 			);
 			name = Products;
@@ -189,7 +155,7 @@
 				2C63C0B92149A1DA006A96EC /* Protocols */,
 				2CACAA6D214986800007B737 /* Settings */,
 				D96F0A4F21494E81007524E1 /* Levels */,
-				2CACA9DC2146E60E0007B737 /* Assets.xcassets */,
+				D96661CB214AD63900784631 /* Objects */,
 			);
 			path = "mc3-shared";
 			sourceTree = "<group>";
@@ -199,6 +165,15 @@
 			children = (
 			);
 			path = Settings;
+			sourceTree = "<group>";
+		};
+		D96661CB214AD63900784631 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				D96661E4214AEFCE00784631 /* PlatformNode.h */,
+				D96661E5214AEFCE00784631 /* PlatformNode.m */,
+			);
+			path = Objects;
 			sourceTree = "<group>";
 		};
 		D96F0A4F21494E81007524E1 /* Levels */ = {
@@ -233,42 +208,6 @@
 			productReference = 2CACA9C92146E60C0007B737 /* mc3.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2CACA9E42146E60E0007B737 /* mc3Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2CACA9FC2146E60E0007B737 /* Build configuration list for PBXNativeTarget "mc3Tests" */;
-			buildPhases = (
-				2CACA9E12146E60E0007B737 /* Sources */,
-				2CACA9E22146E60E0007B737 /* Frameworks */,
-				2CACA9E32146E60E0007B737 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				2CACA9E72146E60E0007B737 /* PBXTargetDependency */,
-			);
-			name = mc3Tests;
-			productName = mc3Tests;
-			productReference = 2CACA9E52146E60E0007B737 /* mc3Tests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		2CACA9EF2146E60E0007B737 /* mc3UITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2CACA9FF2146E60E0007B737 /* Build configuration list for PBXNativeTarget "mc3UITests" */;
-			buildPhases = (
-				2CACA9EC2146E60E0007B737 /* Sources */,
-				2CACA9ED2146E60E0007B737 /* Frameworks */,
-				2CACA9EE2146E60E0007B737 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				2CACA9F22146E60E0007B737 /* PBXTargetDependency */,
-			);
-			name = mc3UITests;
-			productName = mc3UITests;
-			productReference = 2CACA9F02146E60E0007B737 /* mc3UITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 		2CACAA4B21497F4B0007B737 /* mc3-macos */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2CACAA6421497F4C0007B737 /* Build configuration list for PBXNativeTarget "mc3-macos" */;
@@ -297,17 +236,11 @@
 				TargetAttributes = {
 					2CACA9C82146E60C0007B737 = {
 						CreatedOnToolsVersion = 9.4.1;
-					};
-					2CACA9E42146E60E0007B737 = {
-						CreatedOnToolsVersion = 9.4.1;
-						TestTargetID = 2CACA9C82146E60C0007B737;
-					};
-					2CACA9EF2146E60E0007B737 = {
-						CreatedOnToolsVersion = 9.4.1;
-						TestTargetID = 2CACA9C82146E60C0007B737;
+						LastSwiftMigration = 0940;
 					};
 					2CACAA4B21497F4B0007B737 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 0940;
 						SystemCapabilities = {
 							com.apple.Sandbox = {
 								enabled = 0;
@@ -330,8 +263,6 @@
 			projectRoot = "";
 			targets = (
 				2CACA9C82146E60C0007B737 /* mc3 */,
-				2CACA9E42146E60E0007B737 /* mc3Tests */,
-				2CACA9EF2146E60E0007B737 /* mc3UITests */,
 				2CACAA4B21497F4B0007B737 /* mc3-macos */,
 			);
 		};
@@ -344,21 +275,6 @@
 			files = (
 				2CACA9DB2146E60C0007B737 /* Main.storyboard in Resources */,
 				2CACA9D02146E60C0007B737 /* GameLevel.sks in Resources */,
-				2CACA9DD2146E60E0007B737 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2CACA9E32146E60E0007B737 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2CACA9EE2146E60E0007B737 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,7 +283,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CACAA6A214984CE0007B737 /* GameLevel.sks in Resources */,
-				2CACAA6E214986E30007B737 /* Assets.xcassets in Resources */,
 				2CACAA5F21497F4B0007B737 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -381,25 +296,12 @@
 			files = (
 				2CACA9D52146E60C0007B737 /* GameLevel.m in Sources */,
 				2CACAA0721495BD40007B737 /* InputHandler.m in Sources */,
+				D96661E6214AEFCE00784631 /* PlatformNode.m in Sources */,
 				2CACA9D82146E60C0007B737 /* GameViewController.m in Sources */,
 				2CACA9E02146E60E0007B737 /* main.m in Sources */,
 				2C63C0BC2149BD7E006A96EC /* BaseLevelScene.m in Sources */,
 				2CACAA04214958200007B737 /* GameController.m in Sources */,
 				2CACA9CE2146E60C0007B737 /* AppDelegate.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2CACA9E12146E60E0007B737 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2CACA9EC2146E60E0007B737 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,6 +311,7 @@
 			files = (
 				2CACAA5A21497F4B0007B737 /* ViewController.m in Sources */,
 				2CACAA6C214984D80007B737 /* InputHandler.m in Sources */,
+				D96661E7214AEFCE00784631 /* PlatformNode.m in Sources */,
 				2CACAA6221497F4C0007B737 /* main.m in Sources */,
 				2CACAA69214984CB0007B737 /* GameLevel.m in Sources */,
 				2C63C0BD2149BD7E006A96EC /* BaseLevelScene.m in Sources */,
@@ -418,19 +321,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		2CACA9E72146E60E0007B737 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 2CACA9C82146E60C0007B737 /* mc3 */;
-			targetProxy = 2CACA9E62146E60E0007B737 /* PBXContainerItemProxy */;
-		};
-		2CACA9F22146E60E0007B737 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 2CACA9C82146E60C0007B737 /* mc3 */;
-			targetProxy = 2CACA9F12146E60E0007B737 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		2CACA9D92146E60C0007B737 /* Main.storyboard */ = {
@@ -565,8 +455,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UDB57TC6RA;
+				DEVELOPMENT_TEAM = XP4ML92KUD;
 				INFOPLIST_FILE = "$(SRCROOT)/mc3-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -574,6 +465,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.academy.cin.ufpe.jacn.mc3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "mc3-shared/Objects/mc3-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 3;
 			};
 			name = Debug;
@@ -583,8 +477,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UDB57TC6RA;
+				DEVELOPMENT_TEAM = XP4ML92KUD;
 				INFOPLIST_FILE = "$(SRCROOT)/mc3-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -592,81 +487,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.academy.cin.ufpe.jacn.mc3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "mc3-shared/Objects/mc3-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 3;
-			};
-			name = Release;
-		};
-		2CACA9FD2146E60E0007B737 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UDB57TC6RA;
-				INFOPLIST_FILE = mc3Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.academy.cin.ufpe.jacn.mc3Tests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 3;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mc3.app/mc3";
-			};
-			name = Debug;
-		};
-		2CACA9FE2146E60E0007B737 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UDB57TC6RA;
-				INFOPLIST_FILE = mc3Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.academy.cin.ufpe.jacn.mc3Tests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 3;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mc3.app/mc3";
-			};
-			name = Release;
-		};
-		2CACAA002146E60E0007B737 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UDB57TC6RA;
-				INFOPLIST_FILE = mc3UITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.academy.cin.ufpe.jacn.mc3UITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 3;
-				TEST_TARGET_NAME = mc3;
-			};
-			name = Debug;
-		};
-		2CACAA012146E60E0007B737 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UDB57TC6RA;
-				INFOPLIST_FILE = mc3UITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.academy.cin.ufpe.jacn.mc3UITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 3;
-				TEST_TARGET_NAME = mc3;
 			};
 			name = Release;
 		};
@@ -674,10 +497,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "mc3-macos/mc3_macos.entitlements";
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = UDB57TC6RA;
+				DEVELOPMENT_TEAM = XP4ML92KUD;
 				INFOPLIST_FILE = "mc3-macos/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -687,6 +512,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.academy.cin.ufpe.jacn.mc3-macos";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "mc3-shared/Objects/mc3-macos-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -694,10 +522,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "mc3-macos/mc3_macos.entitlements";
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = UDB57TC6RA;
+				DEVELOPMENT_TEAM = XP4ML92KUD;
 				INFOPLIST_FILE = "mc3-macos/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -707,6 +537,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.academy.cin.ufpe.jacn.mc3-macos";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "mc3-shared/Objects/mc3-macos-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -727,24 +559,6 @@
 			buildConfigurations = (
 				2CACA9FA2146E60E0007B737 /* Debug */,
 				2CACA9FB2146E60E0007B737 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		2CACA9FC2146E60E0007B737 /* Build configuration list for PBXNativeTarget "mc3Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2CACA9FD2146E60E0007B737 /* Debug */,
-				2CACA9FE2146E60E0007B737 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		2CACA9FF2146E60E0007B737 /* Build configuration list for PBXNativeTarget "mc3UITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2CACAA002146E60E0007B737 /* Debug */,
-				2CACAA012146E60E0007B737 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
