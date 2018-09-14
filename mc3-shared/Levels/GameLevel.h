@@ -7,6 +7,8 @@
 //
 
 #import "BaseLevelScene.h"
+#import "Player.h"
 
 @interface GameLevel : BaseLevelScene
+@property (nonatomic, strong) Player *player;
 @end
