@@ -25,6 +25,9 @@
 		2CACAA6A214984CE0007B737 /* GameLevel.sks in Resources */ = {isa = PBXBuildFile; fileRef = 2CACA9CF2146E60C0007B737 /* GameLevel.sks */; };
 		2CACAA6B214984D40007B737 /* GameController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CACAA03214958200007B737 /* GameController.m */; };
 		2CACAA6C214984D80007B737 /* InputHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CACAA0621495BD40007B737 /* InputHandler.m */; };
+		2CACAA6E214986E30007B737 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CACA9DC2146E60E0007B737 /* Assets.xcassets */; };
+		A4770119214B55CD00564274 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = A4770118214B55CD00564274 /* Player.m */; };
+		A477011A214B55CD00564274 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = A4770118214B55CD00564274 /* Player.m */; };
 		D96661E6214AEFCE00784631 /* PlatformNode.m in Sources */ = {isa = PBXBuildFile; fileRef = D96661E5214AEFCE00784631 /* PlatformNode.m */; };
 		D96661E7214AEFCE00784631 /* PlatformNode.m in Sources */ = {isa = PBXBuildFile; fileRef = D96661E5214AEFCE00784631 /* PlatformNode.m */; };
 /* End PBXBuildFile section */
@@ -58,6 +61,9 @@
 		2CACAA6021497F4B0007B737 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2CACAA6121497F4C0007B737 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2CACAA6321497F4C0007B737 /* mc3_macos.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = mc3_macos.entitlements; sourceTree = "<group>"; };
+		A4770115214B556E00564274 /* SKTUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKTUtils.h; sourceTree = "<group>"; };
+		A4770117214B55CD00564274 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
+		A4770118214B55CD00564274 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
 		D96661E4214AEFCE00784631 /* PlatformNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlatformNode.h; sourceTree = "<group>"; };
 		D96661E5214AEFCE00784631 /* PlatformNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlatformNode.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -149,12 +155,15 @@
 		2CACAA6721497F7C0007B737 /* mc3-shared */ = {
 			isa = PBXGroup;
 			children = (
+				A4770115214B556E00564274 /* SKTUtils.h */,
 				2CACAA022149562A0007B737 /* GameController.h */,
 				2CACAA03214958200007B737 /* GameController.m */,
 				2C63C0BE214AC52C006A96EC /* Input */,
 				2C63C0B92149A1DA006A96EC /* Protocols */,
 				2CACAA6D214986800007B737 /* Settings */,
 				D96F0A4F21494E81007524E1 /* Levels */,
+				A4770116214B557700564274 /* Characters */,
+				2CACA9DC2146E60E0007B737 /* Assets.xcassets */,
 				D96661CB214AD63900784631 /* Objects */,
 			);
 			path = "mc3-shared";
@@ -167,6 +176,13 @@
 			path = Settings;
 			sourceTree = "<group>";
 		};
+		A4770116214B557700564274 /* Characters */ = {
+			isa = PBXGroup;
+			children = (
+				A4770117214B55CD00564274 /* Player.h */,
+				A4770118214B55CD00564274 /* Player.m */,
+			);
+			path = Characters;
 		D96661CB214AD63900784631 /* Objects */ = {
 			isa = PBXGroup;
 			children = (
@@ -294,6 +310,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4770119214B55CD00564274 /* Player.m in Sources */,
 				2CACA9D52146E60C0007B737 /* GameLevel.m in Sources */,
 				2CACAA0721495BD40007B737 /* InputHandler.m in Sources */,
 				D96661E6214AEFCE00784631 /* PlatformNode.m in Sources */,
@@ -309,6 +326,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A477011A214B55CD00564274 /* Player.m in Sources */,
 				2CACAA5A21497F4B0007B737 /* ViewController.m in Sources */,
 				2CACAA6C214984D80007B737 /* InputHandler.m in Sources */,
 				D96661E7214AEFCE00784631 /* PlatformNode.m in Sources */,
