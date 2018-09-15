@@ -15,8 +15,9 @@
     [super viewDidLoad];
 
     // Load 'GameScene.sks' as a GKScene. This provides gameplay related content
+    
     // including entities and graphs.
-    GKScene *scene = [GKScene sceneWithFileNamed:@"GameLevel"];
+    GKScene *scene = [GKScene sceneWithFileNamed: @"GameLevel"];
     _ctrl = [GameController new];
     
     // Get the SKScene from the loaded GKScene
@@ -35,6 +36,7 @@
     
     self.skView.showsFPS = YES;
     self.skView.showsNodeCount = YES;
+    self.skView.showsPhysics = TRUE;
 }
 
 @end

@@ -17,15 +17,10 @@
 @dynamic delegate;
 
 - (void)sceneDidLoad {
-    // Setup your scene here
-    
-    // Initialize update time
-    _lastUpdateTime = 0;
+    self.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect: self.frame];
 }
 
-
-
--(void)update:(CFTimeInterval)currentTime {
+- (void)update:(CFTimeInterval)currentTime {
     // Called before each frame is rendered
     
     // Initialize _lastUpdateTime if it has not already been
@@ -44,6 +39,8 @@
     _lastUpdateTime = currentTime;
 }
 
+
+// MARK: - Keyboard events
 #if TARGET_OS_OSX
 - (void)keyDown:(NSEvent *)event {
     [self.delegate handleKeyDown:event];
@@ -52,8 +49,6 @@
 - (void)keyUp:(NSEvent *)event {
     [self.delegate handleKeyUp:event];
 }
-
 #endif
-
 
 @end
