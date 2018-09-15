@@ -9,6 +9,7 @@
 #import <SpriteKit/SpriteKit.h>
 #import <GameplayKit/GameplayKit.h>
 #import "LevelDelegate.h"
+#import <TargetConditionals.h>
 
 @interface BaseLevelScene : SKScene
 

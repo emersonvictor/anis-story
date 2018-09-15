@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "BaseLevelScene.h"
-#import <TargetConditionals.h>
+
 
 @implementation BaseLevelScene {
     NSTimeInterval _lastUpdateTime;
