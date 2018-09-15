@@ -10,10 +10,6 @@
 
 @interface InputHandler: NSObject
 
-@property (nonatomic) id controllerScheme;
-
-- (void) handleButtonPress;
-
-
+@property (nonatomic, weak) id controllerScheme;
 
 @end

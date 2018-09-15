@@ -9,8 +9,17 @@
 #import <GameplayKit/GameplayKit.h>
 #import <SpriteKit/SpriteKit.h>
 #import "LevelDelegate.h"
-#import "InputHandler.h"
+#import "KeyboardInputHandler.h"
+#import "InputScheme.h"
+#import <TargetConditionals.h>
 
 @interface GameController: NSObject <LevelDelegate>
-//+(instancetype) initWith:ControllerScheme
+- (instancetype) init;
+@property (nonatomic, strong) InputScheme *inputScheme;
+
+#if TARGET_OS_OSX
+@property (nonatomic, strong) KeyboardInputHandler *keyboardInputHandler;
+#endif
+
+
 @end

@@ -10,19 +10,31 @@
 
 @implementation GameController
 
+- (instancetype) init {
+    self = [super init];
+    self.inputScheme = [InputScheme new];
+    
+//    Keyboard handler
+#if TARGET_OS_OSX
+    self.keyboardInputHandler = [KeyboardInputHandler new];
+#endif
+    
+    return self;
+}
+
+
+//MARK: - Keyboard Logic
 #if TARGET_OS_OSX
 - (void)handleKeyDown:(NSEvent *)event {
-    NSLog(@"%u", event.keyCode);
+    
+    [self.keyboardInputHandler handleKeyDown:event.keyCode];
 }
 
 - (void)handleKeyUp:(NSEvent *)event {
-    NSLog(@"Soltou");
+    [self.keyboardInputHandler handleKeyUp:event.keyCode];
 }
 #endif
 
-//- (void)update:(NSTimeInterval)currentTime forScene:(SKScene *)scene {
-//    NSLog(@"LA FOI UM FRAME");
-//}
 @end
 
 

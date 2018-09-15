@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		2C63C0BC2149BD7E006A96EC /* BaseLevelScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C63C0BB2149BD7E006A96EC /* BaseLevelScene.m */; };
 		2C63C0BD2149BD7E006A96EC /* BaseLevelScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C63C0BB2149BD7E006A96EC /* BaseLevelScene.m */; };
+		2C63C0C2214BFC0A006A96EC /* InputScheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C63C0C1214BFC0A006A96EC /* InputScheme.m */; };
+		2C63C0C3214BFC0A006A96EC /* InputScheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C63C0C1214BFC0A006A96EC /* InputScheme.m */; };
+		2C63C0C5214C018C006A96EC /* KeyboardInputHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C63C0C4214C018C006A96EC /* KeyboardInputHandler.m */; };
 		2CACA9CE2146E60C0007B737 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CACA9CD2146E60C0007B737 /* AppDelegate.m */; };
 		2CACA9D02146E60C0007B737 /* GameLevel.sks in Resources */ = {isa = PBXBuildFile; fileRef = 2CACA9CF2146E60C0007B737 /* GameLevel.sks */; };
 		2CACA9D52146E60C0007B737 /* GameLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CACA9D42146E60C0007B737 /* GameLevel.m */; };
@@ -51,6 +54,9 @@
 		2C63C0BA2149A244006A96EC /* LevelDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LevelDelegate.h; sourceTree = "<group>"; };
 		2C63C0BB2149BD7E006A96EC /* BaseLevelScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseLevelScene.m; sourceTree = "<group>"; };
 		2C63C0BF214AC559006A96EC /* InputScheme.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InputScheme.h; sourceTree = "<group>"; };
+		2C63C0C0214B394E006A96EC /* KeyboardInputHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeyboardInputHandler.h; sourceTree = "<group>"; };
+		2C63C0C1214BFC0A006A96EC /* InputScheme.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InputScheme.m; sourceTree = "<group>"; };
+		2C63C0C4214C018C006A96EC /* KeyboardInputHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KeyboardInputHandler.m; sourceTree = "<group>"; };
 		2CACA9C92146E60C0007B737 /* mc3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mc3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CACA9CC2146E60C0007B737 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2CACA9CD2146E60C0007B737 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -124,8 +130,11 @@
 			isa = PBXGroup;
 			children = (
 				2C63C0BF214AC559006A96EC /* InputScheme.h */,
+				2C63C0C1214BFC0A006A96EC /* InputScheme.m */,
 				2CACAA0521495A670007B737 /* InputHandler.h */,
 				2CACAA0621495BD40007B737 /* InputHandler.m */,
+				2C63C0C0214B394E006A96EC /* KeyboardInputHandler.h */,
+				2C63C0C4214C018C006A96EC /* KeyboardInputHandler.m */,
 			);
 			path = Input;
 			sourceTree = "<group>";
@@ -384,6 +393,7 @@
 				2CACA9D82146E60C0007B737 /* GameViewController.m in Sources */,
 				2CACA9E02146E60E0007B737 /* main.m in Sources */,
 				2C63C0BC2149BD7E006A96EC /* BaseLevelScene.m in Sources */,
+				2C63C0C2214BFC0A006A96EC /* InputScheme.m in Sources */,
 				2CACAA04214958200007B737 /* GameController.m in Sources */,
 				2CACA9CE2146E60C0007B737 /* AppDelegate.m in Sources */,
 			);
@@ -411,7 +421,9 @@
 				2CACAA6C214984D80007B737 /* InputHandler.m in Sources */,
 				2CACAA6221497F4C0007B737 /* main.m in Sources */,
 				2CACAA69214984CB0007B737 /* GameLevel.m in Sources */,
+				2C63C0C5214C018C006A96EC /* KeyboardInputHandler.m in Sources */,
 				2C63C0BD2149BD7E006A96EC /* BaseLevelScene.m in Sources */,
+				2C63C0C3214BFC0A006A96EC /* InputScheme.m in Sources */,
 				2CACAA6B214984D40007B737 /* GameController.m in Sources */,
 				2CACAA5021497F4B0007B737 /* AppDelegate.m in Sources */,
 			);
