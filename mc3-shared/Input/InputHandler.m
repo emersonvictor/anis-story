@@ -10,8 +10,12 @@
 
 @implementation InputHandler
 
-- (void) handleButtonPress {
+- (instancetype) initWith:(InputScheme *)inputScheme {
+    self = [super init];
     
+    self.inputScheme = inputScheme;
+    
+    return self;
 }
 
 @end

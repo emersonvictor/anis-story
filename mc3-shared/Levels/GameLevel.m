@@ -8,6 +8,8 @@
 
 #import "GameLevel.h"
 #import "Player.h"
+#import <CoreGraphics/CoreGraphics.h>
+#import "KeyboardInputHandler.h"
 
 
 @implementation GameLevel {
@@ -30,6 +32,10 @@
 -(void)update:(CFTimeInterval)currentTime {
     // Called before each frame is rendered
     
+//    NSLog(@"Button A: %@",CGEventSourceKeyState(kCGEventSourceStateCombinedSessionState, S) ? @"Yes" : @"No");
+//    NSLog(@"Button B: %@",CGEventSourceKeyState(kCGEventSourceStateCombinedSessionState, D) ? @"Yes" : @"No");
+//    NSLog(@"Button X: %@",CGEventSourceKeyState(kCGEventSourceStateCombinedSessionState, X) ? @"Yes" : @"No");
+//    NSLog(@"Button Y: %@",CGEventSourceKeyState(kCGEventSourceStateCombinedSessionState, C) ? @"Yes" : @"No");
     // Initialize _lastUpdateTime if it has not already been
     if (_lastUpdateTime == 0) {
         _lastUpdateTime = currentTime;
