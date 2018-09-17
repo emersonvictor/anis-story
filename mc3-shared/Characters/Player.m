@@ -15,24 +15,32 @@
     if (self == [super initWithImageNamed:name]) {
         self.velocity = CGPointMake(0.0, 0.0);
     }
-    self.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect: self.frame];
+    
+    self.physicsBody =  [SKPhysicsBody bodyWithRectangleOfSize: self.frame.size];
     self.physicsBody.affectedByGravity = TRUE;
+    self.physicsBody.allowsRotation = TRUE;
+    self.physicsBody.angularDamping = 0;
+    self.physicsBody.angularVelocity = 0;
+    self.physicsBody.mass = 70;
     self.physicsBody.dynamic = TRUE;
-    self.physicsBody.categoryBitMask = 0;
-    self.physicsBody.collisionBitMask = 1;
+    
+    // Collision
+    self.physicsBody.categoryBitMask = 0b1;
+    self.physicsBody.collisionBitMask = 0b11;
+    
     return self;
 }
 
 - (void)update: (NSTimeInterval)delta {
-    CGPoint gravity = CGPointMake(0.0, -450.0);
-    CGPoint gravityStep = CGPointMultiplyScalar(gravity, delta);
+//    CGPoint gravity = CGPointMake(0.0, -450.0);
+//    CGPoint gravityStep = CGPointMultiplyScalar(gravity, delta);
     
     CGPoint forwardMove = CGPointMake(800.0, 0.0);
     CGPoint forwardMoveStep = CGPointMultiplyScalar(forwardMove, delta);
     
     // Velocity
-    self.velocity = CGPointAdd(self.velocity, gravityStep);
-    self.velocity = CGPointMake(self.velocity.x * 0.9, self.velocity.y);
+//    self.velocity = CGPointAdd(self.velocity, gravityStep);
+//    self.velocity = CGPointMake(self.velocity.x * 0.9, self.velocity.y);
     
     // Jump force
     CGPoint jumpForce = CGPointMake(0.0, 310.0);
@@ -57,12 +65,6 @@
     
     self.desiredPosition = CGPointAdd(self.position, velocityStep);
     self.position = CGPointMake(self.desiredPosition.x, self.desiredPosition.y);
-    // MARK: Gambiarra fodida
-//    if (self.position.y >= -50) {
-//        self.position = CGPointMake(self.desiredPosition.x, self.desiredPosition.y);
-//    } else {
-//        self.position = CGPointMake(self.desiredPosition.x, self.position.y);
-//    }
 }
 
 

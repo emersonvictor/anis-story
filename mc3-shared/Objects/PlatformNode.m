@@ -21,10 +21,7 @@
     self.physicsBody.dynamic = FALSE;
     
     // Collision
-    // TODO: - Defition of collision, category and contact bit mask
-    self.physicsBody.categoryBitMask = 0;
-    self.physicsBody.collisionBitMask = 1;
-    self.physicsBody.contactTestBitMask = 1;
+    self.physicsBody.categoryBitMask = 0b111;
 
     return self;
 }

@@ -17,19 +17,20 @@
 
 // MARK: - Initializers and rendering
 - (void)sceneDidLoad {
+    // Physics body
+    self.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect: self.frame];
+    self.physicsBody.categoryBitMask = 0b11;
+    self.physicsBody.collisionBitMask = 0b1;
+    
+    // Create player and add to the scene
     self.player = [[Player alloc] initWithImageNamed:@"koalio_stand"];
-    self.player.physicsBody.categoryBitMask = 0;
     self.player.position = CGPointMake(0, 100);
     self.player.zPosition = 15;
-    [self addChild:self.player];
-    
-    _lastUpdateTime = 0;
-    self.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect: self.frame];
+
+    [self addChild: self.player];
     }
 
 -(void)update:(CFTimeInterval)currentTime {
-    // Called before each frame is rendered
-    
     // Initialize _lastUpdateTime if it has not already been
     if (_lastUpdateTime == 0) {
         _lastUpdateTime = currentTime;
