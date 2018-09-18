@@ -14,5 +14,6 @@
 @property (nonatomic, weak) InputScheme* inputScheme;
 
 - (instancetype) initWith:(InputScheme*) inputScheme;
+- (void) print;
 
 @end

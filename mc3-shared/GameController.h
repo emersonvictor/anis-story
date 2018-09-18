@@ -10,6 +10,7 @@
 #import <SpriteKit/SpriteKit.h>
 #import "LevelDelegate.h"
 #import "KeyboardInputHandler.h"
+#import "ControllerInputHandler.h"
 #import "InputScheme.h"
 #import <TargetConditionals.h>
 
@@ -20,6 +21,8 @@
 #if TARGET_OS_OSX
 @property (nonatomic, strong) KeyboardInputHandler *keyboardInputHandler;
 #endif
+
+@property (nonatomic, strong) ControllerInputHandler *controllerInputHandler;
 
 
 @end

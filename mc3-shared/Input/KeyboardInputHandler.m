@@ -16,14 +16,18 @@
 
 @implementation KeyboardInputHandler
 
+- (instancetype) init {
+    self = [super init];
+    return self;
+}
 - (instancetype) initWith:(InputScheme *)inputScheme {
     self = [super initWith:inputScheme];
     
     self.translator = @{
                         @(ButtonA): @(S),
                         @(ButtonB): @(D),
-                        @(ButtonX): @(X),
-                        @(ButtonY): @(C),
+                        @(ButtonX): @(F),
+                        @(ButtonY): @(G),
                         @(UpBtn): @(Up),
                         @(DownBtn): @(Down),
                         @(LeftBtn): @(Left),
@@ -40,18 +44,6 @@
     }
     
     return -1;
-}
-
-- (void) print {
-    NSLog(@"\n#######################################\nButton A: %@",self.inputScheme.buttonA ? @"Yes" : @"No");
-    NSLog(@"Button B: %@",self.inputScheme.buttonB ? @"Yes" : @"No");
-    NSLog(@"Button X: %@",self.inputScheme.buttonX ? @"Yes" : @"No");
-    NSLog(@"Button Y: %@",self.inputScheme.buttonY ? @"Yes" : @"No");
-
-    NSLog(@"Button Left: %@",self.inputScheme.left ? @"Yes" : @"No");
-    NSLog(@"Button Right: %@",self.inputScheme.right ? @"Yes" : @"No");
-    NSLog(@"Button Up: %@",self.inputScheme.up ? @"Yes" : @"No");
-    NSLog(@"Button Down: %@",self.inputScheme.down ? @"Yes" : @"No");
 }
 
 - (void) handleKeyDown:(int)keycode {
