@@ -19,6 +19,8 @@
     self.keyboardInputHandler = [[KeyboardInputHandler alloc] initWith:self.inputScheme];
 #endif
     
+    self.controllerInputHandler = [[ControllerInputHandler alloc] initWith:self.inputScheme];
+    
     return self;
 }
 

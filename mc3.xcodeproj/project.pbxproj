@@ -11,6 +11,8 @@
 		2C01B6C2214D6DAD00175AA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C01B6BD214D6DAD00175AA1 /* Assets.xcassets */; };
 		2C01B6C3214D6DAD00175AA1 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C01B6C0214D6DAD00175AA1 /* Player.m */; };
 		2C01B6C4214D6DAD00175AA1 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C01B6C0214D6DAD00175AA1 /* Player.m */; };
+		2C01B71221511F7B00175AA1 /* ControllerInputHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C01B71121511F7B00175AA1 /* ControllerInputHandler.m */; };
+		2C01B71321511F7B00175AA1 /* ControllerInputHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C01B71121511F7B00175AA1 /* ControllerInputHandler.m */; };
 		2C63C0BC2149BD7E006A96EC /* BaseLevelScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C63C0BB2149BD7E006A96EC /* BaseLevelScene.m */; };
 		2C63C0BD2149BD7E006A96EC /* BaseLevelScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C63C0BB2149BD7E006A96EC /* BaseLevelScene.m */; };
 		2C63C0C2214BFC0A006A96EC /* InputScheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C63C0C1214BFC0A006A96EC /* InputScheme.m */; };
@@ -41,6 +43,8 @@
 		2C01B6BF214D6DAD00175AA1 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
 		2C01B6C0214D6DAD00175AA1 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
 		2C01B6C6214D6DE200175AA1 /* SKTUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKTUtils.h; sourceTree = "<group>"; };
+		2C01B71021511EBF00175AA1 /* ControllerInputHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ControllerInputHandler.h; sourceTree = "<group>"; };
+		2C01B71121511F7B00175AA1 /* ControllerInputHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ControllerInputHandler.m; sourceTree = "<group>"; };
 		2C63C0B82149A04F006A96EC /* BaseLevelScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseLevelScene.h; sourceTree = "<group>"; };
 		2C63C0BA2149A244006A96EC /* LevelDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LevelDelegate.h; sourceTree = "<group>"; };
 		2C63C0BB2149BD7E006A96EC /* BaseLevelScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseLevelScene.m; sourceTree = "<group>"; };
@@ -128,6 +132,8 @@
 				2CACAA0621495BD40007B737 /* InputHandler.m */,
 				2C63C0C0214B394E006A96EC /* KeyboardInputHandler.h */,
 				2C63C0C4214C018C006A96EC /* KeyboardInputHandler.m */,
+				2C01B71021511EBF00175AA1 /* ControllerInputHandler.h */,
+				2C01B71121511F7B00175AA1 /* ControllerInputHandler.m */,
 			);
 			path = Input;
 			sourceTree = "<group>";
@@ -336,6 +342,7 @@
 				2CACA9D52146E60C0007B737 /* GameLevel.m in Sources */,
 				2CACAA0721495BD40007B737 /* InputHandler.m in Sources */,
 				D96661E6214AEFCE00784631 /* PlatformNode.m in Sources */,
+				2C01B71221511F7B00175AA1 /* ControllerInputHandler.m in Sources */,
 				2CACA9D82146E60C0007B737 /* GameViewController.m in Sources */,
 				2C01B6C3214D6DAD00175AA1 /* Player.m in Sources */,
 				2CACA9E02146E60E0007B737 /* main.m in Sources */,
@@ -355,6 +362,7 @@
 				D96661E7214AEFCE00784631 /* PlatformNode.m in Sources */,
 				2CACAA6221497F4C0007B737 /* main.m in Sources */,
 				2CACAA69214984CB0007B737 /* GameLevel.m in Sources */,
+				2C01B71321511F7B00175AA1 /* ControllerInputHandler.m in Sources */,
 				2C63C0C5214C018C006A96EC /* KeyboardInputHandler.m in Sources */,
 				2C01B6C4214D6DAD00175AA1 /* Player.m in Sources */,
 				2C63C0BD2149BD7E006A96EC /* BaseLevelScene.m in Sources */,
