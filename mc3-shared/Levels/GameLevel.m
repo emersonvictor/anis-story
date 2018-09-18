@@ -54,9 +54,9 @@
     for (UITouch *touch in touches) {
         CGPoint touchLocation = [touch locationInNode:self];
         if (touchLocation.x > self.size.width / 2.0) {
-            self.player.mightAsWellJump = YES;
+            self.player.mightAsWellJump = TRUE;
         } else {
-            self.player.forwardMarch = YES;
+            self.player.forwardMarch = TRUE;
         }
     }
 }
@@ -70,11 +70,11 @@
         CGPoint previousTouchLocation = [touch previousLocationInNode:self];
         
         if (touchLocation.x > halfWidth && previousTouchLocation.x <= halfWidth) {
-            self.player.forwardMarch = NO;
-            self.player.mightAsWellJump = YES;
+            self.player.forwardMarch = FALSE;
+            self.player.mightAsWellJump = TRUE;
         } else if (previousTouchLocation.x > halfWidth && touchLocation.x <= halfWidth) {
-            self.player.forwardMarch = YES;
-            self.player.mightAsWellJump = NO;
+            self.player.forwardMarch = TRUE;
+            self.player.mightAsWellJump = FALSE;
         }
     }
 }
@@ -83,10 +83,11 @@
     for (UITouch *touch in touches) {
         CGPoint touchLocation = [touch locationInNode:self];
         if (touchLocation.x < self.size.width / 2.0) {
-            self.player.forwardMarch = NO;
+            self.player.forwardMarch = FALSE;
         } else {
-            self.player.mightAsWellJump = NO;
+            self.player.mightAsWellJump = FALSE;
         }
+        self.player.velocity = CGPointMake(0.0, 0.0);
     }
 }
 #endif
