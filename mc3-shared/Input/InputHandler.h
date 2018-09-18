@@ -7,9 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "InputScheme.h"
 
 @interface InputHandler: NSObject
 
-@property (nonatomic, weak) id controllerScheme;
+@property (nonatomic, weak) InputScheme* inputScheme;
+
+- (instancetype) initWith:(InputScheme*) inputScheme;
 
 @end

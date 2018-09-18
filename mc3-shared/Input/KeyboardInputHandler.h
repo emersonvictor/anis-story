@@ -165,6 +165,8 @@ typedef enum : NSUInteger {
 - (void) handleKeyUp:(int) keycode;
 - (void) handleKeyDown:(int) keycode;
 
+- (void) print;
+
 @end
 
 #endif /* KeyboardInputHandler_h */

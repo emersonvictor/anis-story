@@ -8,6 +8,8 @@
 
 #import "GameLevel.h"
 #import "Player.h"
+#import <CoreGraphics/CoreGraphics.h>
+#import "KeyboardInputHandler.h"
 
 
 @implementation GameLevel {
@@ -31,6 +33,7 @@
     }
 
 -(void)update:(CFTimeInterval)currentTime {
+
     // Initialize _lastUpdateTime if it has not already been
     if (_lastUpdateTime == 0) {
         _lastUpdateTime = currentTime;

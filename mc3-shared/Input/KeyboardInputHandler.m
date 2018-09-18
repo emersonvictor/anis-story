@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "KeyboardInputHandler.h"
+#import <CoreGraphics/CoreGraphics.h>
 
 @interface KeyboardInputHandler ()
     @property (nonatomic, strong, readwrite) NSDictionary* translator;
@@ -15,8 +16,8 @@
 
 @implementation KeyboardInputHandler
 
-- (instancetype) init {
-    self = [super init];
+- (instancetype) initWith:(InputScheme *)inputScheme {
+    self = [super initWith:inputScheme];
     
     self.translator = @{
                         @(ButtonA): @(S),
@@ -41,47 +42,110 @@
     return -1;
 }
 
+- (void) print {
+    NSLog(@"\n#######################################\nButton A: %@",self.inputScheme.buttonA ? @"Yes" : @"No");
+    NSLog(@"Button B: %@",self.inputScheme.buttonB ? @"Yes" : @"No");
+    NSLog(@"Button X: %@",self.inputScheme.buttonX ? @"Yes" : @"No");
+    NSLog(@"Button Y: %@",self.inputScheme.buttonY ? @"Yes" : @"No");
+
+    NSLog(@"Button Left: %@",self.inputScheme.left ? @"Yes" : @"No");
+    NSLog(@"Button Right: %@",self.inputScheme.right ? @"Yes" : @"No");
+    NSLog(@"Button Up: %@",self.inputScheme.up ? @"Yes" : @"No");
+    NSLog(@"Button Down: %@",self.inputScheme.down ? @"Yes" : @"No");
+}
+
 - (void) handleKeyDown:(int)keycode {
 //    NSLog(@"%@", [self getButtonLabel:keycode]);
     
+//    NSLog(@"keyCode: 0x%02X", keycode);
+    int label = [self getButtonLabel:keycode];
+    if (label==-1) return;
+
+    switch (label) {
+        case ButtonA:
+            [self.inputScheme pressButtonA];
+//            NSLog(@"%@", @"Button A");
+            break;
+        case ButtonB:
+            [self.inputScheme pressButtonB];
+//            NSLog(@"%@", @"Button B");
+            break;
+        case ButtonX:
+            [self.inputScheme pressButtonX];
+//            NSLog(@"%@", @"Button X");
+            break;
+        case ButtonY:
+            [self.inputScheme pressButtonY];
+//            NSLog(@"%@", @"Button Y");
+            break;
+        case UpBtn:
+            [self.inputScheme pressButtonUp];
+//            NSLog(@"%@", @"Up");
+            break;
+        case DownBtn:
+            [self.inputScheme pressButtonDown];
+//            NSLog(@"%@", @"Down");
+            break;
+        case LeftBtn:
+            [self.inputScheme pressButtonLeft];
+//            NSLog(@"%@", @"Left");
+            break;
+        case RightBtn:
+            [self.inputScheme pressButtonRight];
+//            NSLog(@"%@", @"Right");
+            break;
+
+        default:
+            break;
+    }
+    [self print];
+    
+}
+
+- (void) handleKeyUp:(int)keycode {
     int label = [self getButtonLabel:keycode];
     
     if (label==-1) return;
     
     switch (label) {
         case ButtonA:
-            NSLog(@"%@", @"Button A");
+            [self.inputScheme releaseButtonA];
+//            NSLog(@"%@", @"Button A");
             break;
         case ButtonB:
-            NSLog(@"%@", @"Button B");
+            [self.inputScheme releaseButtonB];
+//            NSLog(@"%@", @"Button B");
             break;
         case ButtonX:
-            NSLog(@"%@", @"Button X");
+            [self.inputScheme releaseButtonX];
+//            NSLog(@"%@", @"Button X");
             break;
         case ButtonY:
-            NSLog(@"%@", @"Button Y");
+            [self.inputScheme releaseButtonY];
+//            NSLog(@"%@", @"Button Y");
             break;
         case UpBtn:
-            NSLog(@"%@", @"Up");
+            [self.inputScheme releaseButtonUp];
+//            NSLog(@"%@", @"Up");
             break;
         case DownBtn:
-            NSLog(@"%@", @"Down");
+            [self.inputScheme releaseButtonDown];
+//            NSLog(@"%@", @"Down");
             break;
         case LeftBtn:
-            NSLog(@"%@", @"Left");
+            [self.inputScheme releaseButtonLeft];
+//            NSLog(@"%@", @"Left");
             break;
         case RightBtn:
-            NSLog(@"%@", @"Right");
+            [self.inputScheme releaseButtonRight];
+//            NSLog(@"%@", @"Right");
             break;
             
         default:
             break;
     }
     
-}
-
-- (void) handleKeyUp:(int)keycode {
-//    NSLog(@"%@", [self getButtonLabel:keycode]);
+    
 }
 
 @end

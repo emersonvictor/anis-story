@@ -22,12 +22,14 @@ typedef enum inputSchemeTypes {
 @property (nonatomic, readonly) BOOL buttonX;
 @property (nonatomic, readonly) BOOL buttonY;
 
-@property (nonatomic) BOOL left;
-@property (nonatomic) BOOL right;
-@property (nonatomic) BOOL up;
-@property (nonatomic) BOOL down;
-@property (nonatomic) float xVector;
-@property (nonatomic) float yVector;
+@property (nonatomic, readonly) BOOL left;
+@property (nonatomic, readonly) BOOL right;
+@property (nonatomic, readonly) BOOL up;
+@property (nonatomic, readonly) BOOL down;
+@property (nonatomic, readonly) float xVector;
+@property (nonatomic, readonly) float yVector;
+
+- (instancetype) init;
 
 - (void) pressButtonA;
 - (void) releaseButtonA;

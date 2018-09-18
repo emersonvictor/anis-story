@@ -43,6 +43,9 @@
 // MARK: - Keyboard events
 #if TARGET_OS_OSX
 - (void)keyDown:(NSEvent *)event {
+    
+//    NSLog(@"keyDown:'%@' keyCode: 0x%02X", event.characters, event.keyCode);
+    
     [self.delegate handleKeyDown:event];
 }
 
