@@ -16,6 +16,7 @@
         self.velocity = CGPointMake(0.0, 0.0);
     }
     
+    // MARK: Physics Body
     self.physicsBody =  [SKPhysicsBody bodyWithRectangleOfSize: self.frame.size];
     self.physicsBody.affectedByGravity = TRUE;
     self.physicsBody.allowsRotation = TRUE;
@@ -24,7 +25,7 @@
     self.physicsBody.mass = 70;
     self.physicsBody.dynamic = TRUE;
     
-    // Collision
+    // MARK: Collision
     self.physicsBody.categoryBitMask = 0b1;
     self.physicsBody.collisionBitMask = 0b11;
     
@@ -32,17 +33,10 @@
 }
 
 - (void)update: (NSTimeInterval)delta {
-//    CGPoint gravity = CGPointMake(0.0, -450.0);
-//    CGPoint gravityStep = CGPointMultiplyScalar(gravity, delta);
-    
     CGPoint forwardMove = CGPointMake(800.0, 0.0);
     CGPoint forwardMoveStep = CGPointMultiplyScalar(forwardMove, delta);
     
-    // Velocity
-//    self.velocity = CGPointAdd(self.velocity, gravityStep);
-//    self.velocity = CGPointMake(self.velocity.x * 0.9, self.velocity.y);
-    
-    // Jump force
+    // MARK: Jump force
     CGPoint jumpForce = CGPointMake(0.0, 310.0);
     float jumpCutoff = 150.0;
     
