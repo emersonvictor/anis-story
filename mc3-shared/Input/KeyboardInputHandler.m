@@ -90,7 +90,6 @@
         default:
             break;
     }
-    [self print];
 }
 
 - (void) handleKeyUp:(int)keycode {

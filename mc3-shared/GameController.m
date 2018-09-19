@@ -7,12 +7,20 @@
 //
 
 #import "GameController.h"
+#import "PlayerStates.h"
 
-@implementation GameController
+
+@implementation GameController {
+    NSTimeInterval _lastUpdateTime;
+}
 
 - (instancetype) init {
     self = [super init];
     self.inputScheme = [[InputScheme alloc] init];
+    self.playerNode = [[Player alloc] initWithImageNamed:@"koalio_stand"];
+    self.playerNode.position = CGPointMake(0, 100);
+    self.playerNode.zPosition = 15;
+    
     
     // MARK: Keyboard handler
     #if TARGET_OS_OSX
@@ -37,6 +45,33 @@
 #endif
 
 - (void)update:(NSTimeInterval)currentTime forScene:(SKScene *)scene {
+    
+    // Initialize _lastUpdateTime if it has not already been
+    if (_lastUpdateTime == 0) {
+        _lastUpdateTime = currentTime;
+    }
+    
+    // Calculate time since last update
+    CGFloat delta = currentTime - _lastUpdateTime;
+    [self processInput];
+    [self.playerNode updateWithDeltaTime:delta];
+    
+}
+
+- (void)sceneDidLoadFor:(BaseLevelScene *)scene {
+    
+    NSLog(@"CENA");
+    [scene addChild: self.playerNode];
+}
+
+- (void)processInput {
+    if (self.inputScheme.right) {
+        self.playerNode.forwardMarch = TRUE;
+        [self.playerNode.stateMachine enterState:WalkingState.class];
+    }
+    else {
+        [self.playerNode.stateMachine enterState:IdleState.class];
+    }
     
 }
 
