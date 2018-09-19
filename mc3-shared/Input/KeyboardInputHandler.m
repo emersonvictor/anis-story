@@ -90,7 +90,7 @@
         default:
             break;
     }
-    [self print];
+//    [self print];
     
 }
 

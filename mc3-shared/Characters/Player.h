@@ -7,15 +7,15 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
+#import "StatefulNode.h"
 
-@interface Player : SKSpriteNode
+@interface Player : StatefulNode
 
 @property (nonatomic, assign) BOOL forwardMarch;
 @property (nonatomic, assign) BOOL mightAsWellJump;
 @property (nonatomic, assign) BOOL onGround;
 @property (nonatomic, assign) CGPoint desiredPosition;
 @property (nonatomic, assign) CGPoint velocity;
-- (void)update:(NSTimeInterval)delta;
 - (CGRect)collisionBoundingBox;
 
 @end

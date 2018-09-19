@@ -9,10 +9,12 @@
 #import <GameplayKit/GameplayKit.h>
 #import <SpriteKit/SpriteKit.h>
 #import "LevelDelegate.h"
+#import "BaseLevelScene.h"
 #import "KeyboardInputHandler.h"
 #import "ControllerInputHandler.h"
 #import "InputScheme.h"
 #import <TargetConditionals.h>
+#import "Characters/Player.h"
 
 @interface GameController: NSObject <LevelDelegate>
 - (instancetype) init;
@@ -23,6 +25,9 @@
 #endif
 
 @property (nonatomic, strong) ControllerInputHandler *controllerInputHandler;
+@property (nonatomic, strong) Player *playerNode;
+
+- (void) processInput;
 
 
 @end

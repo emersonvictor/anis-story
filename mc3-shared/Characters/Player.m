@@ -8,6 +8,8 @@
 
 #import "Player.h"
 #import "SKTUtils.h"
+#import "GameState.h"
+#import "PlayerStates.h"
 
 @implementation Player
 
@@ -15,6 +17,15 @@
     if (self == [super initWithImageNamed:name]) {
         self.velocity = CGPointMake(0.0, 0.0);
     }
+    
+    // MARK: State Machine
+    GameState* walking = [[WalkingState alloc] initWithNode:self];
+    GameState* idle = [[IdleState alloc] initWithNode:self];
+    GameState* jumping = [[JumpingState alloc] initWithNode:self];
+    GameState* running = [[RunningState alloc] initWithNode:self];
+    
+    self.stateMachine = [[GKStateMachine alloc] initWithStates:  @[idle, walking, running, jumping]];
+    [self.stateMachine enterState:IdleState.class];
     
     // MARK: Physics Body
     self.physicsBody =  [SKPhysicsBody bodyWithRectangleOfSize: self.frame.size];
@@ -32,33 +43,8 @@
     return self;
 }
 
-- (void)update: (NSTimeInterval)delta {
-    CGPoint forwardMove = CGPointMake(800.0, 0.0);
-    CGPoint forwardMoveStep = CGPointMultiplyScalar(forwardMove, delta);
-    
-    // MARK: Jump force
-    CGPoint jumpForce = CGPointMake(0.0, 310.0);
-    float jumpCutoff = 150.0;
-    
-    if (self.mightAsWellJump && self.onGround) {
-        self.velocity = CGPointAdd(self.velocity, jumpForce);
-        [self runAction:[SKAction playSoundFileNamed:@"jump.wav" waitForCompletion:NO]];
-    } else if (!self.mightAsWellJump && self.velocity.y > jumpCutoff) {
-        self.velocity = CGPointMake(self.velocity.x, jumpCutoff);
-    }
-    
-    if (self.forwardMarch) {
-        self.velocity = CGPointAdd(self.velocity, forwardMoveStep);
-    }
-    
-    CGPoint minMovement = CGPointMake(0.0, -450);
-    CGPoint maxMovement = CGPointMake(120.0, 250.0);
-    self.velocity = CGPointMake(Clamp(self.velocity.x, minMovement.x, maxMovement.x), Clamp(self.velocity.y, minMovement.y, maxMovement.y));
-    
-    CGPoint velocityStep = CGPointMultiplyScalar(self.velocity, delta);
-    
-    self.desiredPosition = CGPointAdd(self.position, velocityStep);
-    self.position = CGPointMake(self.desiredPosition.x, self.desiredPosition.y);
+- (void)updateWithDeltaTime: (NSTimeInterval)delta {
+    [self.stateMachine updateWithDeltaTime: delta];
 }
 
 

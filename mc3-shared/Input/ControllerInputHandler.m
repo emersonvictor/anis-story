@@ -91,10 +91,12 @@
     
     GCControllerDirectionPad* dpad = nil;
     
+    GCControllerDirectionPad* leftThumbstick = nil;
+    
     
     
     if (gameController.extendedGamepad) {
-//        NSLog(@"Is an extended gamepad");
+        NSLog(@"Is an extended gamepad");
         
         buttonA = gameController.extendedGamepad.buttonA;
         buttonB = gameController.extendedGamepad.buttonB;
@@ -105,11 +107,14 @@
         rightShoulder = gameController.extendedGamepad.rightShoulder;
         
         dpad = gameController.extendedGamepad.dpad;
+        leftThumbstick = gameController.extendedGamepad.leftThumbstick;
+        
+        
         
         
     }
     else if (gameController.gamepad) {
-//        NSLog(@"Is an simple gamepad");
+        NSLog(@"Is an simple gamepad");
         
         buttonA = gameController.gamepad.buttonA;
         buttonB = gameController.gamepad.buttonB;
@@ -199,23 +204,10 @@
         [self print];
     };
     
-//    buttonA.valueChangedHandler = ^(GCControllerButtonInput *button, float value, BOOL pressed) {
-//        if (pressed) {
-//            [self.inputScheme pressButtonA];
-//        }
-//        else {
-//            [self.inputScheme releaseButtonA];
-//        }
-//    };
-//
-//    buttonA.valueChangedHandler = ^(GCControllerButtonInput *button, float value, BOOL pressed) {
-//        if (pressed) {
-//            [self.inputScheme pressButtonA];
-//        }
-//        else {
-//            [self.inputScheme releaseButtonA];
-//        }
-//    };
+    if (leftThumbstick != nil) {
+        leftThumbstick.valueChangedHandler = dpad.valueChangedHandler;
+    }
+
     
 }
 

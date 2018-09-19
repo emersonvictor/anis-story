@@ -9,7 +9,11 @@
 #import <Foundation/Foundation.h>
 #import <SpriteKit/SpriteKit.h>
 
+@class BaseLevelScene;
+
 @protocol LevelDelegate <SKSceneDelegate>
+
+- (void) sceneDidLoadFor:(BaseLevelScene *) scene;
 
 // MARK: - Keyboard methods
 #if TARGET_OS_OSX

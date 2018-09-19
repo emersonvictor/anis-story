@@ -18,6 +18,7 @@
 
 - (void)sceneDidLoad {
     self.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect: self.frame];
+    
 }
 
 - (void)update:(CFTimeInterval)currentTime {
