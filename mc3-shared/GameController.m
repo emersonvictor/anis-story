@@ -14,10 +14,10 @@
     self = [super init];
     self.inputScheme = [[InputScheme alloc] init];
     
-//    Keyboard handler
-#if TARGET_OS_OSX
+    // MARK: Keyboard handler
+    #if TARGET_OS_OSX
     self.keyboardInputHandler = [[KeyboardInputHandler alloc] initWith:self.inputScheme];
-#endif
+    #endif
     
     self.controllerInputHandler = [[ControllerInputHandler alloc] initWith:self.inputScheme];
     
@@ -25,7 +25,7 @@
 }
 
 
-//MARK: - Keyboard Logic
+// MARK: - Keyboard Logic
 #if TARGET_OS_OSX
 - (void)handleKeyDown:(NSEvent *)event {
     [self.keyboardInputHandler handleKeyDown:event.keyCode];
