@@ -5,8 +5,10 @@
 //  Created by André Carneiro on 18/09/18.
 //  Copyright © 2018 André Carneiro. All rights reserved.
 //
+
 #import "InputHandler.h"
 #import <GameController/GameController.h>
+
 @interface ControllerInputHandler : InputHandler
 
 - (void) startWatchingForControllers;

@@ -1,13 +1,14 @@
 //
 //  Player.m
-//  SuperKoalio
+//  mc3
 //
-//  Created by Jake Gundersen on 12/27/13.
-//  Copyright (c) 2013 Razeware, LLC. All rights reserved.
+//  Created by Gabriel D'Luca on 14/09/18.
+//  Copyright © 2018 Gabriel D'Luca. All rights reserved.
 //
 
 #import "Player.h"
 #import "SKTUtils.h"
+#import "Categories.h"
 
 @implementation Player
 
@@ -26,7 +27,7 @@
     self.physicsBody.dynamic = TRUE;
     
     // MARK: Collision
-    self.physicsBody.categoryBitMask = 0b1;
+    self.physicsBody.categoryBitMask = playerCategory;
     self.physicsBody.collisionBitMask = 0b11;
     
     return self;

@@ -11,14 +11,14 @@
 #import <CoreGraphics/CoreGraphics.h>
 #import "KeyboardInputHandler.h"
 
-
 @implementation GameLevel {
     NSTimeInterval _lastUpdateTime;
 }
 
-
 // MARK: - Initializers and rendering
 - (void)sceneDidLoad {
+    self.physicsWorld.contactDelegate = self;
+    
     // Physics body
     self.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect: self.frame];
     self.physicsBody.categoryBitMask = 0b11;

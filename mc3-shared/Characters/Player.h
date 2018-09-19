@@ -1,14 +1,14 @@
 //
 //  Player.h
-//  SuperKoalio
+//  mc3
 //
-//  Created by Jake Gundersen on 12/27/13.
-//  Copyright (c) 2013 Razeware, LLC. All rights reserved.
+//  Created by Gabriel D'Luca on 14/09/18.
+//  Copyright © 2018 Gabriel D'Luca. All rights reserved.
 //
 
 #import <SpriteKit/SpriteKit.h>
 
-@interface Player : SKSpriteNode
+@interface Player : SKSpriteNode <SKPhysicsContactDelegate>
 
 @property (nonatomic, assign) BOOL forwardMarch;
 @property (nonatomic, assign) BOOL mightAsWellJump;

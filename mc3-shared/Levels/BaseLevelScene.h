@@ -11,7 +11,7 @@
 #import "LevelDelegate.h"
 #import <TargetConditionals.h>
 
-@interface BaseLevelScene : SKScene
+@interface BaseLevelScene : SKScene <SKPhysicsContactDelegate>
 
 @property (nonatomic) NSMutableArray<GKEntity *> *entities;
 @property (nonatomic) NSMutableDictionary<NSString*, GKGraph *> *graphs;

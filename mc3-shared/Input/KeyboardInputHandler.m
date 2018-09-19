@@ -91,7 +91,6 @@
             break;
     }
     [self print];
-    
 }
 
 - (void) handleKeyUp:(int)keycode {
@@ -136,8 +135,6 @@
         default:
             break;
     }
-    
-    
 }
 
 @end

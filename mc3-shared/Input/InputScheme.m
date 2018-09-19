@@ -11,7 +11,6 @@
 
 @interface InputScheme ()
 
-
 @property (nonatomic, readwrite) BOOL buttonA;
 @property (nonatomic, readwrite) BOOL buttonB;
 @property (nonatomic, readwrite) BOOL buttonX;
