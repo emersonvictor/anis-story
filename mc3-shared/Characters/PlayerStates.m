@@ -36,8 +36,9 @@
 - (void) updateWithDeltaTime:(NSTimeInterval)seconds {
     NSLog(@"The player is WALKING");
     Player* player = (Player*) self.node;
-    
-    CGPoint forwardMove = CGPointMake(0.04, 0.0);
+
+    double theta = 3.6 * pow(10, 3);
+    CGPoint forwardMove = CGPointMake(theta, 0.0);
     CGPoint velocity = CGPointMake(0.0, 0.0);
     CGPoint forwardMoveStep = CGPointMultiplyScalar(forwardMove, seconds);
     
@@ -45,7 +46,8 @@
     
     CGPoint minMovement = CGPointMake(0.0, -450);
     CGPoint maxMovement = CGPointMake(120.0, 250.0);
-    velocity = CGPointMake(Clamp(velocity.x, minMovement.x, maxMovement.x), Clamp(velocity.y, minMovement.y, maxMovement.y));
+    velocity = CGPointMake(Clamp(velocity.x, minMovement.x, maxMovement.x),
+                           Clamp(velocity.y, minMovement.y, maxMovement.y));
     
     CGPoint velocityStep = CGPointMultiplyScalar(velocity, seconds);
     
