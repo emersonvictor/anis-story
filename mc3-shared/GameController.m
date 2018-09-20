@@ -32,7 +32,6 @@
     return self;
 }
 
-
 // MARK: - Keyboard Logic
 #if TARGET_OS_OSX
 - (void)handleKeyDown:(NSEvent *)event {
@@ -56,11 +55,10 @@
     [self processInput];
     [self.playerNode updateWithDeltaTime:delta];
     
+    _lastUpdateTime = currentTime;
 }
 
 - (void)sceneDidLoadFor:(BaseLevelScene *)scene {
-    
-    NSLog(@"CENA");
     [scene addChild: self.playerNode];
 }
 
@@ -68,13 +66,9 @@
     if (self.inputScheme.right) {
         self.playerNode.forwardMarch = TRUE;
         [self.playerNode.stateMachine enterState:WalkingState.class];
-    }
-    else {
+    } else {
         [self.playerNode.stateMachine enterState:IdleState.class];
     }
-    
 }
 
 @end
-
-

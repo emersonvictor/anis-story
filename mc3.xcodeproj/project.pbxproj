@@ -36,15 +36,12 @@
 		2CACAA6A214984CE0007B737 /* GameLevel.sks in Resources */ = {isa = PBXBuildFile; fileRef = 2CACA9CF2146E60C0007B737 /* GameLevel.sks */; };
 		2CACAA6B214984D40007B737 /* GameController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CACAA03214958200007B737 /* GameController.m */; };
 		2CACAA6C214984D80007B737 /* InputHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CACAA0621495BD40007B737 /* InputHandler.m */; };
-
-		A47710CE2152D14600B18F72 /* Categories.h in Sources */ = {isa = PBXBuildFile; fileRef = A47710CD2152D14600B18F72 /* Categories.h */; };
-		A47710CF2152D14900B18F72 /* Categories.h in Sources */ = {isa = PBXBuildFile; fileRef = A47710CD2152D14600B18F72 /* Categories.h */; };
-
 		2CE72C892152C30F008E534E /* StatefulNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE72C882152C30F008E534E /* StatefulNode.m */; };
 		2CE72C8A2152C30F008E534E /* StatefulNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE72C882152C30F008E534E /* StatefulNode.m */; };
 		2CE72C8D2152CA6E008E534E /* GameState.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE72C8C2152CA6E008E534E /* GameState.m */; };
 		2CE72C8E2152CA6E008E534E /* GameState.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE72C8C2152CA6E008E534E /* GameState.m */; };
-
+		A47710CE2152D14600B18F72 /* Categories.h in Sources */ = {isa = PBXBuildFile; fileRef = A47710CD2152D14600B18F72 /* Categories.h */; };
+		A47710CF2152D14900B18F72 /* Categories.h in Sources */ = {isa = PBXBuildFile; fileRef = A47710CD2152D14600B18F72 /* Categories.h */; };
 		D96661E6214AEFCE00784631 /* PlatformNode.m in Sources */ = {isa = PBXBuildFile; fileRef = D96661E5214AEFCE00784631 /* PlatformNode.m */; };
 		D96661E7214AEFCE00784631 /* PlatformNode.m in Sources */ = {isa = PBXBuildFile; fileRef = D96661E5214AEFCE00784631 /* PlatformNode.m */; };
 /* End PBXBuildFile section */
@@ -89,14 +86,11 @@
 		2CACAA6021497F4B0007B737 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2CACAA6121497F4C0007B737 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2CACAA6321497F4C0007B737 /* mc3_macos.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = mc3_macos.entitlements; sourceTree = "<group>"; };
-
-		A47710CD2152D14600B18F72 /* Categories.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Categories.h; sourceTree = "<group>"; };
-
 		2CE72C872152C30F008E534E /* StatefulNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StatefulNode.h; sourceTree = "<group>"; };
 		2CE72C882152C30F008E534E /* StatefulNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StatefulNode.m; sourceTree = "<group>"; };
 		2CE72C8B2152CA6E008E534E /* GameState.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameState.h; sourceTree = "<group>"; };
 		2CE72C8C2152CA6E008E534E /* GameState.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameState.m; sourceTree = "<group>"; };
-
+		A47710CD2152D14600B18F72 /* Categories.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Categories.h; sourceTree = "<group>"; };
 		D96661E4214AEFCE00784631 /* PlatformNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlatformNode.h; sourceTree = "<group>"; };
 		D96661E5214AEFCE00784631 /* PlatformNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlatformNode.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -124,12 +118,9 @@
 			children = (
 				2C01B6BF214D6DAD00175AA1 /* Player.h */,
 				2C01B6C0214D6DAD00175AA1 /* Player.m */,
-
 				A47710CD2152D14600B18F72 /* Categories.h */,
-
 				2C72334A21518ABC001B15C7 /* PlayerStates.h */,
 				2C72334B21518ABC001B15C7 /* PlayerStates.m */,
-
 			);
 			path = Characters;
 			sourceTree = "<group>";
@@ -541,9 +532,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-
-				DEVELOPMENT_TEAM = UDB57TC6RA;
-
+				DEVELOPMENT_TEAM = NEW6GCULKR;
 				INFOPLIST_FILE = "$(SRCROOT)/mc3-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -566,9 +555,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-
-				DEVELOPMENT_TEAM = UDB57TC6RA;
-
+				DEVELOPMENT_TEAM = NEW6GCULKR;
 				INFOPLIST_FILE = "$(SRCROOT)/mc3-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -591,9 +578,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-
-				DEVELOPMENT_TEAM = UDB57TC6RA;
-
+				DEVELOPMENT_TEAM = NEW6GCULKR;
 				INFOPLIST_FILE = "mc3-macos/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -618,9 +603,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-
-				DEVELOPMENT_TEAM = UDB57TC6RA;
-
+				DEVELOPMENT_TEAM = NEW6GCULKR;
 				INFOPLIST_FILE = "mc3-macos/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

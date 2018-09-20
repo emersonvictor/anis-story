@@ -55,7 +55,6 @@
 }
 #endif
 
-
 - (void)didBeginContact: (SKPhysicsContact *)contact {
     NSArray *bodies = @[@(contact.bodyA.categoryBitMask),
                         @(contact.bodyB.categoryBitMask)];
@@ -63,7 +62,8 @@
     // MARK: Totem detection
     if ([bodies containsObject:@(playerCategory)] && [bodies containsObject:@(totemCategory)]) {
         NSLog(@"Personagem chegou no totem e teile");
-
+        
+        
         // TODO: Verificar se o usuário apertou um botão
     }
 }
