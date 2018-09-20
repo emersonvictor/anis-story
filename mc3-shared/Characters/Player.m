@@ -14,8 +14,8 @@
 
 @implementation Player
 
-- (instancetype)initWithImageNamed: (NSString *)name {
-    if (self == [super initWithImageNamed:name]) {
+- (instancetype)initWithTexture:(SKTexture *)texture {
+    if (self == [super initWithTexture:texture]) {
         self.velocity = CGPointMake(0.0, 0.0);
     }
     

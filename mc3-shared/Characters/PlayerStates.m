@@ -18,6 +18,25 @@
     || stateClass == RunningState.class;
 }
 
+- (void)didEnterWithPreviousState:(GKState *)previousState {
+    Player* player = (Player*) self.node;
+    
+    [player removeAllActions];
+    
+    SKTextureAtlas *atlas = [SKTextureAtlas atlasNamed:@"PlayerIdle"];
+    NSMutableArray *textures = [NSMutableArray array];
+    
+    for (int i=0; i<=10; i++) {
+        NSString *filename = [NSString stringWithFormat: @"idle%i.png", i];
+        SKTexture* loadedTexture = [atlas textureNamed:filename];
+        [textures addObject:loadedTexture];
+    }
+    
+    SKAction* walkingAnimation = [SKAction animateWithTextures:textures timePerFrame:0.1];
+    
+    [player runAction:[SKAction repeatActionForever:walkingAnimation] withKey:@"walking"];
+}
+
 - (void) updateWithDeltaTime:(NSTimeInterval)seconds {
     NSLog(@"The player is IDLE");
     
@@ -31,6 +50,25 @@
     return stateClass == IdleState.class
     || stateClass == JumpingState.class
     || stateClass == RunningState.class;
+}
+
+- (void)didEnterWithPreviousState:(GKState *)previousState {
+    Player* player = (Player*) self.node;
+    
+    [player removeAllActions];
+    
+    SKTextureAtlas *atlas = [SKTextureAtlas atlasNamed:@"PlayerWalking"];
+    NSMutableArray *textures = [NSMutableArray array];
+    
+    for (int i=1; i<=7; i++) {
+        NSString *filename = [NSString stringWithFormat: @"adventurer%i.png", i];
+        SKTexture* loadedTexture = [atlas textureNamed:filename];
+        [textures addObject:loadedTexture];
+    }
+    
+    SKAction* walkingAnimation = [SKAction animateWithTextures:textures timePerFrame:0.1];
+    
+    [player runAction:[SKAction repeatActionForever:walkingAnimation] withKey:@"walking"];
 }
 
 - (void) updateWithDeltaTime:(NSTimeInterval)seconds {
