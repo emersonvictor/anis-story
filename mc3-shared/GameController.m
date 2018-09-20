@@ -17,7 +17,9 @@
 - (instancetype) init {
     self = [super init];
     self.inputScheme = [[InputScheme alloc] init];
-    self.playerNode = [[Player alloc] initWithImageNamed:@"koalio_stand"];
+    SKTextureAtlas* playerAtlas =  [SKTextureAtlas atlasNamed:@"PlayerWalking"];
+    SKTexture* initialTexture = [playerAtlas textureNamed:@"adventurer1.png"];
+    self.playerNode = [[Player alloc] initWithTexture: initialTexture];
     self.playerNode.position = CGPointMake(0, 100);
     self.playerNode.zPosition = 15;
     
