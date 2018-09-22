@@ -52,6 +52,10 @@
 		A4317ACB2156C9EB006E8B18 /* InteractiveObject.m in Sources */ = {isa = PBXBuildFile; fileRef = A4317AC92156C9EB006E8B18 /* InteractiveObject.m */; };
 		A4317ACE2156E242006E8B18 /* Match.m in Sources */ = {isa = PBXBuildFile; fileRef = A4317ACD2156E242006E8B18 /* Match.m */; };
 		A4317ACF2156E242006E8B18 /* Match.m in Sources */ = {isa = PBXBuildFile; fileRef = A4317ACD2156E242006E8B18 /* Match.m */; };
+		A4317AD22156E8EC006E8B18 /* Totem.m in Sources */ = {isa = PBXBuildFile; fileRef = A4317AD12156E8EC006E8B18 /* Totem.m */; };
+		A4317AD32156E8EC006E8B18 /* Totem.m in Sources */ = {isa = PBXBuildFile; fileRef = A4317AD12156E8EC006E8B18 /* Totem.m */; };
+		A4317AD82156EC5C006E8B18 /* WhaleTotem.m in Sources */ = {isa = PBXBuildFile; fileRef = A4317AD72156EC5C006E8B18 /* WhaleTotem.m */; };
+		A4317AD92156EC5C006E8B18 /* WhaleTotem.m in Sources */ = {isa = PBXBuildFile; fileRef = A4317AD72156EC5C006E8B18 /* WhaleTotem.m */; };
 		A47710CE2152D14600B18F72 /* Categories.h in Sources */ = {isa = PBXBuildFile; fileRef = A47710CD2152D14600B18F72 /* Categories.h */; };
 		A47710CF2152D14900B18F72 /* Categories.h in Sources */ = {isa = PBXBuildFile; fileRef = A47710CD2152D14600B18F72 /* Categories.h */; };
 		D96661E6214AEFCE00784631 /* PlatformNode.m in Sources */ = {isa = PBXBuildFile; fileRef = D96661E5214AEFCE00784631 /* PlatformNode.m */; };
@@ -110,6 +114,10 @@
 		A4317AC92156C9EB006E8B18 /* InteractiveObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InteractiveObject.m; sourceTree = "<group>"; };
 		A4317ACC2156E242006E8B18 /* Match.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Match.h; sourceTree = "<group>"; };
 		A4317ACD2156E242006E8B18 /* Match.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Match.m; sourceTree = "<group>"; };
+		A4317AD02156E8EC006E8B18 /* Totem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Totem.h; sourceTree = "<group>"; };
+		A4317AD12156E8EC006E8B18 /* Totem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Totem.m; sourceTree = "<group>"; };
+		A4317AD62156EC5C006E8B18 /* WhaleTotem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WhaleTotem.h; sourceTree = "<group>"; };
+		A4317AD72156EC5C006E8B18 /* WhaleTotem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WhaleTotem.m; sourceTree = "<group>"; };
 		A47710CD2152D14600B18F72 /* Categories.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Categories.h; sourceTree = "<group>"; };
 		D96661E4214AEFCE00784631 /* PlatformNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlatformNode.h; sourceTree = "<group>"; };
 		D96661E5214AEFCE00784631 /* PlatformNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlatformNode.m; sourceTree = "<group>"; };
@@ -264,15 +272,35 @@
 			path = Sprites;
 			sourceTree = "<group>";
 		};
+		A4317AD42156EBD3006E8B18 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				A4317ACC2156E242006E8B18 /* Match.h */,
+				A4317ACD2156E242006E8B18 /* Match.m */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		A4317AD52156EC10006E8B18 /* Totems */ = {
+			isa = PBXGroup;
+			children = (
+				A4317AD62156EC5C006E8B18 /* WhaleTotem.h */,
+				A4317AD72156EC5C006E8B18 /* WhaleTotem.m */,
+			);
+			path = Totems;
+			sourceTree = "<group>";
+		};
 		D96661CB214AD63900784631 /* Objects */ = {
 			isa = PBXGroup;
 			children = (
 				A4317AC82156C9EB006E8B18 /* InteractiveObject.h */,
 				A4317AC92156C9EB006E8B18 /* InteractiveObject.m */,
-				A4317ACC2156E242006E8B18 /* Match.h */,
-				A4317ACD2156E242006E8B18 /* Match.m */,
 				D96661E4214AEFCE00784631 /* PlatformNode.h */,
 				D96661E5214AEFCE00784631 /* PlatformNode.m */,
+				A4317AD02156E8EC006E8B18 /* Totem.h */,
+				A4317AD12156E8EC006E8B18 /* Totem.m */,
+				A4317AD42156EBD3006E8B18 /* General */,
+				A4317AD52156EC10006E8B18 /* Totems */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -408,10 +436,12 @@
 				2CACA9D52146E60C0007B737 /* GameLevel.m in Sources */,
 				A47710CE2152D14600B18F72 /* Categories.h in Sources */,
 				2CACAA0721495BD40007B737 /* InputHandler.m in Sources */,
+				A4317AD22156E8EC006E8B18 /* Totem.m in Sources */,
 				A4317ACA2156C9EB006E8B18 /* InteractiveObject.m in Sources */,
 				D96661E6214AEFCE00784631 /* PlatformNode.m in Sources */,
 				2CE72C892152C30F008E534E /* StatefulNode.m in Sources */,
 				2C01B71221511F7B00175AA1 /* ControllerInputHandler.m in Sources */,
+				A4317AD82156EC5C006E8B18 /* WhaleTotem.m in Sources */,
 				A4317ACE2156E242006E8B18 /* Match.m in Sources */,
 				2CACA9D82146E60C0007B737 /* GameViewController.m in Sources */,
 				2C01B6C3214D6DAD00175AA1 /* Player.m in Sources */,
@@ -432,6 +462,7 @@
 				2CACAA5A21497F4B0007B737 /* ViewController.m in Sources */,
 				2CE72C8A2152C30F008E534E /* StatefulNode.m in Sources */,
 				2CACAA6C214984D80007B737 /* InputHandler.m in Sources */,
+				A4317AD32156E8EC006E8B18 /* Totem.m in Sources */,
 				D96661E7214AEFCE00784631 /* PlatformNode.m in Sources */,
 				2CE72C8E2152CA6E008E534E /* GameState.m in Sources */,
 				2CACAA6221497F4C0007B737 /* main.m in Sources */,
@@ -445,6 +476,7 @@
 				2C63C0BD2149BD7E006A96EC /* BaseLevelScene.m in Sources */,
 				2C63C0C3214BFC0A006A96EC /* InputScheme.m in Sources */,
 				A4317ACF2156E242006E8B18 /* Match.m in Sources */,
+				A4317AD92156EC5C006E8B18 /* WhaleTotem.m in Sources */,
 				2CACAA6B214984D40007B737 /* GameController.m in Sources */,
 				2CACAA5021497F4B0007B737 /* AppDelegate.m in Sources */,
 			);

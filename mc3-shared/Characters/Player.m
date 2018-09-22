@@ -18,7 +18,7 @@
     if (self == [super initWithTexture:texture]) {
         self.velocity = CGPointMake(0.0, 0.0);
     }
-    
+    self.mask = Unmasked;
     self.sense = 1;
     
     // MARK: State Machine
