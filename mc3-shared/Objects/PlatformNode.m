@@ -7,6 +7,7 @@
 //
 
 #import "PlatformNode.h"
+#import "Categories.h"
 
 @implementation PlatformNode
 
@@ -21,7 +22,9 @@
     self.physicsBody.dynamic = FALSE;
     
     // Collision
-    self.physicsBody.categoryBitMask = 0b111;
+    self.physicsBody.categoryBitMask = PlatformCategory;
+    self.physicsBody.contactTestBitMask = PlayerCategory | NonInteractiveCategory | InteractiveCategory;
+    self.physicsBody.collisionBitMask = PlayerCategory | NonInteractiveCategory | InteractiveCategory;
 
     return self;
 }

@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "BaseLevelScene.h"
 #import "Categories.h"
+#import "InteractiveObject.h"
 
 @implementation BaseLevelScene {
     NSTimeInterval _lastUpdateTime;
@@ -59,12 +60,21 @@
     NSArray *bodies = @[@(contact.bodyA.categoryBitMask),
                         @(contact.bodyB.categoryBitMask)];
     
-    // MARK: Totem detection
-    if ([bodies containsObject:@(playerCategory)] && [bodies containsObject:@(totemCategory)]) {
-        NSLog(@"Personagem chegou no totem e teile");
-        
-        
-        // TODO: Verificar se o usuário apertou um botão
+    // MARK: Interactive Object detection
+    if ([bodies containsObject:@(PlayerCategory)] && [bodies containsObject:@(InteractiveCategory)]) {
+        NSLog(@"Personagem passou por um objeto interativo");
+    }
+}
+
+- (void)didEndContact: (SKPhysicsContact *)contact {
+    NSArray *bodies = @[contact.bodyA,
+                        contact.bodyB];
+
+    for (SKPhysicsBody *body in bodies) {
+        if (body.categoryBitMask == InteractiveCategory) {
+            InteractiveObject *object = (InteractiveObject*)body.node;
+            object.hasPerformedAction = FALSE;
+        }
     }
 }
 

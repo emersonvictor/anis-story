@@ -9,8 +9,8 @@
 #import <Foundation/Foundation.h>
 
 typedef enum : NSInteger {
-    sceneCategory = 0x1<<0,
-    playerCategory = 0x1<<1,
-    obstaclesCategory = 0x1<<2,
-    totemCategory = 0x1<<3
+    PlatformCategory = 0x1<<0,
+    PlayerCategory = 0x1<<1,
+    NonInteractiveCategory = 0x1<<2,
+    InteractiveCategory = 0x1<<3
 } Categories;

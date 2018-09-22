@@ -41,8 +41,9 @@
     self.physicsBody.restitution = 0.0;
     
     // MARK: Collision
-    self.physicsBody.categoryBitMask = playerCategory;
-    self.physicsBody.collisionBitMask = 0b11;
+    self.physicsBody.categoryBitMask = PlayerCategory;
+    self.physicsBody.contactTestBitMask = NonInteractiveCategory | InteractiveCategory;
+    self.physicsBody.collisionBitMask = PlatformCategory;
     
     return self;
 }

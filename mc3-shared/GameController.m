@@ -8,6 +8,8 @@
 
 #import "GameController.h"
 #import "PlayerStates.h"
+#import "Categories.h"
+#import "InteractiveObject.h"
 
 
 @implementation GameController {
@@ -101,7 +103,14 @@
     }
     
     if (self.inputScheme.buttonB) {
-        NSLog(@"B pressed");
+        for (SKPhysicsBody *body in [self.playerNode.physicsBody allContactedBodies]) {
+            if (body.categoryBitMask == InteractiveCategory) {
+                InteractiveObject *object = (InteractiveObject*)body.node;
+                if (!(object.hasPerformedAction)) {
+                    [object runInteraction:self.playerNode];
+                }
+            }
+        }
     }
 }
 
