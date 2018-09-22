@@ -12,15 +12,19 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@interface MovingState : GameState
+
+@end
+
 @interface IdleState : GameState
 
 @end
 
-@interface WalkingState : GameState
+@interface WalkingState : MovingState
 
 @end
 
-@interface JumpingState : GameState
+@interface JumpingState : MovingState
 
 @end
 

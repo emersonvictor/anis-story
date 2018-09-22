@@ -11,11 +11,14 @@
 
 @interface Player : StatefulNode <SKPhysicsContactDelegate>
 
-@property (nonatomic, assign) BOOL forwardMarch;
-@property (nonatomic, assign) BOOL mightAsWellJump;
-@property (nonatomic, assign) BOOL onGround;
 @property (nonatomic, assign) CGPoint desiredPosition;
 @property (nonatomic, assign) CGPoint velocity;
+@property (nonatomic) int sense;
+
+- (void) accelerate:(NSTimeInterval)seconds;
+- (void) deaccelerate:(NSTimeInterval)seconds;
+- (void) moveUp:(NSTimeInterval)seconds;
+- (void) fall:(NSTimeInterval)seconds;
 - (CGRect)collisionBoundingBox;
 
 @end

@@ -27,7 +27,7 @@
 @property (nonatomic, strong) ControllerInputHandler *controllerInputHandler;
 @property (nonatomic, strong) Player *playerNode;
 
-- (void) processInput;
+- (void) processInput:(NSTimeInterval) delta;
 
 
 @end
