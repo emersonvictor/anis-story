@@ -9,10 +9,16 @@
 #import <SpriteKit/SpriteKit.h>
 #import "StatefulNode.h"
 
+typedef enum : NSInteger {
+    Unmasked = 0x1<<0,
+    WhaleMask = 0x1<<1
+} Masks;
+
 @interface Player : StatefulNode <SKPhysicsContactDelegate>
 
 @property (nonatomic, assign) CGPoint desiredPosition;
 @property (nonatomic, assign) CGPoint velocity;
+@property (nonatomic) NSInteger mask;
 @property (nonatomic) int sense;
 
 - (void) accelerate:(NSTimeInterval)seconds;
