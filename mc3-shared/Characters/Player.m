@@ -26,8 +26,9 @@
     GameState* idle = [[IdleState alloc] initWithNode:self];
     GameState* jumping = [[JumpingState alloc] initWithNode:self];
     GameState* running = [[RunningState alloc] initWithNode:self];
+    GameState* falling = [[FallingState alloc] initWithNode:self];
     
-    self.stateMachine = [[GKStateMachine alloc] initWithStates:  @[idle, walking, running, jumping]];
+    self.stateMachine = [[GKStateMachine alloc] initWithStates:  @[idle, walking, running, jumping, falling]];
     [self.stateMachine enterState:IdleState.class];
     
     // MARK: Physics Body
@@ -76,24 +77,41 @@
 //    Player* player = (Player*) self.node;
     
     // MARK: Jump force
-    CGPoint jumpForce = CGPointMake(0.0, 600.0);
-    float jumpCutoff = 800.0;
+//    CGPoint jumpForce = CGPointMake(0.0, 600.0);
+//    float jumpCutoff = 800.0;
     
-    self.velocity = CGPointAdd(self.velocity, jumpForce);
-    if (self.velocity.y > jumpCutoff) {
-        self.velocity = CGPointMake(self.velocity.x, jumpCutoff);
-    }
-    
-    CGPoint minVelocity = CGPointMake(0.0, -450);
-    CGPoint maxVelocity = CGPointMake(120.0, 500.0);
-    
-    if (self.sense == -1) {
+//    self.velocity = CGPointAdd(self.velocity, jumpForce);
+//    if (self.velocity.y > jumpCutoff) {
+//        self.velocity = CGPointMake(self.velocity.x, jumpCutoff);
+//    }
+    if (self.physicsBody.velocity.dy > 200) {
         
-        minVelocity = CGPointMake(-120.0, -450);
-        maxVelocity = CGPointMake(0.0, 500.0);
+        
+        if ([self.stateMachine canEnterState:FallingState.class]) {
+            NSLog(@"PODE ENTRAR EM FALLING");
+            [self.stateMachine enterState:FallingState.class];
+        }
+        else {
+            NSLog(@"NÃO PODE ENTRAR EM FALLING");
+        }
+        
     }
-    self.velocity = CGPointMake(self.velocity.x,
-                                  Clamp(self.velocity.y, minVelocity.y, maxVelocity.y));
+    else {
+        NSLog(@"NON LIMITE");
+        self.physicsBody.velocity = CGVectorMake(self.physicsBody.velocity.dx, (self.physicsBody.velocity.dy+100));
+        CGPoint minVelocity = CGPointMake(0.0, -450);
+        CGPoint maxVelocity = CGPointMake(120.0, 500.0);
+        
+        if (self.sense == -1) {
+            
+            minVelocity = CGPointMake(-120.0, -450);
+            maxVelocity = CGPointMake(0.0, 500.0);
+        }
+    }
+    
+    
+//    self.velocity = CGPointMake(self.velocity.x,
+//                                  Clamp(self.velocity.y, minVelocity.y, maxVelocity.y));
     //    NSLog(@"VELOCITY WHILE JUMPING:\nX - %f\nY - %f", player.velocity.x, player.velocity.y );
     //    NSLog(@"SENSE:\nX - %i", player.sense);
     
