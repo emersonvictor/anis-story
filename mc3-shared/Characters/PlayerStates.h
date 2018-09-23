@@ -28,6 +28,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
+@interface JumpMomentumState : MovingState
+
+@end
+
 @interface FallingState : MovingState
 
 @end
