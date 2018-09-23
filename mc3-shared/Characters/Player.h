@@ -18,6 +18,7 @@ typedef enum : NSInteger {
 
 @property (nonatomic, assign) CGPoint desiredPosition;
 @property (nonatomic, assign) CGPoint velocity;
+@property (nonatomic, assign) double speedForce;
 @property (nonatomic) NSInteger mask;
 @property (nonatomic) int sense;
 
@@ -26,5 +27,6 @@ typedef enum : NSInteger {
 - (void) moveUp:(NSTimeInterval)seconds;
 - (void) fall:(NSTimeInterval)seconds;
 - (CGRect)collisionBoundingBox;
+- (void) useMaskEffect;
 
 @end

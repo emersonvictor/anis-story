@@ -16,8 +16,18 @@
 }
 
 - (void) runInteraction:(Player*)withPlayer {
-    [super runInteraction:withPlayer];
-    withPlayer.mask = WhaleMask;
+    if (withPlayer.mask != WhaleMask) {
+        [super runInteraction:withPlayer];
+        
+        NSLog(@"INTERAÇÃO COM O TOTEM DA BALEIA");
+        
+        // MARK: - Modifying player attributes
+        withPlayer.mask = WhaleMask;
+        withPlayer.physicsBody.mass *= 10;
+        withPlayer.speedForce /= 50.0;
+        
+        // TO DO: Change player's sprite image
+    }
 }
 
 @end

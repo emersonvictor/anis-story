@@ -73,7 +73,6 @@
         [self.playerNode.stateMachine enterState:WalkingState.class];
     }
     
-    
     if (self.inputScheme.left) {
         self.playerNode.sense = -1;
         [self.playerNode accelerate:delta];
@@ -105,6 +104,10 @@
                 }
             }
         }
+    }
+    
+    if (self.inputScheme.buttonX) {
+        [self.playerNode useMaskEffect];
     }
     
     NSLog(@"%@", self.playerNode.stateMachine.currentState);

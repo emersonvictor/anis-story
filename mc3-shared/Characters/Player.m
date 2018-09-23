@@ -20,6 +20,7 @@
     }
     self.mask = Unmasked;
     self.sense = 1;
+    self.speedForce = 3600.0;
     
     // MARK: State Machine
     GameState* walking = [[WalkingState alloc] initWithNode:self];
@@ -51,8 +52,7 @@
 }
 
 - (void) accelerate:(NSTimeInterval)seconds {
-    double theta = 3600.0;
-    CGPoint forwardMove = CGPointMake(theta*self.sense, 0.0);
+    CGPoint forwardMove = CGPointMake(self.speedForce*self.sense, 0.0);
     CGPoint forwardMoveStep = CGPointMultiplyScalar(forwardMove, seconds);
     
     self.velocity = CGPointAdd(self.velocity, forwardMoveStep);
@@ -108,5 +108,12 @@
     return CGRectOffset(boundingBox, diff.x, diff.y);
 }
 
+- (void) useMaskEffect {
+    if (self.mask == Unmasked) {
+        return;
+    } else if (self.mask == WhaleMask) {
+        NSLog(@"Whale effect!");
+    }
+}
 
 @end
