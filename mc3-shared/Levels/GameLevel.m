@@ -17,6 +17,7 @@
 // MARK: - Initializers and rendering
 - (void)sceneDidLoad {
     self.physicsWorld.contactDelegate = self;
+    self.physicsWorld.gravity = CGVectorMake(0.0, -5.0);
     
     // Physics body
     self.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect: self.frame];
@@ -45,49 +46,5 @@
     }
     _lastUpdateTime = currentTime;
 }
-
-// MARK: - Siri Remote interactions
-#if TARGET_OS_TV
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    for (UITouch *touch in touches) {
-        CGPoint touchLocation = [touch locationInNode:self];
-        if (touchLocation.x > self.size.width / 2.0) {
-            self.player.mightAsWellJump = TRUE;
-        } else {
-            self.player.forwardMarch = TRUE;
-        }
-    }
-}
-
-- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
-    for (UITouch *touch in touches) {
-        float halfWidth = self.size.width / 2.0;
-        CGPoint touchLocation = [touch locationInNode:self];
-        
-        // Get previous touch and convert it to node space
-        CGPoint previousTouchLocation = [touch previousLocationInNode:self];
-        
-        if (touchLocation.x > halfWidth && previousTouchLocation.x <= halfWidth) {
-            self.player.forwardMarch = FALSE;
-            self.player.mightAsWellJump = TRUE;
-        } else if (previousTouchLocation.x > halfWidth && touchLocation.x <= halfWidth) {
-            self.player.forwardMarch = TRUE;
-            self.player.mightAsWellJump = FALSE;
-        }
-    }
-}
-
-- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
-    for (UITouch *touch in touches) {
-        CGPoint touchLocation = [touch locationInNode:self];
-        if (touchLocation.x < self.size.width / 2.0) {
-            self.player.forwardMarch = FALSE;
-        } else {
-            self.player.mightAsWellJump = FALSE;
-        }
-        self.player.velocity = CGPointMake(0.0, 0.0);
-    }
-}
-#endif
 
 @end

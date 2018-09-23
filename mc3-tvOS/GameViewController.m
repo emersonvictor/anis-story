@@ -14,6 +14,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.controllerUserInteractionEnabled = FALSE;
+    
     // Load 'GameScene.sks' as a GKScene. This provides gameplay related content
     // including entities and graphs.
     GKScene *scene = [GKScene sceneWithFileNamed:@"GameLevel"];

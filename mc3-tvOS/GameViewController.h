@@ -11,6 +11,6 @@
 #import <GameplayKit/GameplayKit.h>
 #import "GameController.h"
 
-@interface GameViewController : UIViewController
+@interface GameViewController : GCEventViewController
 @property (nonatomic) GameController *ctrl;
 @end

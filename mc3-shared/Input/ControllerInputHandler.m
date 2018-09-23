@@ -80,6 +80,9 @@
 
 - (void) setupGameController: (GCController*) gameController {
     
+    gameController.controllerPausedHandler = ^(GCController *controller) {
+        NSLog(@"PAUSED THE FREAKING GAME\n\n\n\n");
+    };
     
     GCControllerButtonInput* buttonA = nil;
     GCControllerButtonInput* buttonB = nil;
@@ -201,7 +204,7 @@
             [self.inputScheme releaseButtonDown];
         }
         
-        [self print];
+//        [self print];
     };
     
     if (leftThumbstick != nil) {

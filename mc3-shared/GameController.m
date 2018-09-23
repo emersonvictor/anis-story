@@ -8,6 +8,8 @@
 
 #import "GameController.h"
 #import "PlayerStates.h"
+#import "Categories.h"
+#import "InteractiveObject.h"
 
 
 @implementation GameController {
@@ -54,7 +56,7 @@
     
     // Calculate time since last update
     CGFloat delta = currentTime - _lastUpdateTime;
-    [self processInput];
+    [self processInput: delta];
     [self.playerNode updateWithDeltaTime:delta];
     
     _lastUpdateTime = currentTime;
@@ -64,12 +66,51 @@
     [scene addChild: self.playerNode];
 }
 
-- (void)processInput {
+- (void)processInput:(NSTimeInterval) delta{
     if (self.inputScheme.right) {
-        self.playerNode.forwardMarch = TRUE;
+        self.playerNode.sense = 1;
+        [self.playerNode accelerate:delta];
         [self.playerNode.stateMachine enterState:WalkingState.class];
-    } else {
+    }
+    
+    
+    if (self.inputScheme.left) {
+        self.playerNode.sense = -1;
+        [self.playerNode accelerate:delta];
+        [self.playerNode.stateMachine enterState:WalkingState.class];
+    }
+    if (!self.inputScheme.left && !self.inputScheme.right) {
+        [self.playerNode deaccelerate:delta];
+    }
+    
+    if (self.inputScheme.buttonA) {
+        [self.playerNode moveUp:delta];
+        [self.playerNode.stateMachine enterState:JumpingState.class];
+    }
+    else {
+        if (self.playerNode.stateMachine.currentState.class == JumpingState.class) {
+            NSLog(@"DEVE CAIR");
+//            [self.playerNode fall:delta];
+        }
+        else {
+            
+        }
+        
+    }
+    
+    if (!self.inputScheme.right && !self.inputScheme.buttonA && !self.inputScheme.left) {
         [self.playerNode.stateMachine enterState:IdleState.class];
+    }
+    
+    if (self.inputScheme.buttonB) {
+        for (SKPhysicsBody *body in [self.playerNode.physicsBody allContactedBodies]) {
+            if (body.categoryBitMask == InteractiveCategory) {
+                InteractiveObject *object = (InteractiveObject*)body.node;
+                if (!(object.hasPerformedAction)) {
+                    [object runInteraction:self.playerNode];
+                }
+            }
+        }
     }
 }
 
