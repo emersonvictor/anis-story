@@ -83,22 +83,16 @@
         [self.playerNode deaccelerate:delta];
     }
     
-    if (self.inputScheme.buttonA) {
+    if (self.inputScheme.buttonA && (self.playerNode.stateMachine.currentState.class==IdleState.class || self.playerNode.stateMachine.currentState.class==WalkingState.class)) {
         [self.playerNode moveUp:delta];
         [self.playerNode.stateMachine enterState:JumpingState.class];
     }
     else {
-        if (self.playerNode.stateMachine.currentState.class == JumpingState.class) {
-            NSLog(@"DEVE CAIR");
-//            [self.playerNode fall:delta];
-        }
-        else {
-            
-        }
-        
+//        NSLog(@"%@", self.playerNode.stateMachine.currentState.className);
+//        [self.playerNode.stateMachine enterState:FallingState.class];
     }
     
-    if (!self.inputScheme.right && !self.inputScheme.buttonA && !self.inputScheme.left) {
+    if (!self.inputScheme.right && !self.inputScheme.buttonA && !self.inputScheme.left && self.playerNode.stateMachine.currentState.class == WalkingState.class) {
         [self.playerNode.stateMachine enterState:IdleState.class];
     }
     
@@ -112,6 +106,8 @@
             }
         }
     }
+    
+    NSLog(@"%@", self.playerNode.stateMachine.currentState);
 }
 
 @end

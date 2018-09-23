@@ -38,7 +38,10 @@
 - (void) foundController {
     NSLog(@"New controller connected");
     
-    [self setupGameController:[[GCController controllers] firstObject]];
+    for ( GCController *controller in [GCController controllers]) {
+            [self setupGameController:controller];
+    }
+    
 //    [NSNotificationCenter.defaultCenter removeObserver:self name:GCControllerDidConnectNotification object:nil];
     
     [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(controllerDisconnected) name:GCControllerDidDisconnectNotification object:nil];
@@ -128,6 +131,11 @@
         rightShoulder = gameController.gamepad.rightShoulder;
         
         dpad = gameController.gamepad.dpad;
+    }
+    else if (gameController.microGamepad) {
+        buttonA = gameController.microGamepad.buttonA;
+        buttonX = gameController.microGamepad.buttonX;
+        dpad = gameController.microGamepad.dpad;
     }
     
     buttonA.valueChangedHandler = ^(GCControllerButtonInput *button, float value, BOOL pressed) {
