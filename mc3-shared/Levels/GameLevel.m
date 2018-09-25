@@ -14,7 +14,7 @@
 
 // MARK: - Initializers and rendering
 - (void)sceneDidLoad {
-    self.size = CGSizeMake(self.frame.size.width*5, self.frame.size.height*2);
+
     self.physicsWorld.contactDelegate = self;
     self.physicsWorld.gravity = CGVectorMake(0.0, -5.0);
     

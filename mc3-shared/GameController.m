@@ -22,8 +22,6 @@
     SKTextureAtlas* playerAtlas =  [SKTextureAtlas atlasNamed:@"PlayerWalking"];
     SKTexture* initialTexture = [playerAtlas textureNamed:@"adventurer1.png"];
     self.playerNode = [[Player alloc] initWithTexture: initialTexture];
-    self.playerNode.position = CGPointMake(0, 100);
-    self.playerNode.zPosition = 15;
     
     self.camera = [[SKCameraNode alloc] init];
     [self.camera setScale:0.5];
@@ -70,6 +68,10 @@
     scene.listener = self.playerNode;
     scene.camera = self.camera;
     scene.camera.position = CGPointMake(0, 0);
+    SKSpriteNode* reference = (SKSpriteNode*)[scene childNodeWithName:@"player"];
+    self.playerNode.position = reference.position;
+    self.playerNode.size = reference.size;
+    self.playerNode.zPosition = 15;
     [scene addChild: self.playerNode];
 }
 
