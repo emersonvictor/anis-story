@@ -26,8 +26,10 @@
 
 @property (nonatomic, strong) ControllerInputHandler *controllerInputHandler;
 @property (nonatomic, strong) Player *playerNode;
+@property (nonatomic, strong) SKCameraNode *camera;
 
 - (void) processInput:(NSTimeInterval) delta;
+- (void) updateCameraPosition:(NSTimeInterval) delta;
 
 
 @end
