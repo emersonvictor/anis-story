@@ -68,6 +68,10 @@
 		A4BDF303215978E400A76CC2 /* raindrops.m4a in Resources */ = {isa = PBXBuildFile; fileRef = A4BDF301215978E400A76CC2 /* raindrops.m4a */; };
 		A4D55A0A215AC46800BB5FB4 /* whispers.m4a in Resources */ = {isa = PBXBuildFile; fileRef = A4D55A09215AC46800BB5FB4 /* whispers.m4a */; };
 		A4D55A0B215AC46800BB5FB4 /* whispers.m4a in Resources */ = {isa = PBXBuildFile; fileRef = A4D55A09215AC46800BB5FB4 /* whispers.m4a */; };
+		D95F27CE215AD57900B29ACD /* scene-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = D95F27CD215AD57800B29ACD /* scene-bg.png */; };
+		D95F27CF215AD57900B29ACD /* scene-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = D95F27CD215AD57800B29ACD /* scene-bg.png */; };
+		D95F27D5215AD8B200B29ACD /* bed.png in Resources */ = {isa = PBXBuildFile; fileRef = D95F27D4215AD8B200B29ACD /* bed.png */; };
+		D95F27D6215AD8B200B29ACD /* bed.png in Resources */ = {isa = PBXBuildFile; fileRef = D95F27D4215AD8B200B29ACD /* bed.png */; };
 		D96661E6214AEFCE00784631 /* PlatformNode.m in Sources */ = {isa = PBXBuildFile; fileRef = D96661E5214AEFCE00784631 /* PlatformNode.m */; };
 		D96661E7214AEFCE00784631 /* PlatformNode.m in Sources */ = {isa = PBXBuildFile; fileRef = D96661E5214AEFCE00784631 /* PlatformNode.m */; };
 /* End PBXBuildFile section */
@@ -134,6 +138,8 @@
 		A4AFBF6C21593232000CA023 /* strikingMatch.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = strikingMatch.mp3; sourceTree = "<group>"; };
 		A4BDF301215978E400A76CC2 /* raindrops.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = raindrops.m4a; sourceTree = "<group>"; };
 		A4D55A09215AC46800BB5FB4 /* whispers.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = whispers.m4a; sourceTree = "<group>"; };
+		D95F27CD215AD57800B29ACD /* scene-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "scene-bg.png"; sourceTree = "<group>"; };
+		D95F27D4215AD8B200B29ACD /* bed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bed.png; sourceTree = "<group>"; };
 		D96661E4214AEFCE00784631 /* PlatformNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlatformNode.h; sourceTree = "<group>"; };
 		D96661E5214AEFCE00784631 /* PlatformNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlatformNode.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -272,6 +278,8 @@
 		2CE3781E2153136800C6F715 /* Graphics */ = {
 			isa = PBXGroup;
 			children = (
+				D95F27D0215AD88C00B29ACD /* Objects */,
+				D95F27CD215AD57800B29ACD /* scene-bg.png */,
 				2CE3781F215317E000C6F715 /* Sprites */,
 			);
 			path = Graphics;
@@ -340,6 +348,14 @@
 				A4D55A09215AC46800BB5FB4 /* whispers.m4a */,
 			);
 			path = Background;
+			sourceTree = "<group>";
+		};
+		D95F27D0215AD88C00B29ACD /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				D95F27D4215AD8B200B29ACD /* bed.png */,
+			);
+			path = Objects;
 			sourceTree = "<group>";
 		};
 		D96661CB214AD63900784631 /* Objects */ = {
@@ -457,6 +473,7 @@
 				2CE378212153183500C6F715 /* PlayerWalking.atlas in Resources */,
 				A4D55A0A215AC46800BB5FB4 /* whispers.m4a in Resources */,
 				2CE378242153D43000C6F715 /* PlayerIdle.atlas in Resources */,
+				D95F27CE215AD57900B29ACD /* scene-bg.png in Resources */,
 				2CAF8CCB215410F10088A13B /* PlayerLanding.atlas in Resources */,
 				A4BDF302215978E400A76CC2 /* raindrops.m4a in Resources */,
 				A4AFBF642159239F000CA023 /* walking.mp3 in Resources */,
@@ -464,6 +481,7 @@
 				A4AFBF6D21593232000CA023 /* strikingMatch.mp3 in Resources */,
 				2CAF8CC9215410F10088A13B /* PlayerJumping.atlas in Resources */,
 				2C01B6C1214D6DAD00175AA1 /* Assets.xcassets in Resources */,
+				D95F27D5215AD8B200B29ACD /* bed.png in Resources */,
 				A4A6FCA52157FDC40043FECF /* whaleMoan.wav in Resources */,
 				2CACA9D02146E60C0007B737 /* GameLevel.sks in Resources */,
 			);
@@ -476,6 +494,7 @@
 				2CE378222153183500C6F715 /* PlayerWalking.atlas in Resources */,
 				A4D55A0B215AC46800BB5FB4 /* whispers.m4a in Resources */,
 				2CE378252153D43000C6F715 /* PlayerIdle.atlas in Resources */,
+				D95F27CF215AD57900B29ACD /* scene-bg.png in Resources */,
 				2CAF8CCC215410F10088A13B /* PlayerLanding.atlas in Resources */,
 				A4BDF303215978E400A76CC2 /* raindrops.m4a in Resources */,
 				A4AFBF652159239F000CA023 /* walking.mp3 in Resources */,
@@ -483,6 +502,7 @@
 				A4AFBF6E21593232000CA023 /* strikingMatch.mp3 in Resources */,
 				2CAF8CCA215410F10088A13B /* PlayerJumping.atlas in Resources */,
 				2C01B6C2214D6DAD00175AA1 /* Assets.xcassets in Resources */,
+				D95F27D6215AD8B200B29ACD /* bed.png in Resources */,
 				A4A6FCA62157FDC40043FECF /* whaleMoan.wav in Resources */,
 				2CACAA5F21497F4B0007B737 /* Main.storyboard in Resources */,
 			);
@@ -682,7 +702,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UDB57TC6RA;
+				DEVELOPMENT_TEAM = XP4ML92KUD;
 				INFOPLIST_FILE = "$(SRCROOT)/mc3-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -705,7 +725,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UDB57TC6RA;
+				DEVELOPMENT_TEAM = XP4ML92KUD;
 				INFOPLIST_FILE = "$(SRCROOT)/mc3-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -728,7 +748,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = UDB57TC6RA;
+				DEVELOPMENT_TEAM = XP4ML92KUD;
 				INFOPLIST_FILE = "mc3-macos/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -753,7 +773,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = UDB57TC6RA;
+				DEVELOPMENT_TEAM = XP4ML92KUD;
 				INFOPLIST_FILE = "mc3-macos/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
