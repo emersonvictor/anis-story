@@ -7,8 +7,6 @@
 //
 
 #import "GameLevel.h"
-#import <CoreGraphics/CoreGraphics.h>
-#import "KeyboardInputHandler.h"
 
 @implementation GameLevel {
     NSTimeInterval _lastUpdateTime;
@@ -19,14 +17,20 @@
     self.physicsWorld.contactDelegate = self;
     self.physicsWorld.gravity = CGVectorMake(0.0, -5.0);
     
-    // Physics body
+    // MARK: Physics body
     self.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect: self.frame];
     self.physicsBody.categoryBitMask = 0b11;
     self.physicsBody.collisionBitMask = 0b1;
-    }
+    
+    // MARK: Raindrops audio near the window
+    self.audioNode = [[SKAudioNode alloc] initWithFileNamed:@"raindrops.m4a"];
+    [self.audioNode setPosition:CGPointMake(396.0, 104.0)];
+    [self.audioNode runAction:[SKAction changeVolumeTo:0.02 duration:0]];
+    [self.audioNode setPositional:TRUE];
+    [self addChild:self.audioNode];
+}
 
 - (void)didMoveToView:(SKView *)view {
-    NSLog(@"CARREGOU");
     [self.delegate sceneDidLoadFor:self];
 }
 

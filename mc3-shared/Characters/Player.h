@@ -6,6 +6,7 @@
 //  Copyright © 2018 Gabriel D'Luca. All rights reserved.
 //
 
+#import <AVFoundation/AVFoundation.h>
 #import <SpriteKit/SpriteKit.h>
 #import "StatefulNode.h"
 
@@ -16,6 +17,7 @@ typedef enum : NSInteger {
 
 @interface Player : StatefulNode <SKPhysicsContactDelegate>
 
+@property(nonatomic, strong) AVAudioPlayer *audioPlayer;
 @property (nonatomic, assign) CGPoint desiredPosition;
 @property (nonatomic, assign) CGPoint velocity;
 @property (nonatomic, assign) double speedForce;

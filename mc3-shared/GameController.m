@@ -63,6 +63,7 @@
 }
 
 - (void)sceneDidLoadFor:(BaseLevelScene *)scene {
+    scene.listener = self.playerNode;
     [scene addChild: self.playerNode];
 }
 

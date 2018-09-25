@@ -58,6 +58,16 @@
 		A4317AD92156EC5C006E8B18 /* WhaleTotem.m in Sources */ = {isa = PBXBuildFile; fileRef = A4317AD72156EC5C006E8B18 /* WhaleTotem.m */; };
 		A47710CE2152D14600B18F72 /* Categories.h in Sources */ = {isa = PBXBuildFile; fileRef = A47710CD2152D14600B18F72 /* Categories.h */; };
 		A47710CF2152D14900B18F72 /* Categories.h in Sources */ = {isa = PBXBuildFile; fileRef = A47710CD2152D14600B18F72 /* Categories.h */; };
+		A4A6FCA52157FDC40043FECF /* whaleMoan.wav in Resources */ = {isa = PBXBuildFile; fileRef = A4A6FCA42157FDC40043FECF /* whaleMoan.wav */; };
+		A4A6FCA62157FDC40043FECF /* whaleMoan.wav in Resources */ = {isa = PBXBuildFile; fileRef = A4A6FCA42157FDC40043FECF /* whaleMoan.wav */; };
+		A4AFBF642159239F000CA023 /* walking.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A4AFBF632159239F000CA023 /* walking.mp3 */; };
+		A4AFBF652159239F000CA023 /* walking.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A4AFBF632159239F000CA023 /* walking.mp3 */; };
+		A4AFBF6D21593232000CA023 /* strikingMatch.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A4AFBF6C21593232000CA023 /* strikingMatch.mp3 */; };
+		A4AFBF6E21593232000CA023 /* strikingMatch.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A4AFBF6C21593232000CA023 /* strikingMatch.mp3 */; };
+		A4BDF302215978E400A76CC2 /* raindrops.m4a in Resources */ = {isa = PBXBuildFile; fileRef = A4BDF301215978E400A76CC2 /* raindrops.m4a */; };
+		A4BDF303215978E400A76CC2 /* raindrops.m4a in Resources */ = {isa = PBXBuildFile; fileRef = A4BDF301215978E400A76CC2 /* raindrops.m4a */; };
+		A4D55A0A215AC46800BB5FB4 /* whispers.m4a in Resources */ = {isa = PBXBuildFile; fileRef = A4D55A09215AC46800BB5FB4 /* whispers.m4a */; };
+		A4D55A0B215AC46800BB5FB4 /* whispers.m4a in Resources */ = {isa = PBXBuildFile; fileRef = A4D55A09215AC46800BB5FB4 /* whispers.m4a */; };
 		D96661E6214AEFCE00784631 /* PlatformNode.m in Sources */ = {isa = PBXBuildFile; fileRef = D96661E5214AEFCE00784631 /* PlatformNode.m */; };
 		D96661E7214AEFCE00784631 /* PlatformNode.m in Sources */ = {isa = PBXBuildFile; fileRef = D96661E5214AEFCE00784631 /* PlatformNode.m */; };
 /* End PBXBuildFile section */
@@ -119,6 +129,11 @@
 		A4317AD62156EC5C006E8B18 /* WhaleTotem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WhaleTotem.h; sourceTree = "<group>"; };
 		A4317AD72156EC5C006E8B18 /* WhaleTotem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WhaleTotem.m; sourceTree = "<group>"; };
 		A47710CD2152D14600B18F72 /* Categories.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Categories.h; sourceTree = "<group>"; };
+		A4A6FCA42157FDC40043FECF /* whaleMoan.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = whaleMoan.wav; sourceTree = "<group>"; };
+		A4AFBF632159239F000CA023 /* walking.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = walking.mp3; sourceTree = "<group>"; };
+		A4AFBF6C21593232000CA023 /* strikingMatch.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = strikingMatch.mp3; sourceTree = "<group>"; };
+		A4BDF301215978E400A76CC2 /* raindrops.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = raindrops.m4a; sourceTree = "<group>"; };
+		A4D55A09215AC46800BB5FB4 /* whispers.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = whispers.m4a; sourceTree = "<group>"; };
 		D96661E4214AEFCE00784631 /* PlatformNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlatformNode.h; sourceTree = "<group>"; };
 		D96661E5214AEFCE00784631 /* PlatformNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlatformNode.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -243,6 +258,7 @@
 				2CACAA03214958200007B737 /* GameController.m */,
 				2C01B6BD214D6DAD00175AA1 /* Assets.xcassets */,
 				2CE3781E2153136800C6F715 /* Graphics */,
+				A4A6FC9D2157C9C30043FECF /* Sounds */,
 				2C01B6C5214D6DC600175AA1 /* Utils */,
 				2C01B6BE214D6DAD00175AA1 /* Characters */,
 				2C63C0BE214AC52C006A96EC /* Input */,
@@ -288,6 +304,42 @@
 				A4317AD72156EC5C006E8B18 /* WhaleTotem.m */,
 			);
 			path = Totems;
+			sourceTree = "<group>";
+		};
+		A4A6FC9D2157C9C30043FECF /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				A4AFBF6721592D23000CA023 /* Animals */,
+				A4AFBF6621592C88000CA023 /* Actions */,
+				A4AFBF682159305D000CA023 /* Background */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
+		A4AFBF6621592C88000CA023 /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				A4AFBF632159239F000CA023 /* walking.mp3 */,
+				A4AFBF6C21593232000CA023 /* strikingMatch.mp3 */,
+			);
+			path = Actions;
+			sourceTree = "<group>";
+		};
+		A4AFBF6721592D23000CA023 /* Animals */ = {
+			isa = PBXGroup;
+			children = (
+				A4A6FCA42157FDC40043FECF /* whaleMoan.wav */,
+			);
+			path = Animals;
+			sourceTree = "<group>";
+		};
+		A4AFBF682159305D000CA023 /* Background */ = {
+			isa = PBXGroup;
+			children = (
+				A4BDF301215978E400A76CC2 /* raindrops.m4a */,
+				A4D55A09215AC46800BB5FB4 /* whispers.m4a */,
+			);
+			path = Background;
 			sourceTree = "<group>";
 		};
 		D96661CB214AD63900784631 /* Objects */ = {
@@ -403,11 +455,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CE378212153183500C6F715 /* PlayerWalking.atlas in Resources */,
+				A4D55A0A215AC46800BB5FB4 /* whispers.m4a in Resources */,
 				2CE378242153D43000C6F715 /* PlayerIdle.atlas in Resources */,
 				2CAF8CCB215410F10088A13B /* PlayerLanding.atlas in Resources */,
+				A4BDF302215978E400A76CC2 /* raindrops.m4a in Resources */,
+				A4AFBF642159239F000CA023 /* walking.mp3 in Resources */,
 				2CACA9DB2146E60C0007B737 /* Main.storyboard in Resources */,
+				A4AFBF6D21593232000CA023 /* strikingMatch.mp3 in Resources */,
 				2CAF8CC9215410F10088A13B /* PlayerJumping.atlas in Resources */,
 				2C01B6C1214D6DAD00175AA1 /* Assets.xcassets in Resources */,
+				A4A6FCA52157FDC40043FECF /* whaleMoan.wav in Resources */,
 				2CACA9D02146E60C0007B737 /* GameLevel.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -417,11 +474,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CE378222153183500C6F715 /* PlayerWalking.atlas in Resources */,
+				A4D55A0B215AC46800BB5FB4 /* whispers.m4a in Resources */,
 				2CE378252153D43000C6F715 /* PlayerIdle.atlas in Resources */,
 				2CAF8CCC215410F10088A13B /* PlayerLanding.atlas in Resources */,
+				A4BDF303215978E400A76CC2 /* raindrops.m4a in Resources */,
+				A4AFBF652159239F000CA023 /* walking.mp3 in Resources */,
 				2CACAA6A214984CE0007B737 /* GameLevel.sks in Resources */,
+				A4AFBF6E21593232000CA023 /* strikingMatch.mp3 in Resources */,
 				2CAF8CCA215410F10088A13B /* PlayerJumping.atlas in Resources */,
 				2C01B6C2214D6DAD00175AA1 /* Assets.xcassets in Resources */,
+				A4A6FCA62157FDC40043FECF /* whaleMoan.wav in Resources */,
 				2CACAA5F21497F4B0007B737 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
