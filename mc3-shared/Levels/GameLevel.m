@@ -16,13 +16,15 @@
 
 // MARK: - Initializers and rendering
 - (void)sceneDidLoad {
+    self.size = CGSizeMake(self.frame.size.width*5, self.frame.size.height*2);
     self.physicsWorld.contactDelegate = self;
     self.physicsWorld.gravity = CGVectorMake(0.0, -5.0);
     
     // Physics body
-    self.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect: self.frame];
+    self.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect: CGRectMake(-self.size.width/2, -self.size.height/2, self.size.width, self.size.height)];
     self.physicsBody.categoryBitMask = 0b11;
     self.physicsBody.collisionBitMask = 0b1;
+    
     }
 
 - (void)didMoveToView:(SKView *)view {

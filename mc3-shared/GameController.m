@@ -25,6 +25,8 @@
     self.playerNode.position = CGPointMake(0, 100);
     self.playerNode.zPosition = 15;
     
+    self.camera = [[SKCameraNode alloc] init];
+    [self.camera setScale:0.5];
     
     // MARK: Keyboard handler
     #if TARGET_OS_OSX
@@ -56,13 +58,17 @@
     
     // Calculate time since last update
     CGFloat delta = currentTime - _lastUpdateTime;
+    
     [self processInput: delta];
     [self.playerNode updateWithDeltaTime:delta];
+    [self updateCameraPosition:delta];
     
     _lastUpdateTime = currentTime;
 }
 
 - (void)sceneDidLoadFor:(BaseLevelScene *)scene {
+    scene.camera = self.camera;
+    scene.camera.position = CGPointMake(0, 0);
     [scene addChild: self.playerNode];
 }
 
@@ -111,6 +117,48 @@
     }
     
     NSLog(@"%@", self.playerNode.stateMachine.currentState);
+}
+
+- (void)updateCameraPosition:(NSTimeInterval)delta {
+    
+    
+    float scaleFactorX = self.playerNode.scene.size.width/self.playerNode.scene.view.bounds.size.width;
+    float scaleFactorY = self.playerNode.scene.size.height/self.playerNode.scene.view.bounds.size.height;
+    
+    float leftBoundary = -1*self.playerNode.scene.size.width/2;
+    float rightBoundary = self.playerNode.scene.size.width/2;
+    float bottomBoundary = -1*self.playerNode.scene.size.height/2;
+    float topBoundary = self.playerNode.scene.size.height/2;
+    
+    
+    float top = ((self.playerNode.scene.view.bounds.size.height/2.0)*scaleFactorY*self.camera.xScale) - (self.playerNode.size.height/2.0);
+    float bottom = ((-self.playerNode.scene.view.bounds.size.height/2.0)*scaleFactorY) - (self.playerNode.size.height/2.0);
+    
+    float left = ((-self.playerNode.scene.view.bounds.size.width/2.0)*scaleFactorY) - (self.playerNode.size.width/2.0);
+    float right = ((self.playerNode.scene.view.bounds.size.width/2.0)*scaleFactorY*self.camera.xScale) - (self.playerNode.size.width/2.0);
+    
+    float leftLimit = leftBoundary + right;
+    float rightLimit = rightBoundary - right;
+    float topLimit = topBoundary - top;
+    float bottomLimit = bottomBoundary + top;
+    
+    
+    float xPosition = self.camera.position.x;
+    float yPosition = self.camera.position.y;
+    
+    if (self.playerNode.position.x > leftLimit && self.playerNode.position.x < rightLimit)  {
+        xPosition = self.playerNode.position.x;
+    }
+    
+    if (self.playerNode.position.y > bottomLimit && self.playerNode.position.y < topLimit)  {
+        yPosition = self.playerNode.position.y;
+    }
+    
+    self.camera.position = CGPointMake(xPosition, yPosition);
+    
+    
+    
+    
 }
 
 @end
