@@ -34,9 +34,9 @@
     // Present the scene
     [self.skView presentScene:sceneNode];
     
-    self.skView.showsFPS = YES;
-    self.skView.showsNodeCount = YES;
-    self.skView.showsPhysics = TRUE;
+    self.skView.showsFPS = FALSE;
+    self.skView.showsNodeCount = FALSE;
+    self.skView.showsPhysics = FALSE;
 }
 
 @end

@@ -18,6 +18,8 @@
     if (self == [super initWithTexture:texture]) {
         self.velocity = CGPointMake(0.0, 0.0);
     }
+
+    [self.audioPlayer prepareToPlay];
     self.mask = Unmasked;
     self.sense = 1;
     self.speedForce = 3600.0;
@@ -39,7 +41,7 @@
     self.physicsBody.allowsRotation = FALSE;
     self.physicsBody.angularDamping = 0;
     self.physicsBody.angularVelocity = 0;
-    self.physicsBody.mass = 70;
+    self.physicsBody.mass = 20;
     self.physicsBody.dynamic = TRUE;
     self.physicsBody.restitution = 0.0;
     
@@ -70,7 +72,7 @@
                                   self.velocity.y);
 }
 
-- (void)deaccelerate:(NSTimeInterval)seconds {
+- (void) deaccelerate:(NSTimeInterval)seconds {
     self.velocity = CGPointMake(0.0, self.velocity.y);
 }
 
@@ -90,9 +92,7 @@
 }
 
 - (void) fall:(NSTimeInterval) seconds {
-    
     NSLog(@"%f", self.physicsBody.velocity.dy);
-    
     self.velocity = CGPointMake(self.velocity.x, self.physicsBody.velocity.dy);
     
 }
@@ -111,8 +111,16 @@
 - (void) useMaskEffect {
     if (self.mask == Unmasked) {
         return;
-    } else if (self.mask == WhaleMask) {
-        NSLog(@"Whale effect!");
+    } else if (self.mask == WhaleMask && !self.audioPlayer.isPlaying) {
+
+        NSString *soundFilePath = [[NSBundle mainBundle] pathForResource:@"whaleMoan" ofType:@"wav"];
+        NSURL *soundFileURL = [NSURL fileURLWithPath:soundFilePath];
+        NSError *error;
+
+        // MARK: Whale Sound Effect
+        self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:soundFileURL error:&error];
+        self.audioPlayer.numberOfLoops = 0;
+        [self.audioPlayer play];
     }
 }
 

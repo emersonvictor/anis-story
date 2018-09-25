@@ -90,6 +90,30 @@
     SKAction* walkingAnimation = [SKAction animateWithTextures:textures timePerFrame:0.1];
     
     [player runAction:[SKAction repeatActionForever:walkingAnimation] withKey:@"walking"];
+
+    // MARK: Looking for the sound file URL
+    NSString *soundFilePath = [[NSBundle mainBundle] pathForResource:@"walking" ofType:@"mp3"];
+    NSURL *soundFileURL = [NSURL fileURLWithPath:soundFilePath];
+    NSError *error;
+
+    // MARK: Configuring the audio player
+    player.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:soundFileURL error:&error];
+    player.audioPlayer.numberOfLoops = -1;
+    player.audioPlayer.volume = 0.15;
+    player.audioPlayer.enableRate = TRUE;
+    player.audioPlayer.rate = 0.7;
+
+    // MARK: Playing walking sound in the background thread
+    qos_class_t identifier = QOS_CLASS_BACKGROUND;
+    dispatch_queue_global_t backgroundQueue = dispatch_get_global_queue(identifier, 0);
+    dispatch_async(backgroundQueue, ^{
+        [player.audioPlayer play];
+    });
+}
+
+- (void) willExitWithNextState:(GKState *)nextState {
+    Player* player = (Player*) self.node;
+    [player.audioPlayer stop];
 }
 
 @end
@@ -127,6 +151,10 @@
         [self.stateMachine enterState:JumpMomentumState.class];
     }
     [super updateWithDeltaTime:seconds];
+}
+
+- (void) willExitWithNextState:(GKState *)nextState {
+    // TO DO: Play falling sound
 }
 
 
