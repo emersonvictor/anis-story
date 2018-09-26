@@ -37,7 +37,7 @@
     
     // MARK: Physics Body
     
-    self.physicsBody =  [SKPhysicsBody bodyWithRectangleOfSize: CGSizeMake(40, 65)];
+    self.physicsBody =  [SKPhysicsBody bodyWithRectangleOfSize: CGSizeMake(100, 110)];
     self.physicsBody.affectedByGravity = TRUE;
     self.physicsBody.allowsRotation = FALSE;
     self.physicsBody.angularDamping = 0;

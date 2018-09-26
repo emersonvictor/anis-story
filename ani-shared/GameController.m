@@ -94,7 +94,7 @@
     bg.lightingBitMask=1;
     self.playerNode.position = reference.position;
     self.playerNode.size = reference.size;
-    self.playerNode.zPosition = 10;
+    self.playerNode.zPosition = reference.zPosition;
     [scene addChild: self.playerNode];
 }
 
