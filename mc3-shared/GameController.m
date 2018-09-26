@@ -22,6 +22,24 @@
     SKTextureAtlas* playerAtlas =  [SKTextureAtlas atlasNamed:@"PlayerWalking"];
     SKTexture* initialTexture = [playerAtlas textureNamed:@"adventurer1.png"];
     self.playerNode = [[Player alloc] initWithTexture: initialTexture];
+    SKTexture* normalMap = [self.playerNode.texture textureByGeneratingNormalMap];
+    self.playerNode.normalTexture = normalMap;
+    self.playerNode.lightingBitMask = 1;
+    self.playerNode.shadowedBitMask=1;
+    
+    // MARK: Looking for the sound file URL
+//    NSString *soundFilePath = [[NSBundle mainBundle] pathForResource:@"walking" ofType:@"mp3"];
+//    NSURL *soundFileURL = [NSURL fileURLWithPath:soundFilePath];
+//    NSError *error;
+    
+    
+    // MARK: Configuring the audio player
+    
+    SKAudioNode* playerWalkingAudio = [[SKAudioNode alloc] initWithFileNamed:@"walking.mp3"];
+    playerWalkingAudio.name = @"walkingAudio";
+    [playerWalkingAudio runAction:[SKAction stop]];
+    
+    [self.playerNode addChild:playerWalkingAudio];
     
     self.camera = [[SKCameraNode alloc] init];
     [self.camera setScale:0.5];
@@ -71,6 +89,9 @@
     scene.camera.position = CGPointMake(0, 0);
     // Player
     SKSpriteNode* reference = (SKSpriteNode*)[scene childNodeWithName:@"player"];
+    SKSpriteNode* bg = (SKSpriteNode*)[scene childNodeWithName:@"background"];
+    bg.normalTexture = [bg.texture textureByGeneratingNormalMap];
+    bg.lightingBitMask=1;
     self.playerNode.position = reference.position;
     self.playerNode.size = reference.size;
     self.playerNode.zPosition = 10;

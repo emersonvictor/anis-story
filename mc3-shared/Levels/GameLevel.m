@@ -18,13 +18,32 @@
     self.physicsWorld.contactDelegate = self;
     self.physicsWorld.gravity = CGVectorMake(0.0, -5.0);
     
+    
+    // MARK: Looking for the sound file URL
+    NSString *soundFilePath = [[NSBundle mainBundle] pathForResource:@"raindrops" ofType:@"m4a"];
+    NSURL *soundFileURL = [NSURL fileURLWithPath:soundFilePath];
+    NSError *error;
+    
+    // MARK: Configuring the audio player
+    self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:soundFileURL error:&error];
+    self.audioPlayer.numberOfLoops = -1;
+    self.audioPlayer.volume = 0.04;
+    
+    [self.audioPlayer play];
+    
+    // MARK: Playing walking sound in the background thread
+//    qos_class_t identifier = QOS_CLASS_BACKGROUND;
+//    dispatch_queue_global_t backgroundQueue = dispatch_get_global_queue(identifier, 0);
+//    dispatch_async(backgroundQueue, ^{
+//        [raindrops play];
+//    });
 
-    // MARK: Raindrops audio near the window
-    self.audioNode = [[SKAudioNode alloc] initWithFileNamed:@"raindrops.m4a"];
-    [self.audioNode setPosition:CGPointMake(396.0, 104.0)];
-    [self.audioNode runAction:[SKAction changeVolumeTo:0.02 duration:0]];
-    [self.audioNode setPositional:TRUE];
-    [self addChild:self.audioNode];
+
+//    self.audioNode = [[SKAudioNode alloc] initWithFileNamed:@"raindrops.m4a"];
+//    [self.audioNode setPosition:CGPointMake(396.0, 104.0)];
+//    [self.audioNode runAction:[SKAction changeVolumeTo:0.02 duration:0]];
+//    [self.audioNode setPositional:TRUE];
+//    [self addChild:self.audioNode];
 
 
     // Physics body
