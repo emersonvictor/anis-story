@@ -42,15 +42,17 @@
     
     [player removeAllActions];
     
-    SKTextureAtlas *atlas = [SKTextureAtlas atlasNamed:@"PlayerIdle"];
+//    SKTextureAtlas *atlas = [SKTextureAtlas atlasNamed:@"PlayerIdle"];
+    SKTextureAtlas *atlas = [SKTextureAtlas atlasNamed:@"PlayerRunning"];
     NSMutableArray *textures = [NSMutableArray array];
-    
-    for (int i=0; i<=10; i++) {
-        NSString *filename = [NSString stringWithFormat: @"idle%i.png", i];
-        SKTexture* loadedTexture = [atlas textureNamed:filename];
-        [textures addObject:loadedTexture];
-    }
-    
+//
+//    for (int i=0; i<=10; i++) {
+//        NSString *filename = [NSString stringWithFormat: @"idle%i.png", i];
+//        SKTexture* loadedTexture = [atlas textureNamed:filename];
+//        [textures addObject:loadedTexture];
+//    }
+    SKTexture* texture = [atlas textureNamed:@"running1.png"];
+    [textures addObject:texture];
     SKAction* idleAnimation = [SKAction animateWithTextures:textures timePerFrame:0.1];
     
 //    player.velocity = CGPointMake(0.0, 0.0);
@@ -78,11 +80,11 @@
     
     [player removeAllActions];
     
-    SKTextureAtlas *atlas = [SKTextureAtlas atlasNamed:@"PlayerWalking"];
+    SKTextureAtlas *atlas = [SKTextureAtlas atlasNamed:@"PlayerRunning"];
     NSMutableArray *textures = [NSMutableArray array];
     
-    for (int i=1; i<=7; i++) {
-        NSString *filename = [NSString stringWithFormat: @"adventurer%i.png", i];
+    for (int i=0; i<=8; i++) {
+        NSString *filename = [NSString stringWithFormat: @"running%i.png", i];
         SKTexture* loadedTexture = [atlas textureNamed:filename];
         [textures addObject:loadedTexture];
     }
@@ -125,7 +127,7 @@
 
     SKAction* jumpingAnimation = [SKAction animateWithTextures:textures timePerFrame:0.1];
 
-    [player runAction:[SKAction repeatActionForever:jumpingAnimation] withKey:@"jumping"];
+//    [player runAction:[SKAction repeatActionForever:jumpingAnimation] withKey:@"jumping"];
 }
 
 - (void)updateWithDeltaTime:(NSTimeInterval)seconds {

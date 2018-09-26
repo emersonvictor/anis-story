@@ -40,6 +40,8 @@
 		2CAF8CCA215410F10088A13B /* PlayerJumping.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 2CAF8CC7215410F10088A13B /* PlayerJumping.atlas */; };
 		2CAF8CCB215410F10088A13B /* PlayerLanding.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 2CAF8CC8215410F10088A13B /* PlayerLanding.atlas */; };
 		2CAF8CCC215410F10088A13B /* PlayerLanding.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 2CAF8CC8215410F10088A13B /* PlayerLanding.atlas */; };
+		2CBC1E37215BCE9A0037CD19 /* PlayerRunning.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 2CBC1E36215BCE9A0037CD19 /* PlayerRunning.atlas */; };
+		2CBC1E38215BCE9A0037CD19 /* PlayerRunning.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 2CBC1E36215BCE9A0037CD19 /* PlayerRunning.atlas */; };
 		2CE378212153183500C6F715 /* PlayerWalking.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 2CE378202153183500C6F715 /* PlayerWalking.atlas */; };
 		2CE378222153183500C6F715 /* PlayerWalking.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 2CE378202153183500C6F715 /* PlayerWalking.atlas */; };
 		2CE378242153D43000C6F715 /* PlayerIdle.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 2CE378232153D43000C6F715 /* PlayerIdle.atlas */; };
@@ -122,6 +124,7 @@
 		2CACAA6321497F4C0007B737 /* ani_macos.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ani_macos.entitlements; sourceTree = "<group>"; };
 		2CAF8CC7215410F10088A13B /* PlayerJumping.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = PlayerJumping.atlas; sourceTree = "<group>"; };
 		2CAF8CC8215410F10088A13B /* PlayerLanding.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = PlayerLanding.atlas; sourceTree = "<group>"; };
+		2CBC1E36215BCE9A0037CD19 /* PlayerRunning.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = PlayerRunning.atlas; sourceTree = "<group>"; };
 		2CE378202153183500C6F715 /* PlayerWalking.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = PlayerWalking.atlas; sourceTree = "<group>"; };
 		2CE378232153D43000C6F715 /* PlayerIdle.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = PlayerIdle.atlas; sourceTree = "<group>"; };
 		2CE72C872152C30F008E534E /* StatefulNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StatefulNode.h; sourceTree = "<group>"; };
@@ -294,6 +297,7 @@
 		2CE3781F215317E000C6F715 /* Sprites */ = {
 			isa = PBXGroup;
 			children = (
+				2CBC1E36215BCE9A0037CD19 /* PlayerRunning.atlas */,
 				2CAF8CC7215410F10088A13B /* PlayerJumping.atlas */,
 				2CAF8CC8215410F10088A13B /* PlayerLanding.atlas */,
 				2CE378232153D43000C6F715 /* PlayerIdle.atlas */,
@@ -491,6 +495,7 @@
 				2CAF8CC9215410F10088A13B /* PlayerJumping.atlas in Resources */,
 				2C01B6C1214D6DAD00175AA1 /* Assets.xcassets in Resources */,
 				D96D503F215AF68900CC6161 /* bed.png in Resources */,
+				2CBC1E37215BCE9A0037CD19 /* PlayerRunning.atlas in Resources */,
 				D9D430DB215BB7F200057C15 /* bg.png in Resources */,
 				A4A6FCA52157FDC40043FECF /* whaleMoan.wav in Resources */,
 				2CACA9D02146E60C0007B737 /* GameLevel.sks in Resources */,
@@ -514,6 +519,7 @@
 				2CAF8CCA215410F10088A13B /* PlayerJumping.atlas in Resources */,
 				2C01B6C2214D6DAD00175AA1 /* Assets.xcassets in Resources */,
 				D96D5040215AF68900CC6161 /* bed.png in Resources */,
+				2CBC1E38215BCE9A0037CD19 /* PlayerRunning.atlas in Resources */,
 				D9D430DC215BB7F200057C15 /* bg.png in Resources */,
 				A4A6FCA62157FDC40043FECF /* whaleMoan.wav in Resources */,
 				2CACAA5F21497F4B0007B737 /* Main.storyboard in Resources */,
@@ -714,7 +720,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XP4ML92KUD;
+				DEVELOPMENT_TEAM = UDB57TC6RA;
 				INFOPLIST_FILE = "$(SRCROOT)/ani-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -737,7 +743,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XP4ML92KUD;
+				DEVELOPMENT_TEAM = UDB57TC6RA;
 				INFOPLIST_FILE = "$(SRCROOT)/ani-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -760,7 +766,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = XP4ML92KUD;
+				DEVELOPMENT_TEAM = UDB57TC6RA;
 				INFOPLIST_FILE = "$(SRCROOT)/ani-macos/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -785,7 +791,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = XP4ML92KUD;
+				DEVELOPMENT_TEAM = UDB57TC6RA;
 				INFOPLIST_FILE = "$(SRCROOT)/ani-macos/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

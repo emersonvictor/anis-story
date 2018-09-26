@@ -19,8 +19,8 @@
 - (instancetype) init {
     self = [super init];
     self.inputScheme = [[InputScheme alloc] init];
-    SKTextureAtlas* playerAtlas =  [SKTextureAtlas atlasNamed:@"PlayerWalking"];
-    SKTexture* initialTexture = [playerAtlas textureNamed:@"adventurer1.png"];
+    SKTextureAtlas* playerAtlas =  [SKTextureAtlas atlasNamed:@"PlayerRunning"];
+    SKTexture* initialTexture = [playerAtlas textureNamed:@"running1.png"];
     self.playerNode = [[Player alloc] initWithTexture: initialTexture];
     SKTexture* normalMap = [self.playerNode.texture textureByGeneratingNormalMap];
     self.playerNode.normalTexture = normalMap;
