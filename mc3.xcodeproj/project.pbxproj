@@ -74,10 +74,8 @@
 		D96661E7214AEFCE00784631 /* PlatformNode.m in Sources */ = {isa = PBXBuildFile; fileRef = D96661E5214AEFCE00784631 /* PlatformNode.m */; };
 		D96D503F215AF68900CC6161 /* bed.png in Resources */ = {isa = PBXBuildFile; fileRef = D96D503E215AF68900CC6161 /* bed.png */; };
 		D96D5040215AF68900CC6161 /* bed.png in Resources */ = {isa = PBXBuildFile; fileRef = D96D503E215AF68900CC6161 /* bed.png */; };
-		D96D5046215B212100CC6161 /* left-leg-bed.png in Resources */ = {isa = PBXBuildFile; fileRef = D96D5044215B212100CC6161 /* left-leg-bed.png */; };
-		D96D5047215B212100CC6161 /* left-leg-bed.png in Resources */ = {isa = PBXBuildFile; fileRef = D96D5044215B212100CC6161 /* left-leg-bed.png */; };
-		D96D5048215B212100CC6161 /* right-leg-bed.png in Resources */ = {isa = PBXBuildFile; fileRef = D96D5045215B212100CC6161 /* right-leg-bed.png */; };
-		D96D5049215B212100CC6161 /* right-leg-bed.png in Resources */ = {isa = PBXBuildFile; fileRef = D96D5045215B212100CC6161 /* right-leg-bed.png */; };
+		D9D430D5215BACE200057C15 /* bed-legs.png in Resources */ = {isa = PBXBuildFile; fileRef = D9D430D4215BACE200057C15 /* bed-legs.png */; };
+		D9D430D6215BACE200057C15 /* bed-legs.png in Resources */ = {isa = PBXBuildFile; fileRef = D9D430D4215BACE200057C15 /* bed-legs.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -146,8 +144,7 @@
 		D96661E4214AEFCE00784631 /* PlatformNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlatformNode.h; sourceTree = "<group>"; };
 		D96661E5214AEFCE00784631 /* PlatformNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlatformNode.m; sourceTree = "<group>"; };
 		D96D503E215AF68900CC6161 /* bed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bed.png; sourceTree = "<group>"; };
-		D96D5044215B212100CC6161 /* left-leg-bed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left-leg-bed.png"; sourceTree = "<group>"; };
-		D96D5045215B212100CC6161 /* right-leg-bed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "right-leg-bed.png"; sourceTree = "<group>"; };
+		D9D430D4215BACE200057C15 /* bed-legs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bed-legs.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -359,8 +356,7 @@
 		D95F27D0215AD88C00B29ACD /* Objects */ = {
 			isa = PBXGroup;
 			children = (
-				D96D5044215B212100CC6161 /* left-leg-bed.png */,
-				D96D5045215B212100CC6161 /* right-leg-bed.png */,
+				D9D430D4215BACE200057C15 /* bed-legs.png */,
 				D96D503E215AF68900CC6161 /* bed.png */,
 			);
 			path = Objects;
@@ -487,13 +483,12 @@
 				A4AFBF642159239F000CA023 /* walking.mp3 in Resources */,
 				2CACA9DB2146E60C0007B737 /* Main.storyboard in Resources */,
 				A4AFBF6D21593232000CA023 /* strikingMatch.mp3 in Resources */,
+				D9D430D5215BACE200057C15 /* bed-legs.png in Resources */,
 				2CAF8CC9215410F10088A13B /* PlayerJumping.atlas in Resources */,
 				2C01B6C1214D6DAD00175AA1 /* Assets.xcassets in Resources */,
 				D96D503F215AF68900CC6161 /* bed.png in Resources */,
-				D96D5046215B212100CC6161 /* left-leg-bed.png in Resources */,
 				A4A6FCA52157FDC40043FECF /* whaleMoan.wav in Resources */,
 				2CACA9D02146E60C0007B737 /* GameLevel.sks in Resources */,
-				D96D5048215B212100CC6161 /* right-leg-bed.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -510,13 +505,12 @@
 				A4AFBF652159239F000CA023 /* walking.mp3 in Resources */,
 				2CACAA6A214984CE0007B737 /* GameLevel.sks in Resources */,
 				A4AFBF6E21593232000CA023 /* strikingMatch.mp3 in Resources */,
+				D9D430D6215BACE200057C15 /* bed-legs.png in Resources */,
 				2CAF8CCA215410F10088A13B /* PlayerJumping.atlas in Resources */,
 				2C01B6C2214D6DAD00175AA1 /* Assets.xcassets in Resources */,
 				D96D5040215AF68900CC6161 /* bed.png in Resources */,
-				D96D5047215B212100CC6161 /* left-leg-bed.png in Resources */,
 				A4A6FCA62157FDC40043FECF /* whaleMoan.wav in Resources */,
 				2CACAA5F21497F4B0007B737 /* Main.storyboard in Resources */,
-				D96D5049215B212100CC6161 /* right-leg-bed.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
