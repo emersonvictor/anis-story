@@ -68,8 +68,6 @@
 		A4BDF303215978E400A76CC2 /* raindrops.m4a in Resources */ = {isa = PBXBuildFile; fileRef = A4BDF301215978E400A76CC2 /* raindrops.m4a */; };
 		A4D55A0A215AC46800BB5FB4 /* whispers.m4a in Resources */ = {isa = PBXBuildFile; fileRef = A4D55A09215AC46800BB5FB4 /* whispers.m4a */; };
 		A4D55A0B215AC46800BB5FB4 /* whispers.m4a in Resources */ = {isa = PBXBuildFile; fileRef = A4D55A09215AC46800BB5FB4 /* whispers.m4a */; };
-		D95F27CE215AD57900B29ACD /* scene-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = D95F27CD215AD57800B29ACD /* scene-bg.png */; };
-		D95F27CF215AD57900B29ACD /* scene-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = D95F27CD215AD57800B29ACD /* scene-bg.png */; };
 		D96661E6214AEFCE00784631 /* PlatformNode.m in Sources */ = {isa = PBXBuildFile; fileRef = D96661E5214AEFCE00784631 /* PlatformNode.m */; };
 		D96661E7214AEFCE00784631 /* PlatformNode.m in Sources */ = {isa = PBXBuildFile; fileRef = D96661E5214AEFCE00784631 /* PlatformNode.m */; };
 		D96D503F215AF68900CC6161 /* bed.png in Resources */ = {isa = PBXBuildFile; fileRef = D96D503E215AF68900CC6161 /* bed.png */; };
@@ -78,6 +76,8 @@
 		D9D430D6215BACE200057C15 /* bed-legs.png in Resources */ = {isa = PBXBuildFile; fileRef = D9D430D4215BACE200057C15 /* bed-legs.png */; };
 		D9D430D8215BAF4200057C15 /* earphone.png in Resources */ = {isa = PBXBuildFile; fileRef = D9D430D7215BAF4200057C15 /* earphone.png */; };
 		D9D430D9215BAF4200057C15 /* earphone.png in Resources */ = {isa = PBXBuildFile; fileRef = D9D430D7215BAF4200057C15 /* earphone.png */; };
+		D9D430DB215BB7F200057C15 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = D9D430DA215BB7F200057C15 /* bg.png */; };
+		D9D430DC215BB7F200057C15 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = D9D430DA215BB7F200057C15 /* bg.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -96,7 +96,7 @@
 		2C63C0C4214C018C006A96EC /* KeyboardInputHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KeyboardInputHandler.m; sourceTree = "<group>"; };
 		2C72334A21518ABC001B15C7 /* PlayerStates.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayerStates.h; sourceTree = "<group>"; };
 		2C72334B21518ABC001B15C7 /* PlayerStates.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlayerStates.m; sourceTree = "<group>"; };
-		2CACA9C92146E60C0007B737 /* mc3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mc3.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CACA9C92146E60C0007B737 /* ani.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ani.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CACA9CC2146E60C0007B737 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2CACA9CD2146E60C0007B737 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		2CACA9CF2146E60C0007B737 /* GameLevel.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameLevel.sks; sourceTree = "<group>"; };
@@ -111,7 +111,7 @@
 		2CACAA03214958200007B737 /* GameController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameController.m; sourceTree = "<group>"; };
 		2CACAA0521495A670007B737 /* InputHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InputHandler.h; sourceTree = "<group>"; };
 		2CACAA0621495BD40007B737 /* InputHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InputHandler.m; sourceTree = "<group>"; };
-		2CACAA4C21497F4B0007B737 /* mc3-macos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mc3-macos.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CACAA4C21497F4B0007B737 /* ani-macos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ani-macos.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CACAA4E21497F4B0007B737 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2CACAA4F21497F4B0007B737 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		2CACAA5821497F4B0007B737 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -119,7 +119,7 @@
 		2CACAA5E21497F4B0007B737 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2CACAA6021497F4B0007B737 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2CACAA6121497F4C0007B737 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		2CACAA6321497F4C0007B737 /* mc3_macos.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = mc3_macos.entitlements; sourceTree = "<group>"; };
+		2CACAA6321497F4C0007B737 /* ani_macos.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ani_macos.entitlements; sourceTree = "<group>"; };
 		2CAF8CC7215410F10088A13B /* PlayerJumping.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = PlayerJumping.atlas; sourceTree = "<group>"; };
 		2CAF8CC8215410F10088A13B /* PlayerLanding.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = PlayerLanding.atlas; sourceTree = "<group>"; };
 		2CE378202153183500C6F715 /* PlayerWalking.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = PlayerWalking.atlas; sourceTree = "<group>"; };
@@ -142,12 +142,12 @@
 		A4AFBF6C21593232000CA023 /* strikingMatch.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = strikingMatch.mp3; sourceTree = "<group>"; };
 		A4BDF301215978E400A76CC2 /* raindrops.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = raindrops.m4a; sourceTree = "<group>"; };
 		A4D55A09215AC46800BB5FB4 /* whispers.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = whispers.m4a; sourceTree = "<group>"; };
-		D95F27CD215AD57800B29ACD /* scene-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "scene-bg.png"; sourceTree = "<group>"; };
 		D96661E4214AEFCE00784631 /* PlatformNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlatformNode.h; sourceTree = "<group>"; };
 		D96661E5214AEFCE00784631 /* PlatformNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlatformNode.m; sourceTree = "<group>"; };
 		D96D503E215AF68900CC6161 /* bed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bed.png; sourceTree = "<group>"; };
 		D9D430D4215BACE200057C15 /* bed-legs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bed-legs.png"; sourceTree = "<group>"; };
 		D9D430D7215BAF4200057C15 /* earphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = earphone.png; sourceTree = "<group>"; };
+		D9D430DA215BB7F200057C15 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,9 +218,9 @@
 		2CACA9C02146E60B0007B737 = {
 			isa = PBXGroup;
 			children = (
-				2CACAA6721497F7C0007B737 /* mc3-shared */,
-				2CACA9CB2146E60C0007B737 /* mc3-tvOS */,
-				2CACAA4D21497F4B0007B737 /* mc3-macos */,
+				2CACAA6721497F7C0007B737 /* ani-shared */,
+				2CACA9CB2146E60C0007B737 /* ani-tvOS */,
+				2CACAA4D21497F4B0007B737 /* ani-macos */,
 				2CACA9CA2146E60C0007B737 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -228,13 +228,13 @@
 		2CACA9CA2146E60C0007B737 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2CACA9C92146E60C0007B737 /* mc3.app */,
-				2CACAA4C21497F4B0007B737 /* mc3-macos.app */,
+				2CACA9C92146E60C0007B737 /* ani.app */,
+				2CACAA4C21497F4B0007B737 /* ani-macos.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2CACA9CB2146E60C0007B737 /* mc3-tvOS */ = {
+		2CACA9CB2146E60C0007B737 /* ani-tvOS */ = {
 			isa = PBXGroup;
 			children = (
 				2CACA9CC2146E60C0007B737 /* AppDelegate.h */,
@@ -245,10 +245,10 @@
 				2CACA9D92146E60C0007B737 /* Main.storyboard */,
 				2CACA9DE2146E60E0007B737 /* Info.plist */,
 			);
-			path = "mc3-tvOS";
+			path = "ani-tvOS";
 			sourceTree = "<group>";
 		};
-		2CACAA4D21497F4B0007B737 /* mc3-macos */ = {
+		2CACAA4D21497F4B0007B737 /* ani-macos */ = {
 			isa = PBXGroup;
 			children = (
 				2CACAA4E21497F4B0007B737 /* AppDelegate.h */,
@@ -258,12 +258,12 @@
 				2CACAA5D21497F4B0007B737 /* Main.storyboard */,
 				2CACAA6021497F4B0007B737 /* Info.plist */,
 				2CACAA6121497F4C0007B737 /* main.m */,
-				2CACAA6321497F4C0007B737 /* mc3_macos.entitlements */,
+				2CACAA6321497F4C0007B737 /* ani_macos.entitlements */,
 			);
-			path = "mc3-macos";
+			path = "ani-macos";
 			sourceTree = "<group>";
 		};
-		2CACAA6721497F7C0007B737 /* mc3-shared */ = {
+		2CACAA6721497F7C0007B737 /* ani-shared */ = {
 			isa = PBXGroup;
 			children = (
 				2CACAA022149562A0007B737 /* GameController.h */,
@@ -278,14 +278,14 @@
 				D96F0A4F21494E81007524E1 /* Levels */,
 				D96661CB214AD63900784631 /* Objects */,
 			);
-			path = "mc3-shared";
+			path = "ani-shared";
 			sourceTree = "<group>";
 		};
 		2CE3781E2153136800C6F715 /* Graphics */ = {
 			isa = PBXGroup;
 			children = (
+				D9D430DA215BB7F200057C15 /* bg.png */,
 				D95F27D0215AD88C00B29ACD /* Objects */,
-				D95F27CD215AD57800B29ACD /* scene-bg.png */,
 				2CE3781F215317E000C6F715 /* Sprites */,
 			);
 			path = Graphics;
@@ -396,9 +396,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2CACA9C82146E60C0007B737 /* mc3 */ = {
+		2CACA9C82146E60C0007B737 /* ani */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2CACA9F92146E60E0007B737 /* Build configuration list for PBXNativeTarget "mc3" */;
+			buildConfigurationList = 2CACA9F92146E60E0007B737 /* Build configuration list for PBXNativeTarget "ani" */;
 			buildPhases = (
 				2CACA9C52146E60C0007B737 /* Sources */,
 				2CACA9C62146E60C0007B737 /* Frameworks */,
@@ -408,14 +408,14 @@
 			);
 			dependencies = (
 			);
-			name = mc3;
+			name = ani;
 			productName = mc3;
-			productReference = 2CACA9C92146E60C0007B737 /* mc3.app */;
+			productReference = 2CACA9C92146E60C0007B737 /* ani.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2CACAA4B21497F4B0007B737 /* mc3-macos */ = {
+		2CACAA4B21497F4B0007B737 /* ani-macos */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2CACAA6421497F4C0007B737 /* Build configuration list for PBXNativeTarget "mc3-macos" */;
+			buildConfigurationList = 2CACAA6421497F4C0007B737 /* Build configuration list for PBXNativeTarget "ani-macos" */;
 			buildPhases = (
 				2CACAA4821497F4B0007B737 /* Sources */,
 				2CACAA4921497F4B0007B737 /* Frameworks */,
@@ -425,9 +425,9 @@
 			);
 			dependencies = (
 			);
-			name = "mc3-macos";
+			name = "ani-macos";
 			productName = "mc3-macos";
-			productReference = 2CACAA4C21497F4B0007B737 /* mc3-macos.app */;
+			productReference = 2CACAA4C21497F4B0007B737 /* ani-macos.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -454,7 +454,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 2CACA9C42146E60B0007B737 /* Build configuration list for PBXProject "mc3" */;
+			buildConfigurationList = 2CACA9C42146E60B0007B737 /* Build configuration list for PBXProject "ani" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -467,8 +467,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2CACA9C82146E60C0007B737 /* mc3 */,
-				2CACAA4B21497F4B0007B737 /* mc3-macos */,
+				2CACA9C82146E60C0007B737 /* ani */,
+				2CACAA4B21497F4B0007B737 /* ani-macos */,
 			);
 		};
 /* End PBXProject section */
@@ -482,7 +482,6 @@
 				A4D55A0A215AC46800BB5FB4 /* whispers.m4a in Resources */,
 				2CE378242153D43000C6F715 /* PlayerIdle.atlas in Resources */,
 				D9D430D8215BAF4200057C15 /* earphone.png in Resources */,
-				D95F27CE215AD57900B29ACD /* scene-bg.png in Resources */,
 				2CAF8CCB215410F10088A13B /* PlayerLanding.atlas in Resources */,
 				A4BDF302215978E400A76CC2 /* raindrops.m4a in Resources */,
 				A4AFBF642159239F000CA023 /* walking.mp3 in Resources */,
@@ -492,6 +491,7 @@
 				2CAF8CC9215410F10088A13B /* PlayerJumping.atlas in Resources */,
 				2C01B6C1214D6DAD00175AA1 /* Assets.xcassets in Resources */,
 				D96D503F215AF68900CC6161 /* bed.png in Resources */,
+				D9D430DB215BB7F200057C15 /* bg.png in Resources */,
 				A4A6FCA52157FDC40043FECF /* whaleMoan.wav in Resources */,
 				2CACA9D02146E60C0007B737 /* GameLevel.sks in Resources */,
 			);
@@ -505,7 +505,6 @@
 				A4D55A0B215AC46800BB5FB4 /* whispers.m4a in Resources */,
 				2CE378252153D43000C6F715 /* PlayerIdle.atlas in Resources */,
 				D9D430D9215BAF4200057C15 /* earphone.png in Resources */,
-				D95F27CF215AD57900B29ACD /* scene-bg.png in Resources */,
 				2CAF8CCC215410F10088A13B /* PlayerLanding.atlas in Resources */,
 				A4BDF303215978E400A76CC2 /* raindrops.m4a in Resources */,
 				A4AFBF652159239F000CA023 /* walking.mp3 in Resources */,
@@ -515,6 +514,7 @@
 				2CAF8CCA215410F10088A13B /* PlayerJumping.atlas in Resources */,
 				2C01B6C2214D6DAD00175AA1 /* Assets.xcassets in Resources */,
 				D96D5040215AF68900CC6161 /* bed.png in Resources */,
+				D9D430DC215BB7F200057C15 /* bg.png in Resources */,
 				A4A6FCA62157FDC40043FECF /* whaleMoan.wav in Resources */,
 				2CACAA5F21497F4B0007B737 /* Main.storyboard in Resources */,
 			);
@@ -714,8 +714,8 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UDB57TC6RA;
-				INFOPLIST_FILE = "$(SRCROOT)/mc3-tvOS/Info.plist";
+				DEVELOPMENT_TEAM = XP4ML92KUD;
+				INFOPLIST_FILE = "$(SRCROOT)/ani-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -737,8 +737,8 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UDB57TC6RA;
-				INFOPLIST_FILE = "$(SRCROOT)/mc3-tvOS/Info.plist";
+				DEVELOPMENT_TEAM = XP4ML92KUD;
+				INFOPLIST_FILE = "$(SRCROOT)/ani-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -756,12 +756,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = "mc3-macos/mc3_macos.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "ani-macos/ani_macos.entitlements";
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = UDB57TC6RA;
-				INFOPLIST_FILE = "mc3-macos/Info.plist";
+				DEVELOPMENT_TEAM = XP4ML92KUD;
+				INFOPLIST_FILE = "$(SRCROOT)/ani-macos/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -770,7 +770,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.academy.cin.ufpe.jacn.mc3-macos";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
-				SWIFT_OBJC_BRIDGING_HEADER = "mc3-shared/Objects/mc3-macos-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "ani-shared/Objects/ani-macos-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
@@ -781,12 +781,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = "mc3-macos/mc3_macos.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "ani-macos/ani_macos.entitlements";
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = UDB57TC6RA;
-				INFOPLIST_FILE = "mc3-macos/Info.plist";
+				DEVELOPMENT_TEAM = XP4ML92KUD;
+				INFOPLIST_FILE = "$(SRCROOT)/ani-macos/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -795,7 +795,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.academy.cin.ufpe.jacn.mc3-macos";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
-				SWIFT_OBJC_BRIDGING_HEADER = "mc3-shared/Objects/mc3-macos-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "ani-shared/Objects/ani-macos-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -803,7 +803,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2CACA9C42146E60B0007B737 /* Build configuration list for PBXProject "mc3" */ = {
+		2CACA9C42146E60B0007B737 /* Build configuration list for PBXProject "ani" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2CACA9F72146E60E0007B737 /* Debug */,
@@ -812,7 +812,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2CACA9F92146E60E0007B737 /* Build configuration list for PBXNativeTarget "mc3" */ = {
+		2CACA9F92146E60E0007B737 /* Build configuration list for PBXNativeTarget "ani" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2CACA9FA2146E60E0007B737 /* Debug */,
@@ -821,7 +821,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2CACAA6421497F4C0007B737 /* Build configuration list for PBXNativeTarget "mc3-macos" */ = {
+		2CACAA6421497F4C0007B737 /* Build configuration list for PBXNativeTarget "ani-macos" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2CACAA6521497F4C0007B737 /* Debug */,
