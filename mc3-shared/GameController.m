@@ -65,13 +65,15 @@
 }
 
 - (void)sceneDidLoadFor:(BaseLevelScene *)scene {
+    // Scene
     scene.listener = self.playerNode;
     scene.camera = self.camera;
     scene.camera.position = CGPointMake(0, 0);
+    // Player
     SKSpriteNode* reference = (SKSpriteNode*)[scene childNodeWithName:@"player"];
     self.playerNode.position = reference.position;
     self.playerNode.size = reference.size;
-    self.playerNode.zPosition = 15;
+    self.playerNode.zPosition = 10;
     [scene addChild: self.playerNode];
 }
 

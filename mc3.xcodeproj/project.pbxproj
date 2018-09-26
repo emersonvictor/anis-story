@@ -70,10 +70,14 @@
 		A4D55A0B215AC46800BB5FB4 /* whispers.m4a in Resources */ = {isa = PBXBuildFile; fileRef = A4D55A09215AC46800BB5FB4 /* whispers.m4a */; };
 		D95F27CE215AD57900B29ACD /* scene-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = D95F27CD215AD57800B29ACD /* scene-bg.png */; };
 		D95F27CF215AD57900B29ACD /* scene-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = D95F27CD215AD57800B29ACD /* scene-bg.png */; };
-		D95F27D5215AD8B200B29ACD /* bed.png in Resources */ = {isa = PBXBuildFile; fileRef = D95F27D4215AD8B200B29ACD /* bed.png */; };
-		D95F27D6215AD8B200B29ACD /* bed.png in Resources */ = {isa = PBXBuildFile; fileRef = D95F27D4215AD8B200B29ACD /* bed.png */; };
 		D96661E6214AEFCE00784631 /* PlatformNode.m in Sources */ = {isa = PBXBuildFile; fileRef = D96661E5214AEFCE00784631 /* PlatformNode.m */; };
 		D96661E7214AEFCE00784631 /* PlatformNode.m in Sources */ = {isa = PBXBuildFile; fileRef = D96661E5214AEFCE00784631 /* PlatformNode.m */; };
+		D96D503F215AF68900CC6161 /* bed.png in Resources */ = {isa = PBXBuildFile; fileRef = D96D503E215AF68900CC6161 /* bed.png */; };
+		D96D5040215AF68900CC6161 /* bed.png in Resources */ = {isa = PBXBuildFile; fileRef = D96D503E215AF68900CC6161 /* bed.png */; };
+		D96D5046215B212100CC6161 /* left-leg-bed.png in Resources */ = {isa = PBXBuildFile; fileRef = D96D5044215B212100CC6161 /* left-leg-bed.png */; };
+		D96D5047215B212100CC6161 /* left-leg-bed.png in Resources */ = {isa = PBXBuildFile; fileRef = D96D5044215B212100CC6161 /* left-leg-bed.png */; };
+		D96D5048215B212100CC6161 /* right-leg-bed.png in Resources */ = {isa = PBXBuildFile; fileRef = D96D5045215B212100CC6161 /* right-leg-bed.png */; };
+		D96D5049215B212100CC6161 /* right-leg-bed.png in Resources */ = {isa = PBXBuildFile; fileRef = D96D5045215B212100CC6161 /* right-leg-bed.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -139,9 +143,11 @@
 		A4BDF301215978E400A76CC2 /* raindrops.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = raindrops.m4a; sourceTree = "<group>"; };
 		A4D55A09215AC46800BB5FB4 /* whispers.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = whispers.m4a; sourceTree = "<group>"; };
 		D95F27CD215AD57800B29ACD /* scene-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "scene-bg.png"; sourceTree = "<group>"; };
-		D95F27D4215AD8B200B29ACD /* bed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bed.png; sourceTree = "<group>"; };
 		D96661E4214AEFCE00784631 /* PlatformNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlatformNode.h; sourceTree = "<group>"; };
 		D96661E5214AEFCE00784631 /* PlatformNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlatformNode.m; sourceTree = "<group>"; };
+		D96D503E215AF68900CC6161 /* bed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bed.png; sourceTree = "<group>"; };
+		D96D5044215B212100CC6161 /* left-leg-bed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left-leg-bed.png"; sourceTree = "<group>"; };
+		D96D5045215B212100CC6161 /* right-leg-bed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "right-leg-bed.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -353,7 +359,9 @@
 		D95F27D0215AD88C00B29ACD /* Objects */ = {
 			isa = PBXGroup;
 			children = (
-				D95F27D4215AD8B200B29ACD /* bed.png */,
+				D96D5044215B212100CC6161 /* left-leg-bed.png */,
+				D96D5045215B212100CC6161 /* right-leg-bed.png */,
+				D96D503E215AF68900CC6161 /* bed.png */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -481,9 +489,11 @@
 				A4AFBF6D21593232000CA023 /* strikingMatch.mp3 in Resources */,
 				2CAF8CC9215410F10088A13B /* PlayerJumping.atlas in Resources */,
 				2C01B6C1214D6DAD00175AA1 /* Assets.xcassets in Resources */,
-				D95F27D5215AD8B200B29ACD /* bed.png in Resources */,
+				D96D503F215AF68900CC6161 /* bed.png in Resources */,
+				D96D5046215B212100CC6161 /* left-leg-bed.png in Resources */,
 				A4A6FCA52157FDC40043FECF /* whaleMoan.wav in Resources */,
 				2CACA9D02146E60C0007B737 /* GameLevel.sks in Resources */,
+				D96D5048215B212100CC6161 /* right-leg-bed.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -502,9 +512,11 @@
 				A4AFBF6E21593232000CA023 /* strikingMatch.mp3 in Resources */,
 				2CAF8CCA215410F10088A13B /* PlayerJumping.atlas in Resources */,
 				2C01B6C2214D6DAD00175AA1 /* Assets.xcassets in Resources */,
-				D95F27D6215AD8B200B29ACD /* bed.png in Resources */,
+				D96D5040215AF68900CC6161 /* bed.png in Resources */,
+				D96D5047215B212100CC6161 /* left-leg-bed.png in Resources */,
 				A4A6FCA62157FDC40043FECF /* whaleMoan.wav in Resources */,
 				2CACAA5F21497F4B0007B737 /* Main.storyboard in Resources */,
+				D96D5049215B212100CC6161 /* right-leg-bed.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -702,7 +714,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UDB57TC6RA;
+				DEVELOPMENT_TEAM = XP4ML92KUD;
 				INFOPLIST_FILE = "$(SRCROOT)/mc3-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -725,7 +737,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UDB57TC6RA;
+				DEVELOPMENT_TEAM = XP4ML92KUD;
 				INFOPLIST_FILE = "$(SRCROOT)/mc3-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -748,7 +760,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = UDB57TC6RA;
+				DEVELOPMENT_TEAM = XP4ML92KUD;
 				INFOPLIST_FILE = "mc3-macos/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -773,7 +785,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = UDB57TC6RA;
+				DEVELOPMENT_TEAM = XP4ML92KUD;
 				INFOPLIST_FILE = "mc3-macos/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

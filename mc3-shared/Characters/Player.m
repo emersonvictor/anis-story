@@ -36,7 +36,8 @@
     [self.stateMachine enterState:IdleState.class];
     
     // MARK: Physics Body
-    self.physicsBody =  [SKPhysicsBody bodyWithRectangleOfSize: self.frame.size];
+    SKTexture* nodeTexture = [SKTexture textureWithImageNamed: @"idle0"];
+    self.physicsBody =  [SKPhysicsBody bodyWithTexture: nodeTexture size: CGSizeMake(40, 65)];
     self.physicsBody.affectedByGravity = TRUE;
     self.physicsBody.allowsRotation = FALSE;
     self.physicsBody.angularDamping = 0;
