@@ -19,7 +19,7 @@
         self.velocity = CGPointMake(0.0, 0.0);
     }
 
-    [self.audioPlayer prepareToPlay];
+//    [self.audioPlayer prepareToPlay];
     self.mask = Unmasked;
     self.sense = 1;
     self.speedForce = 3600.0;
