@@ -16,8 +16,15 @@
 
 - (void) runInteraction:(Player*)withPlayer {
     // TO DO: Implementar interação do palito de fósforo
+    [withPlayer.stateMachine enterState:GrabbingState.class];
+
+    
     NSLog(@"INTERAÇÃO DO PALITO DE FÓSFORO");
+    
+    withPlayer.heldItem = @"Match";
+    
     self.hasPerformedAction = TRUE;
+    [withPlayer.stateMachine enterState:IdleState.class];
 }
 
 @end

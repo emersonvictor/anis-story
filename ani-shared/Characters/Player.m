@@ -19,10 +19,10 @@
         self.velocity = CGPointMake(0.0, 0.0);
     }
 
-//    [self.audioPlayer prepareToPlay];
     self.mask = Unmasked;
     self.sense = 1;
     self.speedForce = 3600.0;
+    self.heldItem = @"";
     
     // MARK: State Machine
     GameState* walking = [[WalkingState alloc] initWithNode:self];
@@ -31,12 +31,12 @@
     GameState* running = [[RunningState alloc] initWithNode:self];
     GameState* falling = [[FallingState alloc] initWithNode:self];
     GameState* jumpMomentum = [[JumpMomentumState alloc] initWithNode:self];
+    GameState* grabbing = [[GrabbingState alloc] initWithNode:self];
     
-    self.stateMachine = [[GKStateMachine alloc] initWithStates:  @[idle, walking, running, jumping, jumpMomentum, falling]];
+    self.stateMachine = [[GKStateMachine alloc] initWithStates:  @[idle, walking, running, jumping, jumpMomentum, falling, grabbing]];
     [self.stateMachine enterState:IdleState.class];
     
     // MARK: Physics Body
-    
     self.physicsBody =  [SKPhysicsBody bodyWithRectangleOfSize: CGSizeMake(40, 65)];
     self.physicsBody.affectedByGravity = TRUE;
     self.physicsBody.allowsRotation = FALSE;
@@ -61,16 +61,13 @@
     self.velocity = CGPointAdd(self.velocity, forwardMoveStep);
     CGPoint minVelocity = CGPointMake(0.0, -450);
     CGPoint maxVelocity = CGPointMake(120.0, 600);
+
     if (self.sense == -1) {
-        
         minVelocity = CGPointMake(-120.0, -450);
         maxVelocity = CGPointMake(0.0, 600);
     }
     
-    //    NSLog(@"VELOCITY:\nX - %f\nY - %f", player.velocity.x, player.velocity.y );
-    
-    self.velocity = CGPointMake(Clamp(self.velocity.x, minVelocity.x, maxVelocity.x),
-                                  self.velocity.y);
+    self.velocity = CGPointMake(Clamp(self.velocity.x, minVelocity.x, maxVelocity.x), self.velocity.y);
 }
 
 - (void) deaccelerate:(NSTimeInterval)seconds {
@@ -78,24 +75,19 @@
 }
 
 - (void) moveUp:(NSTimeInterval)seconds {
-
-    
         self.physicsBody.velocity = CGVectorMake(self.physicsBody.velocity.dx, (self.physicsBody.velocity.dy+200));
         CGPoint minVelocity = CGPointMake(0.0, -450);
         CGPoint maxVelocity = CGPointMake(120.0, 500.0);
         
         if (self.sense == -1) {
-            
             minVelocity = CGPointMake(-120.0, -450);
             maxVelocity = CGPointMake(0.0, 500.0);
         }
-    
 }
 
 - (void) fall:(NSTimeInterval) seconds {
     NSLog(@"%f", self.physicsBody.velocity.dy);
     self.velocity = CGPointMake(self.velocity.x, self.physicsBody.velocity.dy);
-    
 }
 
 - (void)updateWithDeltaTime: (NSTimeInterval)delta {
@@ -113,7 +105,6 @@
     if (self.mask == Unmasked) {
         return;
     } else if (self.mask == WhaleMask && !self.audioPlayer.isPlaying) {
-
         NSString *soundFilePath = [[NSBundle mainBundle] pathForResource:@"whaleMoan" ofType:@"wav"];
         NSURL *soundFileURL = [NSURL fileURLWithPath:soundFilePath];
         NSError *error;

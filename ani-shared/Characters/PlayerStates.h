@@ -40,4 +40,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
+@interface GrabbingState : GameState
+
+@end
+
 NS_ASSUME_NONNULL_END

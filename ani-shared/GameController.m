@@ -36,8 +36,8 @@
     // MARK: Configuring the audio player
     
     SKAudioNode* playerWalkingAudio = [[SKAudioNode alloc] initWithFileNamed:@"walking.mp3"];
-    playerWalkingAudio.name = @"walkingAudio";
     [playerWalkingAudio runAction:[SKAction stop]];
+    playerWalkingAudio.name = @"walkingAudio";
     
     [self.playerNode addChild:playerWalkingAudio];
     
@@ -117,8 +117,7 @@
     if (self.inputScheme.buttonA && (self.playerNode.stateMachine.currentState.class==IdleState.class || self.playerNode.stateMachine.currentState.class==WalkingState.class)) {
         [self.playerNode moveUp:delta];
         [self.playerNode.stateMachine enterState:JumpingState.class];
-    }
-    else {
+    } else {
 //        NSLog(@"%@", self.playerNode.stateMachine.currentState.className);
 //        [self.playerNode.stateMachine enterState:FallingState.class];
     }
@@ -146,8 +145,6 @@
 }
 
 - (void)updateCameraPosition:(NSTimeInterval)delta {
-    
-    
     float scaleFactorX = self.playerNode.scene.size.width/self.playerNode.scene.view.bounds.size.width;
     float scaleFactorY = self.playerNode.scene.size.height/self.playerNode.scene.view.bounds.size.height;
     
@@ -168,7 +165,6 @@
     float topLimit = topBoundary - top;
     float bottomLimit = bottomBoundary + top;
     
-    
     float xPosition = self.camera.position.x;
     float yPosition = self.camera.position.y;
     
@@ -181,10 +177,6 @@
     }
     
     self.camera.position = CGPointMake(xPosition, yPosition);
-    
-    
-    
-    
 }
 
 @end
