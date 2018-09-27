@@ -34,7 +34,8 @@
 - (BOOL) isValidNextState:(Class)stateClass {
     return stateClass == WalkingState.class
     || stateClass == JumpingState.class
-    || stateClass == RunningState.class;
+    || stateClass == RunningState.class
+    || stateClass == GrabbingState.class;
 }
 
 - (void)didEnterWithPreviousState:(GKState *)previousState {
@@ -42,11 +43,11 @@
     
     [player removeAllActions];
     
-    SKTextureAtlas *atlas = [SKTextureAtlas atlasNamed:@"PlayerIdle"];
+    SKTextureAtlas *atlas = [SKTextureAtlas atlasNamed:[@"PlayerIdle" stringByAppendingString: player.heldItem]];
     NSMutableArray *textures = [NSMutableArray array];
     
     for (int i=0; i<=10; i++) {
-        NSString *filename = [NSString stringWithFormat: @"idle%i.png", i];
+        NSString *filename = [NSString stringWithFormat: @"idle%@%i.png", player.heldItem, i];
         SKTexture* loadedTexture = [atlas textureNamed:filename];
         [textures addObject:loadedTexture];
     }
@@ -55,12 +56,11 @@
     
 //    player.velocity = CGPointMake(0.0, 0.0);
     
-    [player runAction:[SKAction repeatActionForever:idleAnimation] withKey:@"idle"];
+    [player runAction:[SKAction repeatActionForever:idleAnimation] withKey:[@"idle" stringByAppendingString: player.heldItem]];
 }
 
 - (void) updateWithDeltaTime:(NSTimeInterval)seconds {
 //    NSLog(@"The player is IDLE");
-    
 }
 
 @end
@@ -78,42 +78,27 @@
     
     [player removeAllActions];
     
-    SKTextureAtlas *atlas = [SKTextureAtlas atlasNamed:@"PlayerWalking"];
+    SKTextureAtlas *atlas = [SKTextureAtlas atlasNamed:[@"PlayerWalking" stringByAppendingString: player.heldItem]];
     NSMutableArray *textures = [NSMutableArray array];
     
     for (int i=1; i<=7; i++) {
-        NSString *filename = [NSString stringWithFormat: @"adventurer%i.png", i];
+        NSString *filename = [NSString stringWithFormat: @"adventurer%@%i.png", player.heldItem, i];
         SKTexture* loadedTexture = [atlas textureNamed:filename];
         [textures addObject:loadedTexture];
     }
     
     SKAction* walkingAnimation = [SKAction animateWithTextures:textures timePerFrame:0.1];
     
-    [player runAction:[SKAction repeatActionForever:walkingAnimation] withKey:@"walking"];
-
-    // MARK: Looking for the sound file URL
-    NSString *soundFilePath = [[NSBundle mainBundle] pathForResource:@"walking" ofType:@"mp3"];
-    NSURL *soundFileURL = [NSURL fileURLWithPath:soundFilePath];
-    NSError *error;
-
-    // MARK: Configuring the audio player
-    player.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:soundFileURL error:&error];
-    player.audioPlayer.numberOfLoops = -1;
-    player.audioPlayer.volume = 0.15;
-    player.audioPlayer.enableRate = TRUE;
-    player.audioPlayer.rate = 0.7;
-
-    // MARK: Playing walking sound in the background thread
-    qos_class_t identifier = QOS_CLASS_BACKGROUND;
-    dispatch_queue_global_t backgroundQueue = dispatch_get_global_queue(identifier, 0);
-    dispatch_async(backgroundQueue, ^{
-        [player.audioPlayer play];
-    });
+    [player runAction:[SKAction repeatActionForever:walkingAnimation] withKey:[@"walking" stringByAppendingString: player.heldItem]];
+    [(SKAudioNode*)[player childNodeWithName:@"walkingAudio"] runAction:[SKAction changeVolumeTo:0.15 duration:0]];
+    [(SKAudioNode*)[player childNodeWithName:@"walkingAudio"] runAction:[SKAction changePlaybackRateTo:0.7 duration:0]];
+    [(SKAudioNode*)[player childNodeWithName:@"walkingAudio"] runAction:[SKAction play]];
+    
 }
 
 - (void) willExitWithNextState:(GKState *)nextState {
     Player* player = (Player*) self.node;
-    [player.audioPlayer stop];
+    [(SKAudioNode*)[player childNodeWithName:@"walkingAudio"] runAction:[SKAction stop]];
 }
 
 @end
@@ -129,22 +114,22 @@
 
     [player removeAllActions];
 
-    SKTextureAtlas *atlas = [SKTextureAtlas atlasNamed:@"PlayerJumping"];
+    SKTextureAtlas *atlas = [SKTextureAtlas atlasNamed:[@"PlayerJumping" stringByAppendingString: player.heldItem]];
     NSMutableArray *textures = [NSMutableArray array];
 
     for (int i=0; i<=0; i++) {
-        NSString *filename = [NSString stringWithFormat: @"jump%i.png", i];
+        NSString *filename = [NSString stringWithFormat: @"jump%@%i.png", player.heldItem, i];
         SKTexture* loadedTexture = [atlas textureNamed:filename];
         [textures addObject:loadedTexture];
     }
 
     SKAction* jumpingAnimation = [SKAction animateWithTextures:textures timePerFrame:0.1];
 
-    [player runAction:[SKAction repeatActionForever:jumpingAnimation] withKey:@"jumping"];
+    [player runAction:[SKAction repeatActionForever:jumpingAnimation] withKey:[@"jumping" stringByAppendingString: player.heldItem]];
 }
 
 - (void)updateWithDeltaTime:(NSTimeInterval)seconds {
-    NSLog(@"%f", ((Player*)self.node).physicsBody.velocity.dy);
+    //NSLog(@"%f", ((Player*)self.node).physicsBody.velocity.dy);
     Player* player = (Player*)self.node;
     
     if (player.physicsBody.velocity.dy>=10) {
@@ -228,6 +213,38 @@
 
 - (void) updateWithDeltaTime:(NSTimeInterval)seconds {
     NSLog(@"The player is RUNNING");
+}
+
+@end
+
+// MARK: - Interactions with items
+
+@implementation GrabbingState
+
+- (BOOL) isValidNextState:(Class)stateClass {
+    return stateClass == IdleState.class;
+}
+
+- (void) updateWithDeltaTime:(NSTimeInterval)seconds {
+    NSLog(@"The player is GRABBING");
+}
+
+- (void)didEnterWithPreviousState:(GKState *)previousState {
+    Player* player = (Player*) self.node;
+    [player removeAllActions];
+    
+//    SKTextureAtlas *atlas = [SKTextureAtlas atlasNamed:@"PlayerGrabbing"];
+//    NSMutableArray *textures = [NSMutableArray array];
+//    
+//    for (int i=0; i<=0; i++) {
+//        NSString *filename = [NSString stringWithFormat: @"grabbing%i.png", i];
+//        SKTexture* loadedTexture = [atlas textureNamed:filename];
+//        [textures addObject:loadedTexture];
+//    }
+//    
+//    SKAction* grabbingAnimation = [SKAction animateWithTextures:textures timePerFrame:0.1];
+//    
+//    [player runAction:[SKAction repeatActionForever:grabbingAnimation] withKey:@"grabbing"];
 }
 
 @end

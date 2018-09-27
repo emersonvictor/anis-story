@@ -8,6 +8,7 @@
 
 #import <SpriteKit/SpriteKit.h>
 #import "Player.h"
+#import "PlayerStates.h"
 
 @interface InteractiveObject : SKSpriteNode
 

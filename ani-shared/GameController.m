@@ -22,8 +22,24 @@
     SKTextureAtlas* playerAtlas =  [SKTextureAtlas atlasNamed:@"PlayerWalking"];
     SKTexture* initialTexture = [playerAtlas textureNamed:@"adventurer1.png"];
     self.playerNode = [[Player alloc] initWithTexture: initialTexture];
-    self.playerNode.position = CGPointMake(0, 100);
-    self.playerNode.zPosition = 15;
+    SKTexture* normalMap = [self.playerNode.texture textureByGeneratingNormalMap];
+    self.playerNode.normalTexture = normalMap;
+    self.playerNode.lightingBitMask = 1;
+    self.playerNode.shadowedBitMask=1;
+    
+    // MARK: Looking for the sound file URL
+//    NSString *soundFilePath = [[NSBundle mainBundle] pathForResource:@"walking" ofType:@"mp3"];
+//    NSURL *soundFileURL = [NSURL fileURLWithPath:soundFilePath];
+//    NSError *error;
+    
+    
+    // MARK: Configuring the audio player
+    
+    SKAudioNode* playerWalkingAudio = [[SKAudioNode alloc] initWithFileNamed:@"walking.mp3"];
+    [playerWalkingAudio runAction:[SKAction stop]];
+    playerWalkingAudio.name = @"walkingAudio";
+    
+    [self.playerNode addChild:playerWalkingAudio];
     
     self.camera = [[SKCameraNode alloc] init];
     [self.camera setScale:0.5];
@@ -67,9 +83,18 @@
 }
 
 - (void)sceneDidLoadFor:(BaseLevelScene *)scene {
+    // Scene
     scene.listener = self.playerNode;
     scene.camera = self.camera;
     scene.camera.position = CGPointMake(0, 0);
+    // Player
+    SKSpriteNode* reference = (SKSpriteNode*)[scene childNodeWithName:@"player"];
+    SKSpriteNode* bg = (SKSpriteNode*)[scene childNodeWithName:@"background"];
+    bg.normalTexture = [bg.texture textureByGeneratingNormalMap];
+    bg.lightingBitMask=1;
+    self.playerNode.position = reference.position;
+    self.playerNode.size = reference.size;
+    self.playerNode.zPosition = 10;
     [scene addChild: self.playerNode];
 }
 
@@ -92,8 +117,7 @@
     if (self.inputScheme.buttonA && (self.playerNode.stateMachine.currentState.class==IdleState.class || self.playerNode.stateMachine.currentState.class==WalkingState.class)) {
         [self.playerNode moveUp:delta];
         [self.playerNode.stateMachine enterState:JumpingState.class];
-    }
-    else {
+    } else {
 //        NSLog(@"%@", self.playerNode.stateMachine.currentState.className);
 //        [self.playerNode.stateMachine enterState:FallingState.class];
     }
@@ -121,8 +145,6 @@
 }
 
 - (void)updateCameraPosition:(NSTimeInterval)delta {
-    
-    
     float scaleFactorX = self.playerNode.scene.size.width/self.playerNode.scene.view.bounds.size.width;
     float scaleFactorY = self.playerNode.scene.size.height/self.playerNode.scene.view.bounds.size.height;
     
@@ -143,7 +165,6 @@
     float topLimit = topBoundary - top;
     float bottomLimit = bottomBoundary + top;
     
-    
     float xPosition = self.camera.position.x;
     float yPosition = self.camera.position.y;
     
@@ -156,10 +177,6 @@
     }
     
     self.camera.position = CGPointMake(xPosition, yPosition);
-    
-    
-    
-    
 }
 
 @end

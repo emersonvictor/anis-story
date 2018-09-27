@@ -22,6 +22,7 @@ typedef enum : NSInteger {
 @property (nonatomic, assign) CGPoint velocity;
 @property (nonatomic, assign) double speedForce;
 @property (nonatomic) NSInteger mask;
+@property (nonatomic) NSString *heldItem;
 @property (nonatomic) int sense;
 
 - (void) accelerate:(NSTimeInterval)seconds;

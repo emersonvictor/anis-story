@@ -39,9 +39,9 @@
     // Present the scene
     [skView presentScene:sceneNode];
     
-    skView.showsFPS = TRUE;
-    skView.showsNodeCount = TRUE;
-    skView.showsPhysics = TRUE;
+    skView.showsFPS = FALSE;
+    skView.showsNodeCount = FALSE;
+    skView.showsPhysics = FALSE;
 }
 
 - (void)didReceiveMemoryWarning {
