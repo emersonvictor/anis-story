@@ -50,6 +50,10 @@
 		2CE72C8A2152C30F008E534E /* StatefulNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE72C882152C30F008E534E /* StatefulNode.m */; };
 		2CE72C8D2152CA6E008E534E /* GameState.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE72C8C2152CA6E008E534E /* GameState.m */; };
 		2CE72C8E2152CA6E008E534E /* GameState.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE72C8C2152CA6E008E534E /* GameState.m */; };
+		A426EC5C215D93C500175794 /* Earphone.m in Sources */ = {isa = PBXBuildFile; fileRef = A426EC5B215D93C500175794 /* Earphone.m */; };
+		A426EC5D215D93C700175794 /* Earphone.m in Sources */ = {isa = PBXBuildFile; fileRef = A426EC5B215D93C500175794 /* Earphone.m */; };
+		A426EC60215D96F200175794 /* earphone0.png in Resources */ = {isa = PBXBuildFile; fileRef = D92B17C1215C0CA6009E555A /* earphone0.png */; };
+		A426EC61215D96F200175794 /* earphone0.png in Resources */ = {isa = PBXBuildFile; fileRef = D92B17C1215C0CA6009E555A /* earphone0.png */; };
 		A4317ACA2156C9EB006E8B18 /* InteractiveObject.m in Sources */ = {isa = PBXBuildFile; fileRef = A4317AC92156C9EB006E8B18 /* InteractiveObject.m */; };
 		A4317ACB2156C9EB006E8B18 /* InteractiveObject.m in Sources */ = {isa = PBXBuildFile; fileRef = A4317AC92156C9EB006E8B18 /* InteractiveObject.m */; };
 		A4317ACE2156E242006E8B18 /* Match.m in Sources */ = {isa = PBXBuildFile; fileRef = A4317ACD2156E242006E8B18 /* Match.m */; };
@@ -135,6 +139,8 @@
 		2CE72C882152C30F008E534E /* StatefulNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StatefulNode.m; sourceTree = "<group>"; };
 		2CE72C8B2152CA6E008E534E /* GameState.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameState.h; sourceTree = "<group>"; };
 		2CE72C8C2152CA6E008E534E /* GameState.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameState.m; sourceTree = "<group>"; };
+		A426EC5A215D93C500175794 /* Earphone.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Earphone.h; sourceTree = "<group>"; };
+		A426EC5B215D93C500175794 /* Earphone.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Earphone.m; sourceTree = "<group>"; };
 		A4317AC82156C9EB006E8B18 /* InteractiveObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InteractiveObject.h; sourceTree = "<group>"; };
 		A4317AC92156C9EB006E8B18 /* InteractiveObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InteractiveObject.m; sourceTree = "<group>"; };
 		A4317ACC2156E242006E8B18 /* Match.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Match.h; sourceTree = "<group>"; };
@@ -318,6 +324,8 @@
 			children = (
 				A4317ACC2156E242006E8B18 /* Match.h */,
 				A4317ACD2156E242006E8B18 /* Match.m */,
+				A426EC5A215D93C500175794 /* Earphone.h */,
+				A426EC5B215D93C500175794 /* Earphone.m */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -510,6 +518,7 @@
 				A4A6FCA52157FDC40043FECF /* whaleMoan.wav in Resources */,
 				D9216284215C0444009AD218 /* shelf.png in Resources */,
 				D9216287215C06D8009AD218 /* totem.png in Resources */,
+				A426EC61215D96F200175794 /* earphone0.png in Resources */,
 				2CACA9D02146E60C0007B737 /* GameLevel.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -536,6 +545,7 @@
 				A4A6FCA62157FDC40043FECF /* whaleMoan.wav in Resources */,
 				D9216285215C0444009AD218 /* shelf.png in Resources */,
 				D9216288215C06D8009AD218 /* totem.png in Resources */,
+				A426EC60215D96F200175794 /* earphone0.png in Resources */,
 				2CACAA5F21497F4B0007B737 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -558,6 +568,7 @@
 				A4317AD82156EC5C006E8B18 /* WhaleTotem.m in Sources */,
 				A4317ACE2156E242006E8B18 /* Match.m in Sources */,
 				2CACA9D82146E60C0007B737 /* GameViewController.m in Sources */,
+				A426EC5C215D93C500175794 /* Earphone.m in Sources */,
 				2C01B6C3214D6DAD00175AA1 /* Player.m in Sources */,
 				2C72334C21518ABC001B15C7 /* PlayerStates.m in Sources */,
 				2CACA9E02146E60E0007B737 /* main.m in Sources */,
@@ -580,6 +591,7 @@
 				D96661E7214AEFCE00784631 /* PlatformNode.m in Sources */,
 				2CE72C8E2152CA6E008E534E /* GameState.m in Sources */,
 				2CACAA6221497F4C0007B737 /* main.m in Sources */,
+				A426EC5D215D93C700175794 /* Earphone.m in Sources */,
 				2CACAA69214984CB0007B737 /* GameLevel.m in Sources */,
 				2C01B71321511F7B00175AA1 /* ControllerInputHandler.m in Sources */,
 				2C63C0C5214C018C006A96EC /* KeyboardInputHandler.m in Sources */,

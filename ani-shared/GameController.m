@@ -112,6 +112,29 @@
         [self.playerNode accelerate:delta];
         [self.playerNode.stateMachine enterState:WalkingState.class];
     }
+
+    if (self.inputScheme.down) {
+        for (SKPhysicsBody *body in [self.playerNode.physicsBody allContactedBodies]) {
+            if (body.categoryBitMask == InteractiveCategory) {
+                InteractiveObject *object = (InteractiveObject*)body.node;
+                if (!(object.hasPerformedAction)) {
+                    [self.playerNode.stateMachine enterState:ClimbingState.class];
+                }
+            }
+        }
+    }
+
+    if (self.inputScheme.up) {
+        for (SKPhysicsBody *body in [self.playerNode.physicsBody allContactedBodies]) {
+            if (body.categoryBitMask == InteractiveCategory) {
+                InteractiveObject *object = (InteractiveObject*)body.node;
+                if (!(object.hasPerformedAction)) {
+                    [self.playerNode.stateMachine enterState:ClimbingState.class];
+                }
+            }
+        }
+    }
+
     if (!self.inputScheme.left && !self.inputScheme.right) {
         [self.playerNode deaccelerate:delta];
     }

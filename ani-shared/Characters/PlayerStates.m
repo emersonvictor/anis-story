@@ -69,7 +69,8 @@
 - (BOOL) isValidNextState:(Class)stateClass {
     return stateClass == IdleState.class
     || stateClass == JumpingState.class
-    || stateClass == RunningState.class;
+    || stateClass == RunningState.class
+    || stateClass == ClimbingState.class;
 }
 
 - (void)didEnterWithPreviousState:(GKState *)previousState {
@@ -208,7 +209,8 @@
 - (BOOL) isValidNextState:(Class)stateClass {
     return stateClass == WalkingState.class
     || stateClass == JumpingState.class
-    || stateClass == IdleState.class;
+    || stateClass == IdleState.class
+    || stateClass == ClimbingState.class;
 }
 
 - (void) updateWithDeltaTime:(NSTimeInterval)seconds {
@@ -247,4 +249,36 @@
 //    [player runAction:[SKAction repeatActionForever:grabbingAnimation] withKey:@"grabbing"];
 }
 
+@end
+
+
+@implementation ClimbingState
+
+- (BOOL) isValidNextState:(Class)stateClass {
+    return stateClass == IdleState.class;
+}
+
+- (void) updateWithDeltaTime:(NSTimeInterval)seconds {
+    NSLog(@"The player is CLIMBING");
+}
+
+- (void)didEnterWithPreviousState:(GKState *)previousState {
+    Player* player = (Player*) self.node;
+    [player removeAllActions];
+
+    NSLog(@"The player is CLIMBING");
+
+    SKTextureAtlas *atlas = [SKTextureAtlas atlasNamed:@"PlayerClimbing"];
+    NSMutableArray *textures = [NSMutableArray array];
+
+    for (int i=0; i<=0; i++) {
+        NSString *filename = [NSString stringWithFormat: @"climbing%i.png", i];
+        SKTexture* loadedTexture = [atlas textureNamed:filename];
+        [textures addObject:loadedTexture];
+    }
+
+    SKAction* grabbingAnimation = [SKAction animateWithTextures:textures timePerFrame:0.1];
+
+    [player runAction:[SKAction repeatActionForever:grabbingAnimation] withKey:@"climbing"];
+}
 @end

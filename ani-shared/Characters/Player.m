@@ -32,8 +32,9 @@
     GameState* falling = [[FallingState alloc] initWithNode:self];
     GameState* jumpMomentum = [[JumpMomentumState alloc] initWithNode:self];
     GameState* grabbing = [[GrabbingState alloc] initWithNode:self];
+    GameState* climbing = [[ClimbingState alloc] initWithNode:self];
     
-    self.stateMachine = [[GKStateMachine alloc] initWithStates:  @[idle, walking, running, jumping, jumpMomentum, falling, grabbing]];
+    self.stateMachine = [[GKStateMachine alloc] initWithStates:  @[idle, walking, running, jumping, jumpMomentum, falling, grabbing, climbing]];
     [self.stateMachine enterState:IdleState.class];
     
     // MARK: Physics Body
