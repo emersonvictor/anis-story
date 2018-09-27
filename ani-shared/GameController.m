@@ -151,9 +151,9 @@
     float scaleFactorX = self.playerNode.scene.size.width/self.playerNode.scene.view.bounds.size.width;
     float scaleFactorY = self.playerNode.scene.size.height/self.playerNode.scene.view.bounds.size.height;
     
-    float leftBoundary = -1*self.playerNode.scene.size.width/2;
-    float rightBoundary = self.playerNode.scene.size.width/2;
-    float bottomBoundary = -1*self.playerNode.scene.size.height/2;
+    float leftBoundary = -1*self.playerNode.scene.size.width/2+15;
+    float rightBoundary = self.playerNode.scene.size.width/2-15;
+    float bottomBoundary = -1*self.playerNode.scene.size.height/2+30;
     float topBoundary = self.playerNode.scene.size.height/2;
     
     
