@@ -22,7 +22,7 @@
 //    [self.audioPlayer prepareToPlay];
     self.mask = Unmasked;
     self.sense = 1;
-    self.speedForce = 3600.0;
+    self.speedForce = 4800.0;
     
     // MARK: State Machine
     GameState* walking = [[WalkingState alloc] initWithNode:self];
@@ -60,10 +60,10 @@
     
     self.velocity = CGPointAdd(self.velocity, forwardMoveStep);
     CGPoint minVelocity = CGPointMake(0.0, -450);
-    CGPoint maxVelocity = CGPointMake(120.0, 600);
+    CGPoint maxVelocity = CGPointMake(240.0, 600);
     if (self.sense == -1) {
         
-        minVelocity = CGPointMake(-120.0, -450);
+        minVelocity = CGPointMake(-240.0, -450);
         maxVelocity = CGPointMake(0.0, 600);
     }
     

@@ -42,20 +42,17 @@
     
     [player removeAllActions];
     
-//    SKTextureAtlas *atlas = [SKTextureAtlas atlasNamed:@"PlayerIdle"];
-    SKTextureAtlas *atlas = [SKTextureAtlas atlasNamed:@"PlayerRunning"];
+    SKTextureAtlas *atlas = [SKTextureAtlas atlasNamed:@"PlayerIdle"];
+//    SKTextureAtlas *atlas = [SKTextureAtlas atlasNamed:@"PlayerRunning"];
     NSMutableArray *textures = [NSMutableArray array];
-//
-//    for (int i=0; i<=10; i++) {
-//        NSString *filename = [NSString stringWithFormat: @"idle%i.png", i];
-//        SKTexture* loadedTexture = [atlas textureNamed:filename];
-//        [textures addObject:loadedTexture];
-//    }
-    SKTexture* texture = [atlas textureNamed:@"running1.png"];
-    [textures addObject:texture];
-    SKAction* idleAnimation = [SKAction animateWithTextures:textures timePerFrame:0.1];
+
+    for (int i=0; i<=7; i++) {
+        NSString *filename = [NSString stringWithFormat: @"idle%i.png", i];
+        SKTexture* loadedTexture = [atlas textureNamed:filename];
+        [textures addObject:loadedTexture];
+    }
     
-//    player.velocity = CGPointMake(0.0, 0.0);
+    SKAction* idleAnimation = [SKAction animateWithTextures:textures timePerFrame:0.5];
     
     [player runAction:[SKAction repeatActionForever:idleAnimation] withKey:@"idle"];
 }
@@ -119,15 +116,15 @@
     SKTextureAtlas *atlas = [SKTextureAtlas atlasNamed:@"PlayerJumping"];
     NSMutableArray *textures = [NSMutableArray array];
 
-    for (int i=0; i<=0; i++) {
-        NSString *filename = [NSString stringWithFormat: @"jump%i.png", i];
+    for (int i=0; i<=1; i++) {
+        NSString *filename = [NSString stringWithFormat: @"jumping%i.png", i];
         SKTexture* loadedTexture = [atlas textureNamed:filename];
         [textures addObject:loadedTexture];
     }
 
     SKAction* jumpingAnimation = [SKAction animateWithTextures:textures timePerFrame:0.1];
 
-//    [player runAction:[SKAction repeatActionForever:jumpingAnimation] withKey:@"jumping"];
+    [player runAction:[SKAction repeatActionForever:jumpingAnimation] withKey:@"jumping"];
 }
 
 - (void)updateWithDeltaTime:(NSTimeInterval)seconds {
@@ -182,7 +179,7 @@
     SKTextureAtlas *atlas = [SKTextureAtlas atlasNamed:@"PlayerLanding"];
     NSMutableArray *textures = [NSMutableArray array];
     
-    for (int i=0; i<=0; i++) {
+    for (int i=0; i<=3; i++) {
         NSString *filename = [NSString stringWithFormat: @"landing%i.png", i];
         SKTexture* loadedTexture = [atlas textureNamed:filename];
         [textures addObject:loadedTexture];

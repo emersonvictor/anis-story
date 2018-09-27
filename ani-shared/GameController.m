@@ -24,7 +24,7 @@
     self.playerNode = [[Player alloc] initWithTexture: initialTexture];
     SKTexture* normalMap = [self.playerNode.texture textureByGeneratingNormalMap];
     self.playerNode.normalTexture = normalMap;
-    self.playerNode.lightingBitMask = 1;
+    self.playerNode.lightingBitMask = 0;
     self.playerNode.shadowedBitMask=1;
     
     // MARK: Looking for the sound file URL
@@ -83,10 +83,7 @@
 }
 
 - (void)sceneDidLoadFor:(BaseLevelScene *)scene {
-    // Scene
-    scene.listener = self.playerNode;
-    scene.camera = self.camera;
-    scene.camera.position = CGPointMake(0, 0);
+    
     // Player
     SKSpriteNode* reference = (SKSpriteNode*)[scene childNodeWithName:@"player"];
     SKSpriteNode* bg = (SKSpriteNode*)[scene childNodeWithName:@"background"];
@@ -96,6 +93,11 @@
     self.playerNode.size = reference.size;
     self.playerNode.zPosition = reference.zPosition;
     [scene addChild: self.playerNode];
+    
+    // Scene
+    scene.listener = self.playerNode;
+    scene.camera = self.camera;
+    scene.camera.position = self.playerNode.position;
 }
 
 - (void)processInput:(NSTimeInterval) delta{
@@ -173,6 +175,16 @@
     float yPosition = self.camera.position.y;
     
     if (self.playerNode.position.x > leftLimit && self.playerNode.position.x < rightLimit)  {
+        xPosition = self.playerNode.position.x;
+    }
+    
+    if (self.playerNode.position.x < leftLimit) {
+        xPosition = leftLimit;
+    }
+    else if (self.playerNode.position.x > rightLimit) {
+        xPosition = rightLimit;
+    }
+    else {
         xPosition = self.playerNode.position.x;
     }
     

@@ -734,13 +734,13 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XP4ML92KUD;
+				DEVELOPMENT_TEAM = UDB57TC6RA;
 				INFOPLIST_FILE = "$(SRCROOT)/ani-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.academy.cin.ufpe.jacn.mc3;
+				PRODUCT_BUNDLE_IDENTIFIER = com.academy.cin.ufpe.ani;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "mc3-shared/Objects/mc3-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -757,13 +757,13 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XP4ML92KUD;
+				DEVELOPMENT_TEAM = UDB57TC6RA;
 				INFOPLIST_FILE = "$(SRCROOT)/ani-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.academy.cin.ufpe.jacn.mc3;
+				PRODUCT_BUNDLE_IDENTIFIER = com.academy.cin.ufpe.ani;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "mc3-shared/Objects/mc3-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
@@ -780,14 +780,14 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = XP4ML92KUD;
+				DEVELOPMENT_TEAM = UDB57TC6RA;
 				INFOPLIST_FILE = "$(SRCROOT)/ani-macos/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.academy.cin.ufpe.jacn.mc3-macos";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.academy.cin.ufpe.ani-macos";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_OBJC_BRIDGING_HEADER = "ani-shared/Objects/ani-macos-Bridging-Header.h";
@@ -805,14 +805,14 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = XP4ML92KUD;
+				DEVELOPMENT_TEAM = UDB57TC6RA;
 				INFOPLIST_FILE = "$(SRCROOT)/ani-macos/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.academy.cin.ufpe.jacn.mc3-macos";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.academy.cin.ufpe.ani-macos";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_OBJC_BRIDGING_HEADER = "ani-shared/Objects/ani-macos-Bridging-Header.h";
