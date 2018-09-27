@@ -44,17 +44,16 @@
     [player removeAllActions];
     
     SKTextureAtlas *atlas = [SKTextureAtlas atlasNamed:[@"PlayerIdle" stringByAppendingString: player.heldItem]];
+
     NSMutableArray *textures = [NSMutableArray array];
-    
-    for (int i=0; i<=10; i++) {
-        NSString *filename = [NSString stringWithFormat: @"idle%@%i.png", player.heldItem, i];
+
+    for (int i=0; i<=7; i++) {
+        NSString *filename = [NSString stringWithFormat: @"idle%i.png", i];
         SKTexture* loadedTexture = [atlas textureNamed:filename];
         [textures addObject:loadedTexture];
     }
     
-    SKAction* idleAnimation = [SKAction animateWithTextures:textures timePerFrame:0.1];
-    
-//    player.velocity = CGPointMake(0.0, 0.0);
+    SKAction* idleAnimation = [SKAction animateWithTextures:textures timePerFrame:0.5];
     
     [player runAction:[SKAction repeatActionForever:idleAnimation] withKey:[@"idle" stringByAppendingString: player.heldItem]];
 }
@@ -78,11 +77,11 @@
     
     [player removeAllActions];
     
-    SKTextureAtlas *atlas = [SKTextureAtlas atlasNamed:[@"PlayerWalking" stringByAppendingString: player.heldItem]];
+    SKTextureAtlas *atlas = [SKTextureAtlas atlasNamed:[@"PlayerRunning" stringByAppendingString: player.heldItem]];
     NSMutableArray *textures = [NSMutableArray array];
     
-    for (int i=1; i<=7; i++) {
-        NSString *filename = [NSString stringWithFormat: @"adventurer%@%i.png", player.heldItem, i];
+    for (int i=1; i<=8; i++) {
+        NSString *filename = [NSString stringWithFormat: @"running%@%i.png", player.heldItem, i];
         SKTexture* loadedTexture = [atlas textureNamed:filename];
         [textures addObject:loadedTexture];
     }
@@ -117,8 +116,9 @@
     SKTextureAtlas *atlas = [SKTextureAtlas atlasNamed:[@"PlayerJumping" stringByAppendingString: player.heldItem]];
     NSMutableArray *textures = [NSMutableArray array];
 
-    for (int i=0; i<=0; i++) {
-        NSString *filename = [NSString stringWithFormat: @"jump%@%i.png", player.heldItem, i];
+    for (int i=0; i<=1; i++) {
+        NSString *filename = [NSString stringWithFormat: @"jumping%@%i.png", player.heldItem, i];
+
         SKTexture* loadedTexture = [atlas textureNamed:filename];
         [textures addObject:loadedTexture];
     }
@@ -180,7 +180,7 @@
     SKTextureAtlas *atlas = [SKTextureAtlas atlasNamed:@"PlayerLanding"];
     NSMutableArray *textures = [NSMutableArray array];
     
-    for (int i=0; i<=0; i++) {
+    for (int i=0; i<=3; i++) {
         NSString *filename = [NSString stringWithFormat: @"landing%i.png", i];
         SKTexture* loadedTexture = [atlas textureNamed:filename];
         [textures addObject:loadedTexture];

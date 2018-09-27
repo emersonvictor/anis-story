@@ -19,12 +19,12 @@
 - (instancetype) init {
     self = [super init];
     self.inputScheme = [[InputScheme alloc] init];
-    SKTextureAtlas* playerAtlas =  [SKTextureAtlas atlasNamed:@"PlayerWalking"];
-    SKTexture* initialTexture = [playerAtlas textureNamed:@"adventurer1.png"];
+    SKTextureAtlas* playerAtlas =  [SKTextureAtlas atlasNamed:@"PlayerRunning"];
+    SKTexture* initialTexture = [playerAtlas textureNamed:@"running1.png"];
     self.playerNode = [[Player alloc] initWithTexture: initialTexture];
     SKTexture* normalMap = [self.playerNode.texture textureByGeneratingNormalMap];
     self.playerNode.normalTexture = normalMap;
-    self.playerNode.lightingBitMask = 1;
+    self.playerNode.lightingBitMask = 0;
     self.playerNode.shadowedBitMask=1;
     
     // MARK: Looking for the sound file URL
@@ -83,10 +83,7 @@
 }
 
 - (void)sceneDidLoadFor:(BaseLevelScene *)scene {
-    // Scene
-    scene.listener = self.playerNode;
-    scene.camera = self.camera;
-    scene.camera.position = CGPointMake(0, 0);
+    
     // Player
     SKSpriteNode* reference = (SKSpriteNode*)[scene childNodeWithName:@"player"];
     SKSpriteNode* bg = (SKSpriteNode*)[scene childNodeWithName:@"background"];
@@ -94,8 +91,13 @@
     bg.lightingBitMask=1;
     self.playerNode.position = reference.position;
     self.playerNode.size = reference.size;
-    self.playerNode.zPosition = 10;
+    self.playerNode.zPosition = reference.zPosition;
     [scene addChild: self.playerNode];
+    
+    // Scene
+    scene.listener = self.playerNode;
+    scene.camera = self.camera;
+    scene.camera.position = self.playerNode.position;
 }
 
 - (void)processInput:(NSTimeInterval) delta{
@@ -148,9 +150,9 @@
     float scaleFactorX = self.playerNode.scene.size.width/self.playerNode.scene.view.bounds.size.width;
     float scaleFactorY = self.playerNode.scene.size.height/self.playerNode.scene.view.bounds.size.height;
     
-    float leftBoundary = -1*self.playerNode.scene.size.width/2;
-    float rightBoundary = self.playerNode.scene.size.width/2;
-    float bottomBoundary = -1*self.playerNode.scene.size.height/2;
+    float leftBoundary = -1*self.playerNode.scene.size.width/2+15;
+    float rightBoundary = self.playerNode.scene.size.width/2-15;
+    float bottomBoundary = -1*self.playerNode.scene.size.height/2+30;
     float topBoundary = self.playerNode.scene.size.height/2;
     
     
@@ -169,6 +171,16 @@
     float yPosition = self.camera.position.y;
     
     if (self.playerNode.position.x > leftLimit && self.playerNode.position.x < rightLimit)  {
+        xPosition = self.playerNode.position.x;
+    }
+    
+    if (self.playerNode.position.x < leftLimit) {
+        xPosition = leftLimit;
+    }
+    else if (self.playerNode.position.x > rightLimit) {
+        xPosition = rightLimit;
+    }
+    else {
         xPosition = self.playerNode.position.x;
     }
     

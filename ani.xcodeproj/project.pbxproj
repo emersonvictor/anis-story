@@ -40,6 +40,8 @@
 		2CAF8CCA215410F10088A13B /* PlayerJumping.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 2CAF8CC7215410F10088A13B /* PlayerJumping.atlas */; };
 		2CAF8CCB215410F10088A13B /* PlayerLanding.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 2CAF8CC8215410F10088A13B /* PlayerLanding.atlas */; };
 		2CAF8CCC215410F10088A13B /* PlayerLanding.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 2CAF8CC8215410F10088A13B /* PlayerLanding.atlas */; };
+		2CBC1E37215BCE9A0037CD19 /* PlayerRunning.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 2CBC1E36215BCE9A0037CD19 /* PlayerRunning.atlas */; };
+		2CBC1E38215BCE9A0037CD19 /* PlayerRunning.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 2CBC1E36215BCE9A0037CD19 /* PlayerRunning.atlas */; };
 		2CE378212153183500C6F715 /* PlayerWalking.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 2CE378202153183500C6F715 /* PlayerWalking.atlas */; };
 		2CE378222153183500C6F715 /* PlayerWalking.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 2CE378202153183500C6F715 /* PlayerWalking.atlas */; };
 		2CE378242153D43000C6F715 /* PlayerIdle.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 2CE378232153D43000C6F715 /* PlayerIdle.atlas */; };
@@ -68,14 +70,18 @@
 		A4BDF303215978E400A76CC2 /* raindrops.m4a in Resources */ = {isa = PBXBuildFile; fileRef = A4BDF301215978E400A76CC2 /* raindrops.m4a */; };
 		A4D55A0A215AC46800BB5FB4 /* whispers.m4a in Resources */ = {isa = PBXBuildFile; fileRef = A4D55A09215AC46800BB5FB4 /* whispers.m4a */; };
 		A4D55A0B215AC46800BB5FB4 /* whispers.m4a in Resources */ = {isa = PBXBuildFile; fileRef = A4D55A09215AC46800BB5FB4 /* whispers.m4a */; };
+		D9216284215C0444009AD218 /* shelf.png in Resources */ = {isa = PBXBuildFile; fileRef = D9216283215C0444009AD218 /* shelf.png */; };
+		D9216285215C0444009AD218 /* shelf.png in Resources */ = {isa = PBXBuildFile; fileRef = D9216283215C0444009AD218 /* shelf.png */; };
+		D9216287215C06D8009AD218 /* totem.png in Resources */ = {isa = PBXBuildFile; fileRef = D9216286215C06D8009AD218 /* totem.png */; };
+		D9216288215C06D8009AD218 /* totem.png in Resources */ = {isa = PBXBuildFile; fileRef = D9216286215C06D8009AD218 /* totem.png */; };
+		D921628A215C07BE009AD218 /* matches-box.png in Resources */ = {isa = PBXBuildFile; fileRef = D9216289215C07BE009AD218 /* matches-box.png */; };
+		D921628B215C07BE009AD218 /* matches-box.png in Resources */ = {isa = PBXBuildFile; fileRef = D9216289215C07BE009AD218 /* matches-box.png */; };
 		D96661E6214AEFCE00784631 /* PlatformNode.m in Sources */ = {isa = PBXBuildFile; fileRef = D96661E5214AEFCE00784631 /* PlatformNode.m */; };
 		D96661E7214AEFCE00784631 /* PlatformNode.m in Sources */ = {isa = PBXBuildFile; fileRef = D96661E5214AEFCE00784631 /* PlatformNode.m */; };
 		D96D503F215AF68900CC6161 /* bed.png in Resources */ = {isa = PBXBuildFile; fileRef = D96D503E215AF68900CC6161 /* bed.png */; };
 		D96D5040215AF68900CC6161 /* bed.png in Resources */ = {isa = PBXBuildFile; fileRef = D96D503E215AF68900CC6161 /* bed.png */; };
 		D9D430D5215BACE200057C15 /* bed-legs.png in Resources */ = {isa = PBXBuildFile; fileRef = D9D430D4215BACE200057C15 /* bed-legs.png */; };
 		D9D430D6215BACE200057C15 /* bed-legs.png in Resources */ = {isa = PBXBuildFile; fileRef = D9D430D4215BACE200057C15 /* bed-legs.png */; };
-		D9D430D8215BAF4200057C15 /* earphone.png in Resources */ = {isa = PBXBuildFile; fileRef = D9D430D7215BAF4200057C15 /* earphone.png */; };
-		D9D430D9215BAF4200057C15 /* earphone.png in Resources */ = {isa = PBXBuildFile; fileRef = D9D430D7215BAF4200057C15 /* earphone.png */; };
 		D9D430DB215BB7F200057C15 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = D9D430DA215BB7F200057C15 /* bg.png */; };
 		D9D430DC215BB7F200057C15 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = D9D430DA215BB7F200057C15 /* bg.png */; };
 /* End PBXBuildFile section */
@@ -122,6 +128,7 @@
 		2CACAA6321497F4C0007B737 /* ani_macos.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ani_macos.entitlements; sourceTree = "<group>"; };
 		2CAF8CC7215410F10088A13B /* PlayerJumping.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = PlayerJumping.atlas; sourceTree = "<group>"; };
 		2CAF8CC8215410F10088A13B /* PlayerLanding.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = PlayerLanding.atlas; sourceTree = "<group>"; };
+		2CBC1E36215BCE9A0037CD19 /* PlayerRunning.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = PlayerRunning.atlas; sourceTree = "<group>"; };
 		2CE378202153183500C6F715 /* PlayerWalking.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = PlayerWalking.atlas; sourceTree = "<group>"; };
 		2CE378232153D43000C6F715 /* PlayerIdle.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = PlayerIdle.atlas; sourceTree = "<group>"; };
 		2CE72C872152C30F008E534E /* StatefulNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StatefulNode.h; sourceTree = "<group>"; };
@@ -142,11 +149,14 @@
 		A4AFBF6C21593232000CA023 /* strikingMatch.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = strikingMatch.mp3; sourceTree = "<group>"; };
 		A4BDF301215978E400A76CC2 /* raindrops.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = raindrops.m4a; sourceTree = "<group>"; };
 		A4D55A09215AC46800BB5FB4 /* whispers.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = whispers.m4a; sourceTree = "<group>"; };
+		D9216283215C0444009AD218 /* shelf.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shelf.png; sourceTree = "<group>"; };
+		D9216286215C06D8009AD218 /* totem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = totem.png; sourceTree = "<group>"; };
+		D9216289215C07BE009AD218 /* matches-box.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "matches-box.png"; sourceTree = "<group>"; };
+		D92B17C1215C0CA6009E555A /* earphone0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = earphone0.png; sourceTree = "<group>"; };
 		D96661E4214AEFCE00784631 /* PlatformNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlatformNode.h; sourceTree = "<group>"; };
 		D96661E5214AEFCE00784631 /* PlatformNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlatformNode.m; sourceTree = "<group>"; };
 		D96D503E215AF68900CC6161 /* bed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bed.png; sourceTree = "<group>"; };
 		D9D430D4215BACE200057C15 /* bed-legs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bed-legs.png"; sourceTree = "<group>"; };
-		D9D430D7215BAF4200057C15 /* earphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = earphone.png; sourceTree = "<group>"; };
 		D9D430DA215BB7F200057C15 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -294,6 +304,7 @@
 		2CE3781F215317E000C6F715 /* Sprites */ = {
 			isa = PBXGroup;
 			children = (
+				2CBC1E36215BCE9A0037CD19 /* PlayerRunning.atlas */,
 				2CAF8CC7215410F10088A13B /* PlayerJumping.atlas */,
 				2CAF8CC8215410F10088A13B /* PlayerLanding.atlas */,
 				2CE378232153D43000C6F715 /* PlayerIdle.atlas */,
@@ -359,9 +370,12 @@
 		D95F27D0215AD88C00B29ACD /* Objects */ = {
 			isa = PBXGroup;
 			children = (
+				D9216286215C06D8009AD218 /* totem.png */,
 				D9D430D4215BACE200057C15 /* bed-legs.png */,
+				D9216289215C07BE009AD218 /* matches-box.png */,
 				D96D503E215AF68900CC6161 /* bed.png */,
-				D9D430D7215BAF4200057C15 /* earphone.png */,
+				D9216283215C0444009AD218 /* shelf.png */,
+				D92B17C1215C0CA6009E555A /* earphone0.png */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -481,18 +495,21 @@
 				2CE378212153183500C6F715 /* PlayerWalking.atlas in Resources */,
 				A4D55A0A215AC46800BB5FB4 /* whispers.m4a in Resources */,
 				2CE378242153D43000C6F715 /* PlayerIdle.atlas in Resources */,
-				D9D430D8215BAF4200057C15 /* earphone.png in Resources */,
 				2CAF8CCB215410F10088A13B /* PlayerLanding.atlas in Resources */,
 				A4BDF302215978E400A76CC2 /* raindrops.m4a in Resources */,
 				A4AFBF642159239F000CA023 /* walking.mp3 in Resources */,
 				2CACA9DB2146E60C0007B737 /* Main.storyboard in Resources */,
 				A4AFBF6D21593232000CA023 /* strikingMatch.mp3 in Resources */,
+				D921628A215C07BE009AD218 /* matches-box.png in Resources */,
 				D9D430D5215BACE200057C15 /* bed-legs.png in Resources */,
 				2CAF8CC9215410F10088A13B /* PlayerJumping.atlas in Resources */,
 				2C01B6C1214D6DAD00175AA1 /* Assets.xcassets in Resources */,
 				D96D503F215AF68900CC6161 /* bed.png in Resources */,
+				2CBC1E37215BCE9A0037CD19 /* PlayerRunning.atlas in Resources */,
 				D9D430DB215BB7F200057C15 /* bg.png in Resources */,
 				A4A6FCA52157FDC40043FECF /* whaleMoan.wav in Resources */,
+				D9216284215C0444009AD218 /* shelf.png in Resources */,
+				D9216287215C06D8009AD218 /* totem.png in Resources */,
 				2CACA9D02146E60C0007B737 /* GameLevel.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -504,18 +521,21 @@
 				2CE378222153183500C6F715 /* PlayerWalking.atlas in Resources */,
 				A4D55A0B215AC46800BB5FB4 /* whispers.m4a in Resources */,
 				2CE378252153D43000C6F715 /* PlayerIdle.atlas in Resources */,
-				D9D430D9215BAF4200057C15 /* earphone.png in Resources */,
 				2CAF8CCC215410F10088A13B /* PlayerLanding.atlas in Resources */,
 				A4BDF303215978E400A76CC2 /* raindrops.m4a in Resources */,
 				A4AFBF652159239F000CA023 /* walking.mp3 in Resources */,
 				2CACAA6A214984CE0007B737 /* GameLevel.sks in Resources */,
 				A4AFBF6E21593232000CA023 /* strikingMatch.mp3 in Resources */,
+				D921628B215C07BE009AD218 /* matches-box.png in Resources */,
 				D9D430D6215BACE200057C15 /* bed-legs.png in Resources */,
 				2CAF8CCA215410F10088A13B /* PlayerJumping.atlas in Resources */,
 				2C01B6C2214D6DAD00175AA1 /* Assets.xcassets in Resources */,
 				D96D5040215AF68900CC6161 /* bed.png in Resources */,
+				2CBC1E38215BCE9A0037CD19 /* PlayerRunning.atlas in Resources */,
 				D9D430DC215BB7F200057C15 /* bg.png in Resources */,
 				A4A6FCA62157FDC40043FECF /* whaleMoan.wav in Resources */,
+				D9216285215C0444009AD218 /* shelf.png in Resources */,
+				D9216288215C06D8009AD218 /* totem.png in Resources */,
 				2CACAA5F21497F4B0007B737 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -714,13 +734,13 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = NEW6GCULKR;
+				DEVELOPMENT_TEAM = UDB57TC6RA;
 				INFOPLIST_FILE = "$(SRCROOT)/ani-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.academy.cin.ufpe.jacn.mc3;
+				PRODUCT_BUNDLE_IDENTIFIER = com.academy.cin.ufpe.ani;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "mc3-shared/Objects/mc3-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -737,13 +757,13 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = NEW6GCULKR;
+				DEVELOPMENT_TEAM = UDB57TC6RA;
 				INFOPLIST_FILE = "$(SRCROOT)/ani-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.academy.cin.ufpe.jacn.mc3;
+				PRODUCT_BUNDLE_IDENTIFIER = com.academy.cin.ufpe.ani;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "mc3-shared/Objects/mc3-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
@@ -760,14 +780,14 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = NEW6GCULKR;
+				DEVELOPMENT_TEAM = UDB57TC6RA;
 				INFOPLIST_FILE = "$(SRCROOT)/ani-macos/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.academy.cin.ufpe.jacn.mc3-macos";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.academy.cin.ufpe.ani-macos";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_OBJC_BRIDGING_HEADER = "ani-shared/Objects/ani-macos-Bridging-Header.h";
@@ -785,14 +805,15 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = NEW6GCULKR;
+				DEVELOPMENT_TEAM = UDB57TC6RA;
+
 				INFOPLIST_FILE = "$(SRCROOT)/ani-macos/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.academy.cin.ufpe.jacn.mc3-macos";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.academy.cin.ufpe.ani-macos";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_OBJC_BRIDGING_HEADER = "ani-shared/Objects/ani-macos-Bridging-Header.h";
