@@ -78,7 +78,7 @@
 }
 
 - (void) moveUp:(NSTimeInterval)seconds {
-        self.physicsBody.velocity = CGVectorMake(self.physicsBody.velocity.dx, (self.physicsBody.velocity.dy+200));
+        self.physicsBody.velocity = CGVectorMake(self.physicsBody.velocity.dx, (self.physicsBody.velocity.dy+400));
         CGPoint minVelocity = CGPointMake(0.0, -450);
         CGPoint maxVelocity = CGPointMake(120.0, 500.0);
         

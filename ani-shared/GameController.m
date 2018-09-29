@@ -14,6 +14,7 @@
 
 @implementation GameController {
     NSTimeInterval _lastUpdateTime;
+    BOOL whispersIsPlaying;
 }
 
 - (instancetype) init {
@@ -26,6 +27,7 @@
     self.playerNode.normalTexture = normalMap;
     self.playerNode.lightingBitMask = 0;
     self.playerNode.shadowedBitMask=1;
+    self->whispersIsPlaying =  FALSE;
     
     // MARK: Looking for the sound file URL
 //    NSString *soundFilePath = [[NSBundle mainBundle] pathForResource:@"walking" ofType:@"mp3"];
@@ -92,8 +94,34 @@
     self.playerNode.position = reference.position;
     self.playerNode.size = reference.size;
     self.playerNode.zPosition = reference.zPosition;
+    
     [scene addChild: self.playerNode];
     
+    //Ghost
+    
+    SKAction* moveFront = [SKAction moveBy:CGVectorMake(200, 0) duration:3];
+//    SKAction *scaleUp = [SKAction scaleBy:0.5 duration:1];
+    SKAction* moveBack = [SKAction moveBy:CGVectorMake(-200, 0) duration:3];
+//    SKAction *scaleDown = [SKAction scale duration:1];
+    
+    SKAction *group1 = [SKAction group:@[moveFront]];
+    SKAction *group2 = [SKAction group:@[moveBack]];
+//    SKAction* group = [SKAction group:@[]];
+    SKSpriteNode* g1 = (SKSpriteNode*)[scene childNodeWithName:@"ghost1"];
+    SKAction *sequence = [SKAction sequence:@[group1, group2]];
+    SKAudioNode *audio = [[SKAudioNode alloc] initWithFileNamed:@"whispers.mp3"];
+    audio.autoplayLooped = FALSE;
+    audio.name = @"whispers";
+    [g1 addChild:audio];
+    
+    SKAudioNode *audio2 = [[SKAudioNode alloc] initWithFileNamed:@"Room.mp3"];
+    audio2.autoplayLooped = FALSE;
+    [scene addChild:audio2];
+    
+    [g1 runAction:[SKAction repeatActionForever:sequence]];
+    
+    
+    [audio2 runAction:[SKAction sequence:@[[SKAction changeVolumeTo:0.2 duration:0], [SKAction waitForDuration:10], [SKAction play]]]];
     // Scene
     scene.listener = self.playerNode;
     scene.camera = self.camera;
@@ -186,6 +214,37 @@
     
     if (self.playerNode.position.y > bottomLimit && self.playerNode.position.y < topLimit)  {
         yPosition = self.playerNode.position.y;
+    }
+    
+    if(self.playerNode.position.y < -480 && self.playerNode.position.x > - 480) {
+        
+        
+        if (!whispersIsPlaying) {
+            SKScene* scene = self.playerNode.scene;
+            SKSpriteNode* g1 = (SKSpriteNode*)[scene childNodeWithName:@"ghost1"];
+            SKAudioNode* whispers = (SKAudioNode*)[g1 childNodeWithName:@"whispers"];
+            [whispers runAction:[SKAction changeVolumeTo:0.5 duration:0]];
+            [whispers runAction:[SKAction play]];
+            [whispers runAction:[SKAction changeVolumeTo:0.7 duration:2]];
+        }
+        
+        whispersIsPlaying = TRUE;
+    }
+    else {
+        
+        
+        if (whispersIsPlaying) {
+            SKScene* scene = self.playerNode.scene;
+            SKSpriteNode* g1 = (SKSpriteNode*)[scene childNodeWithName:@"ghost1"];
+            SKAudioNode* whispers = (SKAudioNode*)[g1 childNodeWithName:@"whispers"];
+            
+            [whispers runAction:[SKAction sequence:@[[SKAction changeVolumeTo:0 duration:5], [SKAction stop]]]];
+        }
+        
+        whispersIsPlaying = FALSE;
+
+        
+        
     }
     
     self.camera.position = CGPointMake(xPosition, yPosition);
