@@ -13,6 +13,5 @@
 #import "KeyboardInputHandler.h"
 
 @interface GameLevel : BaseLevelScene
-@property(nonatomic, strong) AVAudioPlayer *audioPlayer;
-@property(nonatomic, strong) SKAudioNode *audioNode;
+
 @end
