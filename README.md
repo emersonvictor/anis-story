@@ -14,4 +14,4 @@ This game was created by:
 
 We want to bring a perspective of depression through metaphors of real and fantastic elements. Our game will bring to you an adventure with highs and lows, just like life. But overall will make you think...
 
-### That’s Ani’s story.
+### That’s Ani’s story!
